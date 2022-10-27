@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Travel Services</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <div id="app" class="app__checkin">
+        <div id="header" class="app__header">
+            <!-- <div class=""> -->
+            <a href="../index.html" class="app__header-logo">
+                <img src="../assets/img/logo.png" alt="" class="app__header-logo--link">
+
+            </a>
+            <div class="app__header-getin">
+                <div class="app__header-login">
+                    <button onclick="location.href='./HTML/dangNhap.html'" class="app__header-button">
+                        <!-- <a href="#" class="app_header-login--link"> -->
+                        Đăng nhập
+                        <!-- </a> -->
+                    </button>
+                </div>
+
+                <div class="app__header-signin">
+                    <button onclick="location.href='./HTML/dangKi.html'" class="app__header-button">
+                        <!-- <a href="dangKi.html" class="app_header-login--link"> -->
+                        Tạo tài khoản
+                        <!-- </a> -->
+                    </button>
+                </div>
+            </div>
+
+            <div class="app__header-user">
+                <div class="app__header-user-display" onclick="user_menu_click()">
+                    <div class="app__header-user-btn">
+                        <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
+                            alt="" class="user-img">
+                    </div>
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+
+                </div>
+
+                <div class="app__header-user-menu">
+                    <div class="user-menu-text">TÀI KHOẢN CỦA TÔI</div>
+
+                    <div class="user-menu-option">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-list"></i>
+                                <!-- <a href="">Đơn đặt chỗ của tôi</a> -->
+                                Đơn đặt chỗ của tôi
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <!-- <a href="">Hộp thư</a> -->
+                                Hộp thư
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-heart"></i>
+                                <!-- <a href="">Hồ sơ của tôi</a> -->
+                                Danh sách yêu thích
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-address-card"></i>
+                                <!-- <a href="">Hồ sơ của tôi</a> -->
+                                Hồ sơ của tôi
+                            </li>
+
+                            <button class="user-menu-option-logout">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Đăng xuất
+                            </button>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app__body">
+            <div class="info-checkin">
+                <img class="info_img"
+                    src="https://pix8.agoda.net/hotelImages/22423667/-1/c8b11fd11884172c23959f0ccb4ebfc0.jpg?ca=19&ce=1"
+                    alt="">
+                <div id="text_information">
+                    <h2 id="name_checkin">Somerset Feliz TP Hồ Chí Minh (Somerset Feliz Ho Chi Minh City)</h2>
+                    <div id="address_checkin">
+                        <img id="icon_map" src="https://vnreview.vn/image/20/36/36/2036366.jpg" alt="">
+                        <h3 id="text_address_checkin">Quận 2, Hồ Chí Minh, Việt Nam</h3>
+                    </div>
+                    <p id="decription_checkin"> Nằm ở vị trí trung tâm tại Quận 2 của Hồ Chí Minh, chỗ nghỉ này đặt quý
+                        khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng
+                        Chứng tích chiến tranh nổi tiếng. Được xếp hạng 3 sao, chỗ nghỉ chất lượng cao này cho phép
+                        khách nghỉ sử dụng bể bơi ngoài trời, phòng xông ướt và phòng tập ngay trong khuôn viên.</p>
+                    <div id="benefit">
+                        <h1>Hưởng các lợi ích đặc biệt dành cho thời gian ở của quý khách</h1>
+                        <div id="list_benefit">
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Bàn tiếp tân [24 giờ]</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>CLB trẻ em</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Đưa đón sân bay</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Phòng tập</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Được phép đưa thú nuôi vào</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Dịch vụ đưa đón</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Bãi để xe</p>
+                            </div>
+                            <div class="list_member">
+                                <img class="Mark"
+                                    src="https://phongthuyxanh.vn/wp-content/uploads/d%E1%BA%A5u-t%C3%ADch.png" alt="">
+                                <p>Tiện nghi nấu nướng ngoài trời</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rooms_infomation">
+                    <div class="room">
+                        <img class="room-img"
+                            src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10032247-0fb541c614f47aebf6f0e7992bd4370b.jpeg?_src=imagekit&tr=h-176,q-40,w-300"
+                            alt="">
+                        <div class="room-inf">
+                            <h2>Loại phòng: Phòng đơn</h2>
+                            <h2>Số khách: 2 khách</h2>
+                            <h2>Giá: 288.150 VND</h2>
+                            <div class="content-input-date-select">
+                                <div class="input-date-wrap input-date-checkin">
+                                    <img src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
+                                    <div class="input-day-text input-checkin-text">
+                                        <div class="input-day input-date-checkin-day">
+                                            21 tháng 10 năm 2022
+                                        </div>
+
+                                        <div class="input-day-desc input-date-checkin-desc">
+                                            Thứ 6
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-date-wrap input-date-checkout">
+                                    <img src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
+                                    <div class="input-day-text input-checkout-text">
+                                        <div class="input-day input-date-checkout-day">
+                                            28 tháng 10 năm 2022
+                                        </div>
+                                        <div class="input-day-desc input-date-checkout-desc">
+                                            Thứ 6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="room-btn blue-button">Đặt ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function user_menu_cdivck() {
+            const menuClick = document.querySelector('.app__header-user-menu');
+            menuClick.classList.toggle("active");
+        }
+    </script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="vue/vue.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+    <!-- DropZone | Documentation: http://dropzonejs.com -->
+    <!-- <script type="text/javascript" src="scripts/dropzone.js"></script> -->
+    <!-- Vue JS -->
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+
+</body>
+
+</html>
