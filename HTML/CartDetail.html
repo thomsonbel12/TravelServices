@@ -37,19 +37,6 @@
                 </a>
 
             </div>
-            <!-- <div class="app__header-getin">
-                <div class="app__header-login">
-                    <button onclick="location.href='./HTML/dangNhap.html'" class="app__header-button">
-                        Đăng nhập
-                    </button>
-                </div>
-
-                <div class="app__header-signin">
-                    <button onclick="location.href='./HTML/dangKi.html'" class="app__header-button">
-                        Tạo tài khoản
-                    </button>
-                </div>
-            </div> -->
 
             <div class="app__header-option">
                 <a class="rgbRed_OutlineButton button-padding_12">Đăng kí cho thuê nhà</a>
@@ -186,36 +173,89 @@
             <div class="app__body-left-menu">
                 <ul class="left-menu-items">
                     <li class="left-menu-item left-menu-cart-list">
-                        <i class="fa-sharp fa-solid fa-clipboard"></i>
-                        Giỏ hàng của tôi
+                        <a href="">
+                            <i class="fa-sharp fa-solid fa-clipboard"></i>
+                            Giỏ hàng của tôi
+                        </a>
                     </li>
                     <li class="left-menu-item left-menu-history-list">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                        Lịch sử du lịch
+                        <a href="">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            Lịch sử du lịch
+                        </a>
                     </li>
                     <li class="left-menu-item">
-                        <i class="fa-solid fa-star"></i>
-                        Danh sách yêu thích
+                        <a href="">
+                            <i class="fa-solid fa-star"></i>
+                            Danh sách yêu thích
+                        </a>
                     </li>
                     <li class="left-menu-item left-menu-profile">
-                        <i class="fa-solid fa-address-card"></i>
-                        Hồ sơ của tôi
+                        <a href="">
+                            <i class="fa-solid fa-address-card"></i>
+                            Hồ sơ của tôi
+                        </a>
                     </li>
                 </ul>
 
             </div>
             <div class="app__body-right-content">
-                
+                <div class="right-content-header">
+                    <div class="header-banner">
+                        <img src="https://cdn6.agoda.net/images/LOY-5878/default/vip-banner-agoji-non-vip.svg" alt="">
+                        <div class="header-banner-text">
+                            <span class="fontWeight-700">
+                                Bạn có muốn trở thành khách VIP không ?
+                            </span>
+                            <br>
+                            <br>
+                            <span style="font-size: 16px">
+                                Hãy hoàn tất việc đặt phòng và thanh toán đúng hạn để mở khóa các dịch vụ và giảm giá,
+                                và hưởng dịch vụ đặc biệt.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="header-option">
+                        <div class="header-option-item header-option-left">Danh sách giỏ hàng của tôi</div>
+                        <div class="header-option-item header-option-right">
+                            <div class="option-right-text rgbRed-text">Sắp xếp theo</div>
+                            <div class="option-right-btn option-right-checkin">Ngày đặt phòng</div>
+                            <div class="option-right-btn option-right-checkout">Ngày nhận phòng</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-content-body">
+
+                    <div class="cart-list"></div>
+
+                    <div class="no-cart-list" style="
+                            margin: 24px 12px 24px 0;
+                            display: flex; 
+                            justify-content: space-evenly">
+                        <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
+                        <div class="no-cart-text">
+                            <p class="fontWeight-700" style="
+                                    font-size: 18px;
+                                    color: #333;">
+                                Quý khách không có phòng nào trong danh sách chờ.</p>
+                            <p style="
+                            font-size: 14px;
+                            color: #333;">
+                                Hãy thêm phòng vào giỏ hàng nếu quý khách có ý định xem xét đặt nhiều phòng!
+                            </p>
+                            <a href="../index.html"
+                            style="text-align: center;
+                            color: #5392fa;
+                            text-decoration: underline;">
+                                Quay trở về trang chủ
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
 
     <!-- Mở menu user -->
@@ -255,6 +295,25 @@
         }
     </script>
 
+    <script>
+        const dayCheckinSort = document.querySelector('.option-right-checkin');
+        const dayCheckoutSort = document.querySelector('.option-right-checkout');
+
+        function disableBtn() {
+            dayCheckinSort.style.backgroundColor = "transparent";
+            dayCheckoutSort.style.backgroundColor = "transparent";
+        }
+
+        dayCheckinSort.addEventListener('click', function () {
+            disableBtn();
+            dayCheckinSort.style.backgroundColor = "#ddd";
+        });
+
+        dayCheckoutSort.addEventListener('click', function () {
+            disableBtn();
+            dayCheckoutSort.style.backgroundColor = "#ddd";
+        })
+    </script>
 
 </body>
 

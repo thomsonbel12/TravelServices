@@ -45,7 +45,7 @@
 
         <div class="app__body">
             <div class="app__body-card login-card">
-                <h1 class="app_body-header">Quên mật khẩu 
+                <h1 class="app_body-header">Quên mật khẩu
                     <span style="color:rgb(207, 32, 97);">Email</span>
                 </h1>
                 <p>Vui lòng nhập đúng Mail để có được được gửi mã tạo lại mật khẩu</p>
@@ -68,13 +68,33 @@
 
                 <div class="app__body-card-form">
                     <!-- Email -->
-                    <form id="change-pass-form" class="app__body-input">
+                    <form id="change-pass-email-check" class="app__body-input">
                         <div class="app__body-input-email">
                             <label for="email-input">Email</label>
                             <input type="email" id="email-input" class="app__body-input-text" placeholder="Email"
                                 required>
                         </div>
-
+                        <div class="app__body-input-option">
+                            <div class="app__body-input-forget-pass">
+                                <a href="./dangNhap.html" class="app__body-input-forget-pass-link">
+                                    <i class="fa-solid fa-unlock-keyhole"></i>
+                                    Đăng nhập</a>
+                            </div>
+                            <div class="app__body-input-new-account">
+                                <a href="./dangKi.html" class="app__body-input-new-account-link">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    Tạo tài khoản</a>
+                            </div>
+                        </div>
+                        <div id="change-pass-error" class="login-error">
+                            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                            <p class="error">Email không hợp lệ vui lòng kiểm tra lại.</p>
+                        </div>
+                        <button id="change-pass" disabled="disabled" class="app__body-input-login-btn">
+                            Kiểm tra Email
+                        </button>
+                    </form>
+                    <form id="change-pass-code-check" action="" class="app__body-input">
                         <div id="code-wrap" class="app__body-input-password app__body-input-code">
                             <span>
                                 <label for="code">Nhập mã xác thực được gửi về mail</label>
@@ -85,9 +105,29 @@
                             <span style="align-self: flex-end; height: 100%;">
                                 <a href="">Gửi lại mã</a>
                             </span>
-
                         </div>
+                        <div class="app__body-input-option">
+                            <div class="app__body-input-forget-pass">
+                                <a href="./dangNhap.html" class="app__body-input-forget-pass-link">
+                                    <i class="fa-solid fa-unlock-keyhole"></i>
+                                    Đăng nhập</a>
+                            </div>
+                            <div class="app__body-input-new-account">
+                                <a href="./dangKi.html" class="app__body-input-new-account-link">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    Tạo tài khoản</a>
+                            </div>
+                        </div>
+                        <div id="change-pass-error" class="login-error">
+                            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                            <p class="error">Mã xác thực không hợp lệ vui lòng kiểm tra lại.</p>
+                        </div>
+                        <button id="change-pass" disabled="disabled" class="app__body-input-login-btn">
+                            Tiếp tục
+                        </button>
+                    </form>
 
+                    <form id="change-pass-form" action="" class="app__body-input">
                         <div class="app__body-input-password">
                             <label for="password">Mật khẩu Mới</label>
                             <input type="password" id="password" class="app__body-input-text" placeholder="Mật khẩu mới"
@@ -99,57 +139,61 @@
                             <input type="password" id="password-repeat" class="app__body-input-text"
                                 placeholder="Nhập lại Mật khẩu" required>
                         </div>
+                        <div class="app__body-input-option">
+                            <div class="app__body-input-forget-pass">
+                                <a href="./dangNhap.html" class="app__body-input-forget-pass-link">
+                                    <i class="fa-solid fa-unlock-keyhole"></i>
+                                    Đăng nhập</a>
+                            </div>
+                            <div class="app__body-input-new-account">
+                                <a href="./dangKi.html" class="app__body-input-new-account-link">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    Tạo tài khoản</a>
+                            </div>
+                        </div>
                         <div class="app__body-input-bottom">
                             <!-- <div class="app__body-input-remember-field">
                                 <input type="checkbox" id="checkbox-remember" class="app__body-input-remember-checkbox">
                                 <label for="checkbox-remember">Ghi nhớ đăng nhập</label>
                             </div> -->
 
-                            <div class="app__body-input-option">
-                                <div class="app__body-input-forget-pass">
-                                    <a href="./dangNhap.html" class="app__body-input-forget-pass-link">
-                                        <i class="fa-solid fa-unlock-keyhole"></i>
-                                        Đăng nhập</a>
-                                </div>
-                                <div class="app__body-input-new-account">
-                                    <a href="./dangKi.html" class="app__body-input-new-account-link">
-                                        <i class="fa-solid fa-user-plus"></i>
-                                        Tạo tài khoản</a>
-                                </div>
+
+                            <div id="change-pass-error" class="login-error">
+                                <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                <p class="error">Mật không trùng nhau</p>
                             </div>
+                            <button id="change-pass" disabled="disabled" class="app__body-input-login-btn">
+                                Đổi mật khẩu
+                            </button>
 
-                        </div>
+                    </form>
 
-                        <!-- <div class="login-error">
+                </div>
+
+                <!-- <div class="login-error">
                             <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
                             <p class="error">Địa chỉ email hoặc mật khẩu không đúng.</p>
                         </div> -->
-                        <div id="change-pass-error" class="login-error">
-                            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                            <p class="error">Mã xác thực không hợp lệ vui lòng kiểm tra lại.</p>
-                        </div>
-                        <button id="change-pass" disabled="disabled" class="app__body-input-login-btn">
-                            Đặt lại mật khẩu
-                        </button>
-                    </form>
 
-                    <div class="app__body-policy">
-                        <p>
-                            Khi đăng nhập, tôi đồng ý với các
-                            <a href="">Điều khoản sử dụng</a>
-                            và
-                            <a href="">Chính sách bảo mật</a>
-                            của LHT Travel Company.
-                        </p>
-                    </div>
+                </form>
+
+                <div class="app__body-policy">
+                    <p>
+                        Khi đăng nhập, tôi đồng ý với các
+                        <a href="">Điều khoản sử dụng</a>
+                        và
+                        <a href="">Chính sách bảo mật</a>
+                        của LHT Travel Company.
+                    </p>
                 </div>
-
             </div>
+
         </div>
+    </div>
     </div>
 
     <script src="/script/emptyText.js"></script>
-    <script>
+    <!-- <script>
         const mail = document.getElementById('email-input');
         const code_wrap = document.getElementById('code-wrap');
         const code = document.getElementById('code');
@@ -205,7 +249,7 @@
                 change_pass_error.style.display = "flex"
             })
         })
-    </script>
+    </script> -->
 </body>
 
 </html>

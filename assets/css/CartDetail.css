@@ -6,7 +6,8 @@
     font-size: 18px;
     padding-left: 100px;
 
-    min-height: 600px;
+    min-height: 635px;
+    /* height: 100%; */
     align-items: unset;
     color: #5392fa;
 }
@@ -17,7 +18,8 @@
     box-shadow: 7px 0 8px #e9ebee;
     background: linear-gradient(90deg,#f8f7f9,#fff);;
 }
-.app__body .left-menu-item{
+.app__body .left-menu-item a{
+    color: #5392fa;
     padding: 24px 12px;
     display: flex;
     /* justify-content: space-between; */
@@ -28,16 +30,84 @@
 }
 .app__body .left-menu-item:hover{
     background-color: #5392fa;
-    color: #fff;
     cursor: pointer;
+}
+.app__body .left-menu-item:hover a{
+    color: #fff;
 }
 .app__body .left-menu-cart-list{
     background-color: #f8f7f9;
     border-right: 4px solid #5392fa;
+    font-weight: 700;
+}
+.app__body .left-menu-cart-list a{
+    color: #333;
 
 }
 .app__body .app__body-right-content{
     width: 80%;
-    padding: 24px 0 0 24px;
+    padding: 24px 24px 0 24px;
     
+}
+.right-content-header{
+    width: 100%;
+    /* background-color: #333; */
+    overflow: hidden;
+    
+}
+.right-content-header .header-banner{
+    width: 100%;
+    /* text-align: center; */
+    background-color: #5392fa;
+    margin-bottom: 24px;
+    display: flex;
+    padding: 18px;
+    border-radius: 8px; 
+
+}
+.right-content-header .header-banner img{
+    border-radius: 8px;
+    
+}
+.right-content-header .header-banner .header-banner-text{
+    color: #f8f7f9;
+
+}
+.right-content-header .header-option{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: antiquewhite; */
+    width: 100%;
+}
+.right-content-header .header-option .header-option-item{
+}
+.right-content-header .header-option .header-option-left{
+    border-bottom: 3px solid #5392fa;
+    color: #333;
+    /* width: 30%; */
+    padding: 16px 0;
+
+}
+.right-content-header .header-option .header-option-right{
+    /* border-bottom: 3px solid #5392fa; */
+    color: #333;
+    display: flex;
+    width: 40%;
+    font-size: 14px;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+}
+.right-content-header .header-option .header-option-right .option-right-text{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 16px;
+
+}
+.right-content-header .header-option .header-option-right .option-right-btn{
+    padding: 16px 16px;
+    cursor: pointer;
+    /* border-left: 1px solid #ccc ; */
+}
+.right-content-header .header-option .header-option-right .option-right-checkout{
+    background-color: #ddd;
 }
