@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../assets/css/calendar.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
     <link rel="stylesheet" href="../assets/css/CartDetail.css">
+    <link rel="stylesheet" href="../assets/css/myProfile.css">
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -27,7 +28,7 @@
 
 <body>
 
-    <div id="app" class="app__CartDetail">
+    <div id="app" class="app__myProfile">
         <div id="header" class="app__header">
             <!-- <div class=""> -->
             <div class="app__header-logo">
@@ -122,7 +123,7 @@
 
                         <div class="cart-item cart-item-detail-link">
                             <p>Có <span class="rgbRed-text fontWeight-700">3</span> phòng trong danh sách</p>
-                            <a class="rgbRed_OutlineButton button-padding_12" href="./HTML/CartDetail.html">Chi tiết
+                            <a class="rgbRed_OutlineButton button-padding_12" href="./CartDetail.html">Chi tiết
                                 danh sách</a>
                         </div>
                     </div>
@@ -243,11 +244,12 @@
                         <!-- <img  src="../assets/img/banner_1.png" alt=""> -->
 
                     </div>
+                    <div class="header-option">
                     
+                    </div>
                 </div>
 
                 <div class="right-content-body">
-
                 </div>
             </div>
         </div>
@@ -274,6 +276,8 @@
         });
 
     </script>
+
+
 <script>
     document.onclick = function () {
         autoHide();
@@ -283,15 +287,15 @@
     function hideUserMenu() {
         menuClick.classList.remove('show');
     }
-    // function hideShowAddForm() {
-    //     for (let i = 0; i < ShowAddForm.length; i++)
-    //         ShowAddForm[i].classList.remove('show');
-    // }
-    // // function hid
-    // function hideShowDatePick(){
-    //     for (let i = 0; i < calendarShow.length; i++)
-    //         calendarShow[i].classList.remove('show');
-    // }
+    function hideShowAddForm() {
+        for (let i = 0; i < ShowAddForm.length; i++)
+            ShowAddForm[i].classList.remove('show');
+    }
+    // function hid
+    function hideShowDatePick(){
+        for (let i = 0; i < calendarShow.length; i++)
+            calendarShow[i].classList.remove('show');
+    }
     function autoHide() {
         hideUserMenu();
         // hideShowAddForm();
@@ -300,6 +304,7 @@
     }
 </script>
 
+ 
 </body>
 
 </html>

@@ -6,23 +6,28 @@
 }   
 .app__body .left-menu-cart-list a{
     color: #5392fa;
-
+    
 }
 
 
+.app__myProfile .app__header{
+    position: fixed;
+    width: 100%;
+}
 
 .app__myProfile .app__body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* padding: 24px; */
     font-size: 18px;
-    padding-left: 100px;
-
-    min-height: 635px;
-    /* height: 100%; */
+    padding-left: 18px;
+    
+    min-height: 1000px;
     align-items: unset;
     color: #5392fa;
+    position: relative;
+    top: 77px;
+    
 }
 .app__body .left-menu-profile{
     background-color: #f8f7f9;
