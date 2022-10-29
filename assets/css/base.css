@@ -7,8 +7,8 @@
     /* kế thừa từ thẻ chứa nó */
     /* margin: 0;
     padding: 0; */
-    /* transition: 0.5s; */
-
+    transition: 0.125s;
+    animation: fadeIn ease 0.2s;
 }
 a{
     text-decoration: none;
@@ -35,7 +35,12 @@ html{
     background-color: #f9f9f9;
     /* height: 100%; */
 }
-
+body{
+    /* font-size: 100%; */
+}
+a:hover{
+    opacity: 0.7;
+}
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -66,8 +71,23 @@ a{
 button{
     cursor: pointer;
 }
+.fontWeight-500{
+    font-weight: 500;
+}
+.fontWeight-600{
+    font-weight: 600;
+}
 .fontWeight-700{
     font-weight: 700;
+}
+.padding-8{
+    padding: 8px;
+}
+.padding-12{
+    padding: 12px;
+}
+.padding-24{
+    padding: 24px;
 }
 .rgbRed-text{
     color: rgb(207, 32, 97);

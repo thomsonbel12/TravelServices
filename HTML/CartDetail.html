@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/base.css">
-    <!-- <link rel="stylesheet" href="../assets/css/calendar.css"> -->
+    <link rel="stylesheet" href="../assets/css/calendar.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
     <link rel="stylesheet" href="../assets/css/CartDetail.css">
 
@@ -57,8 +57,16 @@
                                     Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
                                 </div>
                                 <div class="cart-item-desc">
-                                    <div class="cart-item-date">20 Tháng 10 năm 2022</div>
-                                    <div class="cart-item-people">2 người lớn, 1 trẻ em</div>
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
                                     <div class="cart-item-money">500,000,000 vnđ</div>
                                 </div>
                             </div>
@@ -73,8 +81,16 @@
                                     Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
                                 </div>
                                 <div class="cart-item-desc">
-                                    <div class="cart-item-date">20 Tháng 10 năm 2022</div>
-                                    <div class="cart-item-people">2 người lớn, 1 trẻ em</div>
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
                                     <div class="cart-item-money">500,000,000 vnđ</div>
                                 </div>
                             </div>
@@ -89,8 +105,16 @@
                                     Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
                                 </div>
                                 <div class="cart-item-desc">
-                                    <div class="cart-item-date">20 Tháng 10 năm 2022</div>
-                                    <div class="cart-item-people">2 người lớn, 1 trẻ em</div>
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
                                     <div class="cart-item-money">500,000,000 vnđ</div>
                                 </div>
                             </div>
@@ -191,7 +215,7 @@
                         </a>
                     </li>
                     <li class="left-menu-item left-menu-profile">
-                        <a href="">
+                        <a href="./myProfile.html">
                             <i class="fa-solid fa-address-card"></i>
                             Hồ sơ của tôi
                         </a>
@@ -214,40 +238,804 @@
                                 và hưởng dịch vụ đặc biệt.
                             </span>
                         </div>
+                        <img src="https://cdn6.agoda.net/images/LOY-5878/default/vip-banner-agoji-non-vip.svg" alt="">
+
+                        <!-- <img  src="../assets/img/banner_1.png" alt=""> -->
+
                     </div>
                     <div class="header-option">
-                        <div class="header-option-item header-option-left">Danh sách giỏ hàng của tôi</div>
+                        <div class="header-option-item header-option-left">
+                            <!-- <div>Phòng</div> -->
+                            <div style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
+                                <input style="margin-right: 0;" type="checkbox" id="checkbox-selectAll"
+                                    class="app__body-input-remember-checkbox">
+                                <label style="position: relative;" class="checkbox-all-text rgbRed-text"
+                                    for="checkbox-selectAll">Chọn tất cả</label>
+                            </div>
+
+                        </div>
                         <div class="header-option-item header-option-right">
                             <div class="option-right-text rgbRed-text">Sắp xếp theo</div>
-                            <div class="option-right-btn option-right-checkin">Ngày đặt phòng</div>
-                            <div class="option-right-btn option-right-checkout">Ngày nhận phòng</div>
+                            <div class="option-right-btn option-right-checkin">Ngày Nhận phòng</div>
+                            <div class="option-right-btn option-right-checkout">Ngày Trả phòng</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="right-content-body">
 
-                    <div class="cart-list"></div>
+                    <div style="width: 100%;" class="cart-list padding-8">
+                        <div class="cart-room-wrap">
+                            <div style="padding-left: 12px;" class="cart-room-check">
+                                <input style="margin: unset;" type="checkbox" id="checkbox-select" class="checkbox-select app__body-input-remember-checkbox">
+                            </div>
+                            <div class="cart-room padding-8">
+                                <div class="cart-room-img">
+                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg" alt="">
+                                </div>
+                                <div class="cart-room-content">
+                                    <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)asdasdsad
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                    </div>
+                                    <div class="cart-room-decs">
+                                        <div class="cart-room-date">
+                                            <div style="width: 100%;" class="content-input-date-select">
+                                                <div class="input-date-wrap input-date-checkin">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
+                                                    <div class="input-day-text input-checkin-text">
+                                                        <div class="input-day input-date-checkin-day">
+                                                            21 tháng 10 năm 2022
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-date-wrap input-date-checkout">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
+                                                    <div class="input-day-text input-checkout-text">
+                                                        <div class="input-day input-date-checkout-day">
+                                                            28 tháng 10 năm 2022
+                                                        </div>
+                                                        <!-- <div class="input-day-desc input-date-checkout-desc">
+                                                            Thứ 6
+                                                        </div> -->
+                                                    </div>
+                                                </div>
 
-                    <div class="no-cart-list" style="
-                            margin: 24px 12px 24px 0;
-                            display: flex; 
-                            justify-content: space-evenly">
+                                                <div style="height: 445px;
+                                                            width: 125%;
+                                                            z-index: 1;" class="calendar-wrap">
+                                                    <div style="height: 100%;" class="date-input-form date-checkin">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày nhận phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <span id="prev" class=""><i
+                                                                        class="fa-solid fa-chevron-left"></i></span>
+                                                                <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
+                                                            </div>
+                                                            <p class="current-date current-date-checkin">Tháng 10 2001
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkin"></ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="height: 100%;" class="date-input-form date-checkout">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày trả phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
+                                                                <span id="next" class=""><i
+                                                                        class="fa-solid fa-chevron-right"></i></span>
+                                                            </div>
+                                                            <p class="current-date current-date-checkout">Tháng 10 2002
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkout"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-room-people">
+                                            <div style="width: 100%;" class="content-input-people-room">
+                                                <div class="input-people-room-text">
+                                                    <i class="fa-solid fa-users"></i>
+                                                    <div class="input-people-text">
+                                                        <div class="input-people">
+                                                            1 người lớn, 1 trẻ em
+                                                        </div>
+        
+                                                        <div class="input-room">
+                                                            1 phòng
+                                                        </div>
+                                                    </div>
+        
+                                                    <i class="fa-solid fa-chevron-down point-down"></i>
+                                                </div>
+        
+                                                <div style="z-index: 1;" class="input-add-room-people">
+                                                    <div class="input-add add-room">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Phòng
+                                                            </div>
+                                                            <div class="add-text-desc">
+        
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number rooms">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-adult">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Người lớn
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                18 tuổi trở lên
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number adults">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-child">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Trẻ em
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                0-12 tuổi
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number children">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-room-money">
+                                    <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
+                                    <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                        <div class="cart-room-money-text padding-8">
+                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="cart-room-btn padding-8">
+                                    <button class="blue-button padding-8">Đặt ngay</button>
+                                    <button class="rgbRed_OutlineButton padding-8">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Xóa phòng này
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="cart-room-wrap">
+                            <div style="padding-left: 12px;" class="cart-room-check">
+                                <input style="margin: unset;" type="checkbox" id="checkbox-select" class="checkbox-select app__body-input-remember-checkbox">
+                            </div>
+                            <div class="cart-room padding-8">
+                                <div class="cart-room-img">
+                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg" alt="">
+                                </div>
+                                <div class="cart-room-content">
+                                    <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)asdasdsad
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                    </div>
+                                    <div class="cart-room-decs">
+                                        <div class="cart-room-date">
+                                            <div style="width: 100%;" class="content-input-date-select">
+                                                <div class="input-date-wrap input-date-checkin">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
+                                                    <div class="input-day-text input-checkin-text">
+                                                        <div class="input-day input-date-checkin-day">
+                                                            21 tháng 10 năm 2022
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-date-wrap input-date-checkout">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
+                                                    <div class="input-day-text input-checkout-text">
+                                                        <div class="input-day input-date-checkout-day">
+                                                            28 tháng 10 năm 2022
+                                                        </div>
+                                                        <!-- <div class="input-day-desc input-date-checkout-desc">
+                                                            Thứ 6
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+
+                                                <div style="height: 445px;
+                                                            width: 125%;
+                                                            z-index: 1;" class="calendar-wrap">
+                                                    <div style="height: 100%;" class="date-input-form date-checkin">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày nhận phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <span id="prev" class=""><i
+                                                                        class="fa-solid fa-chevron-left"></i></span>
+                                                                <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
+                                                            </div>
+                                                            <p class="current-date current-date-checkin">Tháng 10 2001
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkin"></ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="height: 100%;" class="date-input-form date-checkout">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày trả phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
+                                                                <span id="next" class=""><i
+                                                                        class="fa-solid fa-chevron-right"></i></span>
+                                                            </div>
+                                                            <p class="current-date current-date-checkout">Tháng 10 2002
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkout"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-room-people">
+                                            <div style="width: 100%;" class="content-input-people-room">
+                                                <div class="input-people-room-text">
+                                                    <i class="fa-solid fa-users"></i>
+                                                    <div class="input-people-text">
+                                                        <div class="input-people">
+                                                            1 người lớn, 1 trẻ em
+                                                        </div>
+        
+                                                        <div class="input-room">
+                                                            1 phòng
+                                                        </div>
+                                                    </div>
+        
+                                                    <i class="fa-solid fa-chevron-down point-down"></i>
+                                                </div>
+        
+                                                <div style="z-index: 1;" class="input-add-room-people">
+                                                    <div class="input-add add-room">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Phòng
+                                                            </div>
+                                                            <div class="add-text-desc">
+        
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number rooms">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-adult">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Người lớn
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                18 tuổi trở lên
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number adults">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-child">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Trẻ em
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                0-12 tuổi
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number children">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-room-money">
+                                    <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
+                                    <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                        <div class="cart-room-money-text padding-8">
+                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="cart-room-btn padding-8">
+                                    <button class="blue-button padding-8">Đặt ngay</button>
+                                    <button class="rgbRed_OutlineButton padding-8">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Xóa phòng này
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="cart-room-wrap">
+                            <div style="padding-left: 12px;" class="cart-room-check">
+                                <input style="margin: unset;" type="checkbox" id="checkbox-select" class="checkbox-select app__body-input-remember-checkbox">
+                            </div>
+                            <div class="cart-room padding-8">
+                                <div class="cart-room-img">
+                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg" alt="">
+                                </div>
+                                <div class="cart-room-content">
+                                    <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)asdasdsad
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                    </div>
+                                    <div class="cart-room-decs">
+                                        <div class="cart-room-date">
+                                            <div style="width: 100%;" class="content-input-date-select">
+                                                <div class="input-date-wrap input-date-checkin">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
+                                                    <div class="input-day-text input-checkin-text">
+                                                        <div class="input-day input-date-checkin-day">
+                                                            21 tháng 10 năm 2022
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-date-wrap input-date-checkout">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
+                                                    <div class="input-day-text input-checkout-text">
+                                                        <div class="input-day input-date-checkout-day">
+                                                            28 tháng 10 năm 2022
+                                                        </div>
+                                                        <!-- <div class="input-day-desc input-date-checkout-desc">
+                                                            Thứ 6
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+
+                                                <div style="height: 445px;
+                                                            width: 125%;
+                                                            z-index: 1;" class="calendar-wrap">
+                                                    <div style="height: 100%;" class="date-input-form date-checkin">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày nhận phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <span id="prev" class=""><i
+                                                                        class="fa-solid fa-chevron-left"></i></span>
+                                                                <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
+                                                            </div>
+                                                            <p class="current-date current-date-checkin">Tháng 10 2001
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkin"></ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="height: 100%;" class="date-input-form date-checkout">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày trả phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
+                                                                <span id="next" class=""><i
+                                                                        class="fa-solid fa-chevron-right"></i></span>
+                                                            </div>
+                                                            <p class="current-date current-date-checkout">Tháng 10 2002
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkout"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-room-people">
+                                            <div style="width: 100%;" class="content-input-people-room">
+                                                <div class="input-people-room-text">
+                                                    <i class="fa-solid fa-users"></i>
+                                                    <div class="input-people-text">
+                                                        <div class="input-people">
+                                                            1 người lớn, 1 trẻ em
+                                                        </div>
+        
+                                                        <div class="input-room">
+                                                            1 phòng
+                                                        </div>
+                                                    </div>
+        
+                                                    <i class="fa-solid fa-chevron-down point-down"></i>
+                                                </div>
+        
+                                                <div style="z-index: 1;" class="input-add-room-people">
+                                                    <div class="input-add add-room">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Phòng
+                                                            </div>
+                                                            <div class="add-text-desc">
+        
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number rooms">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-adult">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Người lớn
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                18 tuổi trở lên
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number adults">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-child">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Trẻ em
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                0-12 tuổi
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number children">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-room-money">
+                                    <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
+                                    <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                        <div class="cart-room-money-text padding-8">
+                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="cart-room-btn padding-8">
+                                    <button class="blue-button padding-8">Đặt ngay</button>
+                                    <button class="rgbRed_OutlineButton padding-8">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Xóa phòng này
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cart-room-wrap">
+                            <div style="padding-left: 12px;" class="cart-room-check">
+                                <input style="margin: unset;" type="checkbox" id="checkbox-select" class="checkbox-select app__body-input-remember-checkbox">
+                            </div>
+                            <div class="cart-room padding-8">
+                                <div class="cart-room-img">
+                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg" alt="">
+                                </div>
+                                <div class="cart-room-content">
+                                    <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)asdasdsad
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                    </div>
+                                    <div class="cart-room-decs">
+                                        <div class="cart-room-date">
+                                            <div style="width: 100%;" class="content-input-date-select">
+                                                <div class="input-date-wrap input-date-checkin">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
+                                                    <div class="input-day-text input-checkin-text">
+                                                        <div class="input-day input-date-checkin-day">
+                                                            21 tháng 10 năm 2022
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-date-wrap input-date-checkout">
+                                                    <img
+                                                        src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
+                                                    <div class="input-day-text input-checkout-text">
+                                                        <div class="input-day input-date-checkout-day">
+                                                            28 tháng 10 năm 2022
+                                                        </div>
+                                                        <!-- <div class="input-day-desc input-date-checkout-desc">
+                                                            Thứ 6
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+
+                                                <div style="height: 445px;
+                                                            width: 125%;
+                                                            z-index: 1;" class="calendar-wrap">
+                                                    <div style="height: 100%;" class="date-input-form date-checkin">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày nhận phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <span id="prev" class=""><i
+                                                                        class="fa-solid fa-chevron-left"></i></span>
+                                                                <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
+                                                            </div>
+                                                            <p class="current-date current-date-checkin">Tháng 10 2001
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkin"></ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="height: 100%;" class="date-input-form date-checkout">
+                                                        <div style="font-weight: 700;" class="date-input-lable">
+                                                            Ngày trả phòng
+                                                        </div>
+                                                        <header>
+                                                            <div class="icons">
+                                                                <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
+                                                                <span id="next" class=""><i
+                                                                        class="fa-solid fa-chevron-right"></i></span>
+                                                            </div>
+                                                            <p class="current-date current-date-checkout">Tháng 10 2002
+                                                            </p>
+                                                        </header>
+                                                        <div class="calendar">
+                                                            <ul class="weeks">
+                                                                <li>CN</li>
+                                                                <li>T2</li>
+                                                                <li>T3</li>
+                                                                <li>T4</li>
+                                                                <li>T5</li>
+                                                                <li>T6</li>
+                                                                <li>T7</li>
+                                                            </ul>
+                                                            <ul class="days days-checkout"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-room-people">
+                                            <div style="width: 100%;" class="content-input-people-room">
+                                                <div class="input-people-room-text">
+                                                    <i class="fa-solid fa-users"></i>
+                                                    <div class="input-people-text">
+                                                        <div class="input-people">
+                                                            1 người lớn, 1 trẻ em
+                                                        </div>
+        
+                                                        <div class="input-room">
+                                                            1 phòng
+                                                        </div>
+                                                    </div>
+        
+                                                    <i class="fa-solid fa-chevron-down point-down"></i>
+                                                </div>
+        
+                                                <div style="z-index: 1;" class="input-add-room-people">
+                                                    <div class="input-add add-room">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Phòng
+                                                            </div>
+                                                            <div class="add-text-desc">
+        
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number rooms">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-adult">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Người lớn
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                18 tuổi trở lên
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number adults">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-child">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Trẻ em
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                0-12 tuổi
+                                                            </div>
+                                                        </div>
+        
+                                                        <div class="input-add-btn">
+                                                            <i class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number children">1</span>
+                                                            <i class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-room-money">
+                                    <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
+                                    <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                        <div class="cart-room-money-text padding-8">
+                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="cart-room-btn padding-8">
+                                    <button class="blue-button padding-8">Đặt ngay</button>
+                                    <button class="rgbRed_OutlineButton padding-8">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Xóa phòng này
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="no-cart-list">
                         <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
                         <div class="no-cart-text">
-                            <p class="fontWeight-700" style="
-                                    font-size: 18px;
-                                    color: #333;">
+                            <p class="fontWeight-700">
                                 Quý khách không có phòng nào trong danh sách chờ.</p>
-                            <p style="
-                            font-size: 14px;
-                            color: #333;">
+                            <p style="font-size: 14px">
                                 Hãy thêm phòng vào giỏ hàng nếu quý khách có ý định xem xét đặt nhiều phòng!
                             </p>
-                            <a href="../index.html"
-                            style="text-align: center;
-                            color: #5392fa;
-                            text-decoration: underline;">
+                            <a href="../index.html">
                                 Quay trở về trang chủ
                             </a>
                         </div>
@@ -257,7 +1045,7 @@
         </div>
     </div>
 
-
+    <script src="../script/calendarScript.js"></script>
     <!-- Mở menu user -->
     <script>
         const app = document.querySelector('.app__header-user-display');
@@ -280,20 +1068,100 @@
     </script>
 
     <script>
-        document.onclick = function () {
-            autoHide();
-        };
-
-        //auto hide
-        function hideUserMenu() {
-            menuClick.classList.remove('show');
-        }
-
-        function autoHide() {
+        const datepickClick = document.querySelectorAll('.content-input-date-select');
+        const calendarShow = document.querySelectorAll('.calendar-wrap');
+        function ShowCalendar(e) {
             hideUserMenu();
-
+            hideShowAddForm();
+            // hideShowSearchForm();
+            let test = e.target;
+            while(!test.classList.contains('content-input-date-select')){
+                test = test.parentElement;
+            }
+            console.log(test.children[2]);
+            test.children[2].classList.toggle('show');
+            // while(!test.classList.contains('content-input-date-select')){
+            //     test = test.parentElement;
+            // }
+            // console.log(test.children[2]);
+            // test.children[2].classList.toggle('show');
+            
+        }
+        for (let i = 0; i < calendarShow.length; i++) {
+            datepickClick[i].addEventListener('click', ShowCalendar);
+            calendarShow[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
+            datepickClick[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
         }
     </script>
+
+    <!-- Mở form thêm phòng, người -->
+    <script>
+        const AddFormClick = document.getElementsByClassName('input-people-room-text');
+        const ShowAddForm = document.getElementsByClassName('input-add-room-people');
+        // const indexShowAddForm = ShowAddForm.isSameNode(AddFormClick);
+        // console.log(indexShowAddForm)
+        function ShowAddRoomPeopleForm(e) {
+            hideUserMenu();
+            // hideShowAddForm();
+            // hideShowSearchForm();
+            hideShowDatePick();
+
+            let test = e.target;
+            while(!test.classList.contains('content-input-people-room')){
+                test = test.parentElement;
+            }
+            console.log(test);
+            test.children[1].classList.toggle('show');
+
+            // for(var i = 0; i < ShowAddForm.length; i++){
+            //     // ShowAddForm[i].addEventListener('click', function(){
+            //         ShowAddForm[i].classList.toggle('show');
+            //     // })
+            // }
+
+        }
+
+        for (let i = 0; i < ShowAddForm.length; i++) {
+            AddFormClick[i].addEventListener('click', ShowAddRoomPeopleForm);
+            ShowAddForm[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
+            AddFormClick[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
+        }
+
+    </script>
+
+<script>
+    document.onclick = function () {
+        autoHide();
+    };
+
+    //auto hide
+    function hideUserMenu() {
+        menuClick.classList.remove('show');
+    }
+    function hideShowAddForm() {
+        for (let i = 0; i < ShowAddForm.length; i++)
+            ShowAddForm[i].classList.remove('show');
+    }
+    // function hid
+    function hideShowDatePick(){
+        for (let i = 0; i < calendarShow.length; i++)
+            calendarShow[i].classList.remove('show');
+    }
+    function autoHide() {
+        hideUserMenu();
+        hideShowAddForm();
+        // hideShowSearchForm();
+        hideShowDatePick();
+    }
+</script>
 
     <script>
         const dayCheckinSort = document.querySelector('.option-right-checkin');
@@ -302,19 +1170,41 @@
         function disableBtn() {
             dayCheckinSort.style.backgroundColor = "transparent";
             dayCheckoutSort.style.backgroundColor = "transparent";
+
+            dayCheckinSort.style.fontWeight = "unset";
+            dayCheckoutSort.style.fontWeight = "unset";
         }
 
         dayCheckinSort.addEventListener('click', function () {
             disableBtn();
             dayCheckinSort.style.backgroundColor = "#ddd";
+            dayCheckinSort.style.fontWeight = "600";
         });
 
         dayCheckoutSort.addEventListener('click', function () {
             disableBtn();
             dayCheckoutSort.style.backgroundColor = "#ddd";
+            dayCheckoutSort.style.fontWeight = "600";
         })
     </script>
 
+
+    <script>
+        const checkAll_box = document.getElementById('checkbox-selectAll')
+        const checkbox = document.getElementsByClassName('checkbox-select')
+        checkAll_box.addEventListener('click', function(e){
+            if(checkAll_box.checked === true){
+                for(const checkedbox of checkbox){
+                    checkedbox.checked = true
+                }
+            }
+            else{
+                for(const checkedbox of checkbox){
+                    checkedbox.checked = false
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
