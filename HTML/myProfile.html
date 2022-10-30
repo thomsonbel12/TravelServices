@@ -245,11 +245,79 @@
 
                     </div>
                     <div class="header-option">
-                    
+
                     </div>
                 </div>
 
                 <div class="right-content-body">
+                    <div class="user-information">
+                        <h1>Thông tin người dùng</h1>
+                        <div class="user_name_inf use_inf_item">
+                            <div class="user_name_inf_left">
+                                <div class="img_user_inf">
+                                    <img class="img_inf"
+                                        src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
+                                        alt="" class="user-img">
+                                </div>
+                                <div class="display_name">
+                                    <h2 class="name_label">Họ & Tên</h2>
+                                    <span class="text_content_inf">Phan Công Tú</span>
+                                </div>
+                            </div>
+                            <div class="edit_username_inf"><a href="">Chỉnh sửa</a></div>
+                        </div>
+                        <div class="edit_username edit_item">
+                            <label for="">Nhập tên mới</label>
+                            <input class="app__body-input-text" type="text">
+                            <div class="btn_xacnhan_huy">
+                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="user_email_inf use_inf_item">
+                            <h2>Email</h2>
+                            <span class="text_content_inf">phancongtu25032002@gmail.com</span>
+                            <div class="edit_email_inf"><a href="">Chỉnh sửa</a></div>
+
+                        </div>
+                        <div class="edit_email edit_item">
+                            <label for="">Nhập Email mới</label>
+                            <input class="app__body-input-text" type="text">
+                            <div class="btn_xacnhan_huy">
+                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="phone_number_inf use_inf_item">
+                            <h2>Số điện thoại</h2>
+                            <span class="text_content_inf">0123456789</span>
+                            <div class="edit_phone_number_inf"><a href="">Chỉnh sửa</a></div>
+                        </div>
+                        <div class="edit_phone_number edit_item">
+                            <label for="">Nhập số điện thoại mới</label>
+                            <input class="app__body-input-text" type="text">
+                            <div class="btn_xacnhan_huy">
+                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="password_inf use_inf_item">
+                            <h2>Mật khẩu</h2>
+                            <span class="text_content_inf">*********</span>
+                            <div class="edit_password_inf"><a href="">Chỉnh sửa</a></div>
+                        </div>
+                        <div class="edit_phone_number edit_item">
+                            <label for="">Nhập mật khẩu mới</label>
+                            <input class="app__body-input-text" type="text">
+                            <label for="">Nhập lại mật khẩu</label>
+                            <input class="app__body-input-text" type="text">
+                            <div class="btn_xacnhan_huy">
+                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,33 +346,33 @@
     </script>
 
 
-<script>
-    document.onclick = function () {
-        autoHide();
-    };
+    <script>
+        document.onclick = function () {
+            autoHide();
+        };
 
-    //auto hide
-    function hideUserMenu() {
-        menuClick.classList.remove('show');
-    }
-    function hideShowAddForm() {
-        for (let i = 0; i < ShowAddForm.length; i++)
-            ShowAddForm[i].classList.remove('show');
-    }
-    // function hid
-    function hideShowDatePick(){
-        for (let i = 0; i < calendarShow.length; i++)
-            calendarShow[i].classList.remove('show');
-    }
-    function autoHide() {
-        hideUserMenu();
-        // hideShowAddForm();
-        // hideShowSearchForm();
-        // hideShowDatePick();
-    }
-</script>
+        //auto hide
+        function hideUserMenu() {
+            menuClick.classList.remove('show');
+        }
+        function hideShowAddForm() {
+            for (let i = 0; i < ShowAddForm.length; i++)
+                ShowAddForm[i].classList.remove('show');
+        }
+        // function hid
+        function hideShowDatePick() {
+            for (let i = 0; i < calendarShow.length; i++)
+                calendarShow[i].classList.remove('show');
+        }
+        function autoHide() {
+            hideUserMenu();
+            // hideShowAddForm();
+            // hideShowSearchForm();
+            // hideShowDatePick();
+        }
+    </script>
 
- 
+
 </body>
 
 </html>

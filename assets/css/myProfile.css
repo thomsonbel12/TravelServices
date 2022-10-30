@@ -1,39 +1,130 @@
-.app__body .left-menu-cart-list{
-    background-color: unset;
-    border-right: unset;
-    font-weight: unset;
-    
-}   
-.app__body .left-menu-cart-list a{
-    color: #5392fa;
-    
+.app__body .left-menu-cart-list {
+  background-color: unset;
+  border-right: unset;
+  font-weight: unset;
 }
 
-
-.app__myProfile .app__header{
-    position: fixed;
-    width: 100%;
+.app__body .left-menu-cart-list a {
+  color: #5392fa;
 }
 
-.app__myProfile .app__body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 18px;
-    padding-left: 18px;
-    
-    min-height: 1000px;
-    align-items: unset;
-    color: #5392fa;
-    position: relative;
-    top: 77px;
-    
+.app__myProfile .app__header {
+  position: fixed;
+  width: 100%;
 }
-.app__body .left-menu-profile{
-    background-color: #f8f7f9;
-    border-right: 4px solid #5392fa;
-    font-weight: 700;
+
+.app__myProfile .app__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  padding-left: 18px;
+
+  min-height: 1000px;
+  align-items: unset;
+  color: #02132e;
+  position: relative;
+  top: 77px;
 }
-.app__body .left-menu-profile a{
-    color: #333;
+
+.app__body .left-menu-profile {
+  background-color: #f8f7f9;
+  border-right: 4px solid #5392fa;
+  font-weight: 700;
+}
+
+.app__body .left-menu-profile a {
+  color: #333;
+}
+
+.app__body .right-content-body .user-information {
+  margin-left: 50px;
+}
+
+.app__body .right-content-body .user-information .use_inf_item {
+  margin-left: 50px;
+  border-right: 1px solid #ddd;
+  box-shadow: 7px 0 8px #e9ebee;
+  background: linear-gradient(90deg, #b2ddfd, #fff);
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.app__body .right-content-body .user-information .user_name_inf_left {
+  display: flex;
+  align-items: center;
+}
+
+.app__body
+  .right-content-body
+  .user-information
+  .user_name_inf_left
+  .img_user_inf {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.app__body .right-content-body .user-information .user_name_inf_left .img_inf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app__body
+  .right-content-body
+  .user-information
+  .user_name_inf_left
+  .display_name {
+  padding-left: 20px;
+}
+
+.app__body
+  .right-content-body
+  .user-information
+  .user_name_inf
+  .edit_username_inf {
+  display: block;
+  float: right;
+}
+.app__body
+  .right-content-body
+  .user-information
+  .phone_number_inf
+  .edit_phone_number_inf {
+  display: block;
+  float: right;
+}
+.app__body
+  .right-content-body
+  .user-information
+  .password_inf
+  .edit_password_inf {
+  display: block;
+  float: right;
+}
+.app__body
+  .right-content-body
+  .user-information
+  .user_email_inf
+  .edit_email_inf {
+  display: block;
+  float: right;
+}
+.app__body .right-content-body .text_content_inf {
+  color: rgb(91, 73, 73);
+}
+.app__body .right-content-body .edit_item {
+  padding: 40px 50px;
+}
+.app__body .right-content-body .edit_item .btn_xacnhan_huy {
+  float: right;
 }

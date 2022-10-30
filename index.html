@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/calendar.css">
     <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
@@ -29,13 +32,13 @@
     <div id="app" class="app__main">
         <div id="header" class="app__header">
             <!-- <div class=""> -->
-                <div class="app__header-logo">
-                    <a href="./index.html" class="app__header-logo">
-                        <img src="./assets/img/logo.png" alt="" class="app__header-logo--link">
-        
-                    </a>
+            <div class="app__header-logo">
+                <a href="./index.html" class="app__header-logo">
+                    <img src="./assets/img/logo.png" alt="" class="app__header-logo--link">
 
-                </div>
+                </a>
+
+            </div>
             <!-- <div class="app__header-getin">
                 <div class="app__header-login">
                     <button onclick="location.href='./HTML/dangNhap.html'" class="app__header-button">
@@ -300,79 +303,13 @@
                                 <div class="content-input-selection">
                                     <div class="content-input-date-select">
                                         <div class="input-date-wrap input-date-checkin">
-                                            <img src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
-                                            <div class="input-day-text input-checkin-text">
-                                                <div class="input-day input-date-checkin-day">
-                                                    21 tháng 10 năm 2022
-                                                </div>
+                                            <i class="far fa-calendar-alt"></i>
+                                            <input id="SelectDate" placeholder="Ngày Nhận phòng">
 
-                                                <!-- <div class="input-day-desc input-date-checkin-desc">
-                                                    Thứ 6
-                                                </div> -->
-                                            </div>
                                         </div>
                                         <div class="input-date-wrap input-date-checkout">
-                                            <img src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
-                                            <div class="input-day-text input-checkout-text">
-                                                <div class="input-day input-date-checkout-day">
-                                                    28 tháng 10 năm 2022
-                                                </div>
-                                                <!-- <div class="input-day-desc input-date-checkout-desc">
-                                                    Thứ 6
-                                                </div> -->
-                                            </div>
-                                        </div>
-
-                                        <div style="height: 525px;" class="calendar-wrap">
-                                            <div style="height: 100%;" class="date-input-form date-checkin">
-                                                <div style="font-weight: 700;" class="date-input-lable">
-                                                    Ngày nhận phòng
-                                                </div>
-                                                <header>
-                                                    <div class="icons">
-                                                        <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span>
-                                                        <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
-                                                    </div>
-                                                    <p class="current-date current-date-checkin">Tháng 10 2001</p>
-                                                </header>
-                                                <div class="calendar">
-                                                    <ul class="weeks">
-                                                        <li>CN</li>
-                                                        <li>T2</li>
-                                                        <li>T3</li>
-                                                        <li>T4</li>
-                                                        <li>T5</li>
-                                                        <li>T6</li>
-                                                        <li>T7</li>
-                                                    </ul>
-                                                    <ul class="days days-checkin"></ul>
-                                                </div>
-                                            </div>
-
-                                            <div style="height: 100%;" class="date-input-form date-checkout">
-                                                <div style="font-weight: 700;" class="date-input-lable">
-                                                    Ngày trả phòng
-                                                </div>
-                                                <header>
-                                                    <div class="icons">
-                                                        <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
-                                                        <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span>
-                                                    </div>
-                                                    <p class="current-date current-date-checkout">Tháng 10 2002</p>
-                                                </header>
-                                                <div class="calendar">
-                                                    <ul class="weeks">
-                                                        <li>CN</li>
-                                                        <li>T2</li>
-                                                        <li>T3</li>
-                                                        <li>T4</li>
-                                                        <li>T5</li>
-                                                        <li>T6</li>
-                                                        <li>T7</li>
-                                                    </ul>
-                                                    <ul class="days days-checkout"></ul>
-                                                </div>
-                                            </div>
+                                            <i class="far fa-calendar-alt"></i>
+                                            <input id="SelectDate" placeholder="Ngày Trả phòng">
                                         </div>
 
                                     </div>
@@ -381,7 +318,7 @@
                                             <i class="fa-solid fa-users"></i>
                                             <div class="input-people-text">
                                                 <div class="input-people">
-                                                    1 người lớn, 1 trẻ em
+                                                    <span class="adultNum">1</span> người lớn, <span class="childNum">0</span> trẻ em
                                                 </div>
 
                                                 <div class="input-room">
@@ -404,9 +341,10 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
+                                                    <i style="visibility: hidden;"
+                                                        class="fa-regular fa-square-minus"></i>
                                                     <span class="input-add-number rooms">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i style="visibility: hidden;" class="fa-solid fa-square-plus"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-adult">
@@ -420,9 +358,9 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
-                                                    <span class="input-add-number adults">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
+                                                    <span id="adults" class="input-add-number adults">1</span>
+                                                    <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-child">
@@ -436,9 +374,9 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
-                                                    <span class="input-add-number children">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i id="minusChild" class="fa-regular fa-square-minus minusChild"></i>
+                                                    <span class="input-add-number children">0</span>
+                                                    <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -533,78 +471,13 @@
                                 <div class="content-input-selection">
                                     <div class="content-input-date-select">
                                         <div class="input-date-wrap input-date-checkin">
-                                            <img src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
-                                            <div class="input-day-text input-checkin-text">
-                                                <div class="input-day input-date-checkin-day">
-                                                    21 tháng 10 năm 2022
-                                                </div>
+                                            <i class="far fa-calendar-alt"></i>
+                                            <input id="SelectDate" placeholder="Ngày Nhận phòng">
 
-                                                <!-- <div class="input-day-desc input-date-checkin-desc">
-                                                    Thứ 6
-                                                </div> -->
-                                            </div>
-                                        </div>  
-                                        <div class="input-date-wrap input-date-checkout">
-                                            <img src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
-                                            <div class="input-day-text input-checkout-text">
-                                                <div class="input-day input-date-checkout-day">
-                                                    28 tháng 10 năm 2022
-                                                </div>
-                                                <!-- <div class="input-day-desc input-date-checkout-desc">
-                                                    Thứ 6
-                                                </div> -->
-                                            </div>
                                         </div>
-                                        <div style="height: 525px;" class="calendar-wrap">
-                                            <div style="height: 100%;" class="date-input-form date-checkin">
-                                                <div style="font-weight: 700;" class="date-input-lable">
-                                                    Ngày nhận phòng
-                                                </div>
-                                                <header>
-                                                    <div class="icons">
-                                                        <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span>
-                                                        <!-- <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span> -->
-                                                    </div>
-                                                    <p class="current-date current-date-checkin">Tháng 10 2001</p>
-                                                </header>
-                                                <div class="calendar">
-                                                    <ul class="weeks">
-                                                        <li>CN</li>
-                                                        <li>T2</li>
-                                                        <li>T3</li>
-                                                        <li>T4</li>
-                                                        <li>T5</li>
-                                                        <li>T6</li>
-                                                        <li>T7</li>
-                                                    </ul>
-                                                    <ul class="days days-checkin"></ul>
-                                                </div>
-                                            </div>
-
-                                            <div style="height: 100%;" class="date-input-form date-checkout">
-                                                <div style="font-weight: 700;" class="date-input-lable">
-                                                    Ngày trả phòng
-                                                </div>
-                                                <header>
-                                                    <div class="icons">
-                                                        <!-- <span id="prev" class=""><i class="fa-solid fa-chevron-left"></i></span> -->
-                                                        <span id="next" class=""><i class="fa-solid fa-chevron-right"></i></span>
-                                                    </div>
-                                                    <p class="current-date current-date-checkout">Tháng 10 2002</p>
-                                                </header>
-                                                <div class="calendar">
-                                                    <ul class="weeks">
-                                                        <li>CN</li>
-                                                        <li>T2</li>
-                                                        <li>T3</li>
-                                                        <li>T4</li>
-                                                        <li>T5</li>
-                                                        <li>T6</li>
-                                                        <li>T7</li>
-                                                    </ul>
-                                                    <ul class="days days-checkout"></ul>
-                                                </div>
-                                            </div>
+                                        <div class="input-date-wrap input-date-checkout">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <input id="SelectDate" placeholder="Ngày Trả phòng">
                                         </div>
 
                                     </div>
@@ -613,7 +486,7 @@
                                             <i class="fa-solid fa-users"></i>
                                             <div class="input-people-text">
                                                 <div class="input-people">
-                                                    1 người lớn, 1 trẻ em
+                                                    <span class="adultNum">1</span> người lớn, <span class="childNum">0</span> trẻ em
                                                 </div>
 
                                                 <div class="input-room">
@@ -636,9 +509,9 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
+                                                    <i style="visibility: hidden;" class="fa-regular fa-square-minus"></i>
                                                     <span class="input-add-number rooms">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i style="visibility: hidden;" class="fa-solid fa-square-plus"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-adult">
@@ -652,9 +525,9 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
-                                                    <span class="input-add-number adults">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
+                                                    <span id="adults" class="input-add-number adults">1</span>
+                                                    <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-child">
@@ -668,9 +541,9 @@
                                                 </div>
 
                                                 <div class="input-add-btn">
-                                                    <i class="fa-regular fa-square-minus"></i>
+                                                    <i id="minusChild" class="fa-regular fa-square-minus minusChild"></i>
                                                     <span class="input-add-number children">1</span>
-                                                    <i class="fa-solid fa-square-plus"></i>
+                                                    <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -858,7 +731,7 @@
         function ShowSearchList() {
             hideUserMenu();
             hideShowAddForm();
-            hideShowDatePick();
+            // hideShowDatePick();
 
             for (let i = 0; i < ShowSearchForm.length; i++)
                 ShowSearchForm[i].classList.toggle('show');
@@ -882,7 +755,7 @@
             hideUserMenu();
             // hideShowAddForm();
             hideShowSearchForm();
-            hideShowDatePick();
+            // hideShowDatePick();
 
             for (let i = 0; i < ShowAddForm.length; i++)
                 ShowAddForm[i].classList.toggle('show');
@@ -899,8 +772,22 @@
         }
 
     </script>
-
+    <!-- Script calendar flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
     <script>
+        flatpickr("#SelectDate", {
+            "locale": "vn",
+            minDate: "today",
+            dateFormat: "d-m-Y",
+
+        });
+
+    </script>
+
+
+
+    <!-- <script>
         const datepickClick = document.querySelectorAll('.content-input-selection')
         const calendarShow = document.querySelectorAll('.calendar-wrap')
         function ShowCalendar(){
@@ -919,7 +806,7 @@
                 event.stopPropagation();
             });
         }
-    </script>
+    </script> -->
 
     <script>
         document.onclick = function () {
@@ -938,15 +825,15 @@
             for (let i = 0; i < ShowSearchForm.length; i++)
                 ShowSearchForm[i].classList.remove('show');
         }
-        function hideShowDatePick(){
-            for (let i = 0; i < calendarShow.length; i++)
-                calendarShow[i].classList.remove('show');
-        }
+        // function hideShowDatePick(){
+        //     for (let i = 0; i < calendarShow.length; i++)
+        //         calendarShow[i].classList.remove('show');
+        // }
         function autoHide() {
             hideUserMenu();
             hideShowAddForm();
             hideShowSearchForm();
-            hideShowDatePick();
+            // hideShowDatePick();
         }
     </script>
 
@@ -955,7 +842,7 @@
 
 
 
-<!-- 
+    <!-- 
     <script>
         window.addEventListener('load', function () {
             function hideBottomBorderCityList() {
@@ -1009,7 +896,8 @@
         })
     </script> -->
 
-    <script src="./script/calendarScript.js"></script>
+    <!-- <script src="./script/calendarScript.js"></script> -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -1027,6 +915,7 @@
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="vue/vue.js"></script> -->
 
+    <script src="./script/addRoomPeople.js"></script>
 </body>
 
 </html>
