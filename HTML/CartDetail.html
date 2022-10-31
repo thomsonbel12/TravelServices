@@ -81,7 +81,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">500,000,000 vnđ</div>
+                                    <div class="cart-item-money">5000000 vnđ</div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">500,000,000 vnđ</div>
+                                    <div class="cart-item-money">5000000 vnđ</div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">500,000,000 vnđ</div>
+                                    <div class="cart-item-money">5000000 vnđ</div>
                                 </div>
                             </div>
                         </div>
@@ -260,8 +260,7 @@
                     <div class="header-option">
                         <div class="header-option-item header-option-left">
                             <!-- <div>Phòng</div> -->
-                            <div
-                                style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
+                            <div style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
                                 <input style="margin-right: 0;" type="checkbox" id="checkbox-selectAll"
                                     class="app__body-input-remember-checkbox">
                                 <label style="position: relative;" class="checkbox-all-text rgbRed-text"
@@ -388,7 +387,7 @@
                                     <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
                                     <div class="cart-room-money-price fontWeight-700 rgbRed-text">
                                         <div class="cart-room-money-text padding-8">
-                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                            5000000 <span>&nbsp;VNĐ</span>
                                         </div>
                                     </div>
 
@@ -510,7 +509,7 @@
                                     <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
                                     <div class="cart-room-money-price fontWeight-700 rgbRed-text">
                                         <div class="cart-room-money-text padding-8">
-                                            500,000,000 <span>&nbsp;VNĐ</span>
+                                            4284525 <span>&nbsp;VNĐ</span>
                                         </div>
                                     </div>
 
@@ -526,7 +525,25 @@
                         </div>
 
                     </div>
+                    <div id="tes" class="right-content-footer">
+                        <div class="footer-content">
 
+
+                            <div class="Money-Wrapper">
+                                <div class="Money-Tag">
+                                    <span>Tổng Tiền</span>
+                                </div>
+                                <div class="footer-all-money">
+                                    <span id="footer-all-money-text" class="footer-all-money-text rgbRed-text">0</span>
+                                    <span class="footer-all-money-currency">VNĐ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-btn">
+
+                        </div>
+                    </div>
+                    
                     <div class="no-cart-list">
                         <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
                         <div class="no-cart-text">
@@ -541,6 +558,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -660,22 +678,7 @@
     </script>
 
 
-    <script>
-        const checkAll_box = document.getElementById('checkbox-selectAll');
-        const checkbox = document.getElementsByClassName('checkbox-select');
-        checkAll_box.addEventListener('click', function (e) {
-            if (checkAll_box.checked === true) {
-                for (const checkedbox of checkbox) {
-                    checkedbox.checked = true;
-                }
-            }
-            else {
-                for (const checkedbox of checkbox) {
-                    checkedbox.checked = false;
-                }
-            }
-        })
-    </script>
+    <script src="../script/cartSelect.js"></script>
 
 
     <!-- Script calendar flatpickr -->

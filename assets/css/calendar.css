@@ -19,10 +19,15 @@
 .flatpickr-months .flatpickr-month{
     background-color: #5392fa !important;
 }
-
+.flatpickr-current-month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .flatpickr-current-month .flatpickr-monthDropdown-months{
     /* background-color: #5392fa !important; */
     color: #fff !important;
+    background-color: #5392fa !important;
     /* border: 1px solid #5392fa;
     border-color: #5392fa !important; */
 }
