@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/calendar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <script src="../script/numbeWithComma.js" type="module"></script>
 
@@ -263,27 +265,89 @@
                             <h2>Loại phòng: Phòng đơn</h2>
                             <h2>Số khách: 2 khách</h2>
                             <h2>Giá: 288.150 VND</h2>
-                            <div class="content-input-date-select">
-                                <div class="input-date-wrap input-date-checkin">
-                                    <img src="https://img.icons8.com/officel/40/000000/hotel-check-in.png" />
-                                    <div class="input-day-text input-checkin-text">
-                                        <div class="input-day input-date-checkin-day">
-                                            21 tháng 10 năm 2022
+                            <div style="width: 100%;" class="content-input-date-select">
+                                <div class="input-date-wrap input-date-checkin flatpickr">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input id="SelectDate" placeholder="Ngày Nhận phòng"
+                                        value="24-10-2022">
+
+                                </div>
+                                <div class="input-date-wrap input-date-checkout flatpickr">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input id="SelectDate" placeholder="Ngày Trả phòng"
+                                        value="24-10-2022">
+                                </div>
+                            </div>
+                            <div style="width: 100%;" class="content-input-people-room">
+                                <div class="input-people-room-text">
+                                    <i class="fa-solid fa-users"></i>
+                                    <div class="input-people-text">
+                                        <div class="input-people">
+                                            <span class="adultNum">1</span> người lớn, <span
+                                                class="childNum">0</span> trẻ em
                                         </div>
 
-                                        <div class="input-day-desc input-date-checkin-desc">
-                                            Thứ 6
+                                        <div class="input-room">
+                                            1 phòng
                                         </div>
                                     </div>
+
+                                    <i class="fa-solid fa-chevron-down point-down"></i>
                                 </div>
-                                <div class="input-date-wrap input-date-checkout">
-                                    <img src="https://img.icons8.com/officel/40/000000/hotel-chekc-out.png" />
-                                    <div class="input-day-text input-checkout-text">
-                                        <div class="input-day input-date-checkout-day">
-                                            28 tháng 10 năm 2022
+
+                                <div class="input-add-room-people">
+                                    <div class="input-add add-room">
+                                        <div class="input-add-text">
+                                            <div class="add-text-title">
+                                                Phòng
+                                            </div>
+                                            <div class="add-text-desc">
+
+                                            </div>
                                         </div>
-                                        <div class="input-day-desc input-date-checkout-desc">
-                                            Thứ 6
+
+                                        <div class="input-add-btn">
+                                            <i style="visibility: hidden;"
+                                                class="fa-regular fa-square-minus"></i>
+                                            <span class="input-add-number rooms">1</span>
+                                            <i style="visibility: hidden;"
+                                                class="fa-solid fa-square-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="input-add add-adult">
+                                        <div class="input-add-text">
+                                            <div class="add-text-title">
+                                                Người lớn
+                                            </div>
+                                            <div class="add-text-desc">
+                                                18 tuổi trở lên
+                                            </div>
+                                        </div>
+
+                                        <div class="input-add-btn input-add-btn-adult">
+                                            <i id="minusAdult"
+                                                class="fa-solid fa-square-minus minusAdult"></i>
+                                            <span id="adults" class="input-add-number adults">1</span>
+                                            <i id="addAdult"
+                                                class="fa-regular fa-square-plus addAdult"></i>
+                                        </div>
+                                    </div>
+                                    <div class="input-add add-child">
+                                        <div class="input-add-text">
+                                            <div class="add-text-title">
+                                                Trẻ em
+                                            </div>
+                                            <div class="add-text-desc">
+                                                0-12 tuổi
+                                            </div>
+                                        </div>
+
+                                        <div class="input-add-btn">
+                                            <i id="minusChild"
+                                                class="fa-regular fa-square-minus minusChild"></i>
+                                            <span class="input-add-number children">0</span>
+                                            <i id="addChild"
+                                                class="fa-solid fa-square-plus addChild"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -296,22 +360,95 @@
         </div>
     </div>
 
+    
+    <!-- Mở menu user -->
     <script>
-        function user_menu_cdivck() {
-            const menuClick = document.querySelector('.app__header-user-menu');
-            menuClick.classList.toggle("active");
+        const app = document.querySelector('.app__header-user-display');
+        const menuClick = document.querySelector('.app__header-user-menu');
+        function user_menu_click() {
+            // hideUserMenu();
+            hideShowAddForm();
+            // hideShowSearchForm();
+            menuClick.classList.toggle("show");
+        }
+
+        app.addEventListener('click', user_menu_click);
+        menuClick.addEventListener('click', function () {
+            event.stopPropagation();
+        });
+        app.addEventListener('click', function () {
+            event.stopPropagation();
+        });
+
+    </script>
+    <script>
+        const AddFormClick = document.querySelectorAll('.input-people-room-text');
+        const ShowAddForm = document.querySelectorAll('.input-add-room-people');
+        function ShowAddRoomPeopleForm() {
+            hideUserMenu();
+            // hideShowAddForm();
+            // hideShowSearchForm();
+            // hideShowDatePick();
+
+            for (let i = 0; i < ShowAddForm.length; i++)
+                ShowAddForm[i].classList.toggle('show');
+        }
+
+        for (let i = 0; i < ShowAddForm.length; i++) {
+            AddFormClick[i].addEventListener('click', ShowAddRoomPeopleForm);
+            ShowAddForm[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
+            AddFormClick[i].addEventListener('click', function () {
+                event.stopPropagation();
+            });
+        }
+
+    </script>
+    <script>
+        document.onclick = function () {
+            autoHide();
+        };
+
+        //auto hide
+        function hideUserMenu() {
+            menuClick.classList.remove('show');
+        }
+        function hideShowAddForm() {
+            for (let i = 0; i < ShowAddForm.length; i++)
+                ShowAddForm[i].classList.remove('show');
+        }
+        // function hideShowSearchForm() {
+        //     for (let i = 0; i < ShowSearchForm.length; i++)
+        //         ShowSearchForm[i].classList.remove('show');
+        // }
+        function autoHide() {
+            hideUserMenu();
+            hideShowAddForm();
+            // hideShowSearchForm();
         }
     </script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="vue/vue.js"></script>
 
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
+    <script>
+        flatpickr("#SelectDate", {
+            "locale": "vn",
+            minDate: "today",
+            dateFormat: "d-m-Y",
+
+        });
+
+    </script>
+    <script src="../script/addRoomPeople.js"></script>
     <script src="../script/numbeWithComma.js" type="module"></script>
     <script src="../script/cartHeader.js" type="module"></script>
-
-
-
-
 
 
 
