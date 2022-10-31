@@ -1,6 +1,7 @@
 .app__CartDetail .app__header{
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 .app__CartDetail .app__body {
     display: flex;
@@ -10,7 +11,7 @@
     font-size: 18px;
     padding-left: 18px;
 
-    min-height: 1000px;
+    min-height: 600px;
     align-items: unset;
     color: #5392fa;
     position: relative;
@@ -153,6 +154,7 @@
 
 .right-content-body {
     margin-top: 24px;
+    margin: 0px 0 115px 0;
     /* padding: 24px; */
     /* background-color: #e2daea; */
 }
@@ -272,9 +274,52 @@
     color: #5392fa;
     text-decoration: underline;
 }
-
-
-
 .input-day-text{
     font-size: 0.855em;
+}
+
+
+.right-content-footer{
+    z-index: 2;
+    position: fixed;
+    height: 90px;
+    bottom: 10px;
+    background-color: #fff;
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 2px 4px 4px #cfcdcd;
+}
+.right-content-footer .footer-content-left{
+    width: 15%;
+}
+.right-content-footer .footer-content-item{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 12px;
+}
+.right-content-footer .footer-content-left .footer-content-left-option{
+    width: 100%;
+    border: 3px solid #5392fa;
+    color: #333;
+    border-radius: 8px;
+    /* width: 15%; */
+    padding: 16px 0;
+}
+.right-content-footer .footer-content-right{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-content-footer .footer-content-right .Money-Wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.right-content-footer .footer-content-right .Money-Wrapper .Money-Tag{
+
 }

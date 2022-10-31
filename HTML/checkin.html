@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+
+    <script src="../script/numbeWithComma.js" type="module"></script>
+
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
@@ -25,30 +29,111 @@
     <div id="app" class="app__checkin">
         <div id="header" class="app__header">
             <!-- <div class=""> -->
-            <a href="../index.html" class="app__header-logo">
-                <img src="../assets/img/logo.png" alt="" class="app__header-logo--link">
+            <div class="app__header-logo">
+                <a href="../index.html" class="app__header-logo">
+                    <img src="../assets/img/logo.png" alt="" class="app__header-logo--link">
 
-            </a>
-            <div class="app__header-getin">
-                <div class="app__header-login">
-                    <button onclick="location.href='./HTML/dangNhap.html'" class="app__header-button">
-                        <!-- <a href="#" class="app_header-login--link"> -->
-                        Đăng nhập
-                        <!-- </a> -->
-                    </button>
-                </div>
+                </a>
 
-                <div class="app__header-signin">
-                    <button onclick="location.href='./HTML/dangKi.html'" class="app__header-button">
-                        <!-- <a href="dangKi.html" class="app_header-login--link"> -->
-                        Tạo tài khoản
-                        <!-- </a> -->
-                    </button>
-                </div>
             </div>
 
+            <div class="app__header-option">
+                <a class="rgbRed_OutlineButton button-padding_12">Đăng kí cho thuê nhà</a>
+                <span class="shopping_cart">
+                    <a class="rgbRed-text" href="./CartDetail.html">
+                        <i class="fa-solid fa-cart-shopping">
+                            <span class="cart-item-number">3</span>
+                        </i>
+                    </a>
+                    <div class="shopping_cart-items">
+                        <div class="cart-text">Danh sách của tôi</div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-img">
+                                <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
+                            </div>
+                            <div class="cart-item-detail">
+                                <div class="cart-item-name">
+                                    Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                </div>
+                                <div class="cart-item-desc">
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-img">
+                                <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
+                            </div>
+                            <div class="cart-item-detail">
+                                <div class="cart-item-name">
+                                    Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                </div>
+                                <div class="cart-item-desc">
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-img">
+                                <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
+                            </div>
+                            <div class="cart-item-detail">
+                                <div class="cart-item-name">
+                                    Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                </div>
+                                <div class="cart-item-desc">
+                                    <div class="cart-item-date">
+                                        <label style="color: #333;">Ngày nhận phòng</label>
+                                        <div>
+                                            20 Tháng 10 năm 2022
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-people">
+                                        <div style="color: #333;">1 phòng</div>
+                                        <div>2 người lớn, 1 trẻ em</div>
+                                    </div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-item cart-item-detail-link">
+                            <p>Có <span class="rgbRed-text fontWeight-700">3</span> phòng trong danh sách</p>
+                            <a class="rgbRed_OutlineButton button-padding_12" href="./CartDetail.html">Chi tiết
+                                danh sách</a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+
+
+
             <div class="app__header-user">
-                <div class="app__header-user-display" onclick="user_menu_click()">
+                <div class="app__header-user-display">
+                    <!-- <div class="app__header-user-display" onclick="user_menu_click()"> -->
                     <div class="app__header-user-btn">
                         <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
                             alt="" class="user-img">
@@ -58,8 +143,9 @@
                 </div>
 
                 <div class="app__header-user-menu">
-                    <div class="user-menu-text">TÀI KHOẢN CỦA TÔI</div>
-
+                    <div class="user-menu-text">
+                        TÀI KHOẢN CỦA TÔI
+                    </div>
                     <div class="user-menu-option">
                         <ul>
                             <li>
@@ -86,16 +172,25 @@
                                 Hồ sơ của tôi
                             </li>
 
+                            <span>
+                                Đặc biệt
+                            </span>
+
+                            <li class="landlord-register" onclick="location.href='./propertyLandlord.html'">
+                                <i class="fa-solid fa-house-flag"></i>
+                                <!-- <a href="/HTML/propertyLanlord.html"> -->
+                                Đăng kí cho thuê nhà
+                                <!-- </a> -->
+                            </li>
                             <button class="user-menu-option-logout">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 Đăng xuất
                             </button>
-
                         </ul>
-
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="app__body">
@@ -211,7 +306,8 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="vue/vue.js"></script>
 
-
+    <script src="../script/numbeWithComma.js" type="module"></script>
+    <script src="../script/cartHeader.js" type="module"></script>
 
 
 

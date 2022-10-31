@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../assets/css/cart.css">
     <link rel="stylesheet" href="../assets/css/CartDetail.css">
 
-
+    <!-- <script src="../script/numbeWithComma.js" type="module"></script> -->
     <style>
         input {
             /* width: 100%; */
@@ -62,6 +62,7 @@
                     </a>
                     <div class="shopping_cart-items">
                         <div class="cart-text">Danh sách của tôi</div>
+
                         <div class="cart-item">
                             <div class="cart-item-img">
                                 <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
@@ -81,7 +82,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">5000000 vnđ</div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">5000000 vnđ</div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +130,7 @@
                                         <div style="color: #333;">1 phòng</div>
                                         <div>2 người lớn, 1 trẻ em</div>
                                     </div>
-                                    <div class="cart-item-money">5000000 vnđ</div>
+                                    <div class="cart-item-money">5000000 &nbsp;<span>VNĐ</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +191,7 @@
                                 Đặc biệt
                             </span>
 
-                            <li class="landlord-register" onclick="location.href='./HTML/propertyLandlord.html'">
+                            <li class="landlord-register" onclick="location.href='./propertyLandlord.html'">
                                 <i class="fa-solid fa-house-flag"></i>
                                 <!-- <a href="/HTML/propertyLanlord.html"> -->
                                 Đăng kí cho thuê nhà
@@ -260,9 +261,10 @@
                     <div class="header-option">
                         <div class="header-option-item header-option-left">
                             <!-- <div>Phòng</div> -->
-                            <div style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
+                            <div
+                                style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
                                 <input style="margin-right: 0;" type="checkbox" id="checkbox-selectAll"
-                                    class="app__body-input-remember-checkbox">
+                                    class="app__body-input-remember-checkbox checkbox-selectAll">
                                 <label style="position: relative;" class="checkbox-all-text rgbRed-text"
                                     for="checkbox-selectAll">Chọn tất cả</label>
                             </div>
@@ -300,12 +302,14 @@
                                             <div style="width: 100%;" class="content-input-date-select">
                                                 <div class="input-date-wrap input-date-checkin flatpickr">
                                                     <i class="far fa-calendar-alt"></i>
-                                                    <input id="SelectDate" placeholder="Ngày Nhận phòng" value="24-10-2022">
+                                                    <input id="SelectDate" placeholder="Ngày Nhận phòng"
+                                                        value="24-10-2022">
 
                                                 </div>
                                                 <div class="input-date-wrap input-date-checkout flatpickr">
                                                     <i class="far fa-calendar-alt"></i>
-                                                    <input id="SelectDate" placeholder="Ngày Trả phòng" value="24-10-2022">
+                                                    <input id="SelectDate" placeholder="Ngày Trả phòng"
+                                                        value="24-10-2022">
                                                 </div>
 
                                             </div>
@@ -317,7 +321,8 @@
                                                     <i class="fa-solid fa-users"></i>
                                                     <div class="input-people-text">
                                                         <div class="input-people">
-                                                            <span class="adultNum">3</span> người lớn, <span class="childNum">4</span> trẻ em
+                                                            <span class="adultNum">3</span> người lớn, <span
+                                                                class="childNum">4</span> trẻ em
                                                         </div>
 
                                                         <div class="input-room">
@@ -328,7 +333,7 @@
                                                     <i class="fa-solid fa-chevron-down point-down"></i>
                                                 </div>
 
-                                                <div style="z-index: 2;" class="input-add-room-people">
+                                                <div class="input-add-room-people">
                                                     <div class="input-add add-room">
                                                         <div class="input-add-text">
                                                             <div class="add-text-title">
@@ -340,9 +345,11 @@
                                                         </div>
 
                                                         <div class="input-add-btn">
-                                                            <i style="visibility: hidden;" class="fa-regular fa-square-minus"></i>
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-regular fa-square-minus"></i>
                                                             <span class="input-add-number rooms">1</span>
-                                                            <i style="visibility: hidden;" class="fa-solid fa-square-plus"></i>
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-solid fa-square-plus"></i>
                                                         </div>
                                                     </div>
                                                     <div class="input-add add-adult">
@@ -356,9 +363,11 @@
                                                         </div>
 
                                                         <div class="input-add-btn input-add-btn-adult">
-                                                            <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
+                                                            <i id="minusAdult"
+                                                                class="fa-solid fa-square-minus minusAdult"></i>
                                                             <span id="adults" class="input-add-number adults">3</span>
-                                                            <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
+                                                            <i id="addAdult"
+                                                                class="fa-regular fa-square-plus addAdult"></i>
                                                         </div>
                                                     </div>
                                                     <div class="input-add add-child">
@@ -372,9 +381,11 @@
                                                         </div>
 
                                                         <div class="input-add-btn">
-                                                            <i id="minusChild" class="fa-regular fa-square-minus minusChild"></i>
+                                                            <i id="minusChild"
+                                                                class="fa-regular fa-square-minus minusChild"></i>
                                                             <span class="input-add-number children">4</span>
-                                                            <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
+                                                            <i id="addChild"
+                                                                class="fa-solid fa-square-plus addChild"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -422,12 +433,14 @@
                                             <div style="width: 100%;" class="content-input-date-select">
                                                 <div class="input-date-wrap input-date-checkin flatpickr">
                                                     <i class="far fa-calendar-alt"></i>
-                                                    <input id="SelectDate" placeholder="Ngày Nhận phòng" value="24-10-2022">
+                                                    <input id="SelectDate" placeholder="Ngày Nhận phòng"
+                                                        value="24-10-2022">
 
                                                 </div>
                                                 <div class="input-date-wrap input-date-checkout flatpickr">
                                                     <i class="far fa-calendar-alt"></i>
-                                                    <input id="SelectDate" placeholder="Ngày Trả phòng" value="24-10-2022">
+                                                    <input id="SelectDate" placeholder="Ngày Trả phòng"
+                                                        value="24-10-2022">
                                                 </div>
 
                                             </div>
@@ -439,7 +452,8 @@
                                                     <i class="fa-solid fa-users"></i>
                                                     <div class="input-people-text">
                                                         <div class="input-people">
-                                                            <span class="adultNum">1</span> người lớn, <span class="childNum">1</span> trẻ em
+                                                            <span class="adultNum">1</span> người lớn, <span
+                                                                class="childNum">1</span> trẻ em
                                                         </div>
 
                                                         <div class="input-room">
@@ -450,7 +464,7 @@
                                                     <i class="fa-solid fa-chevron-down point-down"></i>
                                                 </div>
 
-                                                <div style="z-index: 2;" class="input-add-room-people">
+                                                <div class="input-add-room-people">
                                                     <div class="input-add add-room">
                                                         <div class="input-add-text">
                                                             <div class="add-text-title">
@@ -462,9 +476,11 @@
                                                         </div>
 
                                                         <div class="input-add-btn">
-                                                            <i style="visibility: hidden;" class="fa-regular fa-square-minus"></i>
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-regular fa-square-minus"></i>
                                                             <span class="input-add-number rooms">1</span>
-                                                            <i style="visibility: hidden;" class="fa-solid fa-square-plus"></i>
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-solid fa-square-plus"></i>
                                                         </div>
                                                     </div>
                                                     <div class="input-add add-adult">
@@ -478,9 +494,11 @@
                                                         </div>
 
                                                         <div class="input-add-btn">
-                                                            <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
+                                                            <i id="minusAdult"
+                                                                class="fa-solid fa-square-minus minusAdult"></i>
                                                             <span class="input-add-number adults">1</span>
-                                                            <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
+                                                            <i id="addAdult"
+                                                                class="fa-regular fa-square-plus addAdult"></i>
                                                         </div>
                                                     </div>
                                                     <div class="input-add add-child">
@@ -494,9 +512,142 @@
                                                         </div>
 
                                                         <div class="input-add-btn">
-                                                            <i id="minusChild" class="fa-regular fa-square-minus minusChild"></i>
+                                                            <i id="minusChild"
+                                                                class="fa-regular fa-square-minus minusChild"></i>
                                                             <span class="input-add-number children">1</span>
-                                                            <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
+                                                            <i id="addChild"
+                                                                class="fa-solid fa-square-plus addChild"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-room-money">
+                                    <div class="cart-room-money-tag fontWeight-700 rgbRed-text">Giá Tiền</div>
+                                    <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                        <div class="cart-room-money-text padding-8">
+                                            4284525 <span>&nbsp;VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="cart-room-btn padding-8">
+                                    <button class="rgbRed_OutlineButton padding-8">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Xóa phòng này
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cart-room-wrap">
+                            <div style="padding-left: 12px;" class="cart-room-check">
+                                <input style="margin: unset;" type="checkbox" id="checkbox-select"
+                                    class="checkbox-select app__body-input-remember-checkbox">
+                            </div>
+                            <div class="cart-room padding-8">
+                                <div class="cart-room-img">
+                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg" alt="">
+                                </div>
+                                <div class="cart-room-content">
+                                    <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien
+                                        Centre)asdasdsad
+                                        Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                    </div>
+                                    <div class="cart-room-decs">
+                                        <div class="cart-room-date">
+                                            <div style="width: 100%;" class="content-input-date-select">
+                                                <div class="input-date-wrap input-date-checkin flatpickr">
+                                                    <i class="far fa-calendar-alt"></i>
+                                                    <input id="SelectDate" placeholder="Ngày Nhận phòng"
+                                                        value="24-10-2022">
+
+                                                </div>
+                                                <div class="input-date-wrap input-date-checkout flatpickr">
+                                                    <i class="far fa-calendar-alt"></i>
+                                                    <input id="SelectDate" placeholder="Ngày Trả phòng"
+                                                        value="24-10-2022">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-room-people">
+                                            <div style="width: 100%;" class="content-input-people-room">
+                                                <div class="input-people-room-text">
+                                                    <i class="fa-solid fa-users"></i>
+                                                    <div class="input-people-text">
+                                                        <div class="input-people">
+                                                            <span class="adultNum">1</span> người lớn, <span
+                                                                class="childNum">1</span> trẻ em
+                                                        </div>
+
+                                                        <div class="input-room">
+                                                            1 phòng
+                                                        </div>
+                                                    </div>
+
+                                                    <i class="fa-solid fa-chevron-down point-down"></i>
+                                                </div>
+
+                                                <div class="input-add-room-people">
+                                                    <div class="input-add add-room">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Phòng
+                                                            </div>
+                                                            <div class="add-text-desc">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="input-add-btn">
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-regular fa-square-minus"></i>
+                                                            <span class="input-add-number rooms">1</span>
+                                                            <i style="visibility: hidden;"
+                                                                class="fa-solid fa-square-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-adult">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Người lớn
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                18 tuổi trở lên
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="input-add-btn">
+                                                            <i id="minusAdult"
+                                                                class="fa-solid fa-square-minus minusAdult"></i>
+                                                            <span class="input-add-number adults">1</span>
+                                                            <i id="addAdult"
+                                                                class="fa-regular fa-square-plus addAdult"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-add add-child">
+                                                        <div class="input-add-text">
+                                                            <div class="add-text-title">
+                                                                Trẻ em
+                                                            </div>
+                                                            <div class="add-text-desc">
+                                                                0-12 tuổi
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="input-add-btn">
+                                                            <i id="minusChild"
+                                                                class="fa-regular fa-square-minus minusChild"></i>
+                                                            <span class="input-add-number children">1</span>
+                                                            <i id="addChild"
+                                                                class="fa-solid fa-square-plus addChild"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -525,26 +676,8 @@
                         </div>
 
                     </div>
-                    <div id="tes" class="right-content-footer">
-                        <div class="footer-content">
 
-
-                            <div class="Money-Wrapper">
-                                <div class="Money-Tag">
-                                    <span>Tổng Tiền</span>
-                                </div>
-                                <div class="footer-all-money">
-                                    <span id="footer-all-money-text" class="footer-all-money-text rgbRed-text">0</span>
-                                    <span class="footer-all-money-currency">VNĐ</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-btn">
-
-                        </div>
-                    </div>
-                    
-                    <div class="no-cart-list">
+                    <div id="no-cart-list" class="no-cart-list">
                         <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
                         <div class="no-cart-text">
                             <p class="fontWeight-700">
@@ -559,6 +692,48 @@
                     </div>
                 </div>
 
+                <div id="right-content-footer" class="right-content-footer">
+                    <div class="footer-content-item footer-content-left">
+                        <div class="footer-content-left-option">
+                            <div
+                                style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
+                                <input style="margin-right: 0;" type="checkbox" id="checkbox-selectAll1"
+                                    class="app__body-input-remember-checkbox checkbox-selectAll">
+                                <label style="position: relative;" class="checkbox-all-text rgbRed-text"
+                                    for="checkbox-selectAll1">Chọn tất cả</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-bar"></div>
+                    <div class="footer-content-item footer-content-center">
+                        Có tất cả &nbsp;<span class="rgbRed-text" id="cart-selected-num"> 0 </span>&nbsp; phòng đã được chọn
+                    </div>
+                    <div class="border-bar"></div>
+
+                    <div class="footer-content-item footer-content-right">
+                        <div class="Money-Wrapper">
+
+                            <div class="Money-Tag">
+                                <span>Tổng Tiền</span>
+                            </div>
+                            <div class="footer-all-money">
+                                <span id="footer-all-money-text" class="footer-all-money-text rgbRed-text">0</span>
+                                <span class="footer-all-money-currency">VNĐ</span>
+                            </div>
+                        </div>
+                        <!-- <div class="border-bar"></div> -->
+                        <div class="footer-btn">
+                            <form action="">
+                                <!-- <input type="text"> -->
+                                <button disabled="disabled" class="blue-button padding-8" id="submit-cart-checkout"  >
+                                    <i class="fa-solid fa-money-check-dollar"></i>
+                                    Đặt Ngay
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -569,9 +744,7 @@
         const app = document.querySelector('.app__header-user-display');
         const menuClick = document.querySelector('.app__header-user-menu');
         function user_menu_click() {
-            // hideUserMenu();
             hideShowAddForm();
-            // hideShowSearchForm();
             menuClick.classList.toggle("show");
         }
 
@@ -585,32 +758,21 @@
 
     </script>
 
-   
+
 
     <!-- Mở form thêm phòng, người -->
     <script>
         const AddFormClick = document.getElementsByClassName('input-people-room-text');
         const ShowAddForm = document.getElementsByClassName('input-add-room-people');
-        // const indexShowAddForm = ShowAddForm.isSameNode(AddFormClick);
-        // console.log(indexShowAddForm)
         function ShowAddRoomPeopleForm(e) {
             hideUserMenu();
-            // hideShowAddForm();
-            // hideShowSearchForm();
-            // hideShowDatePick();
 
             let test = e.target;
             while (!test.classList.contains('content-input-people-room')) {
                 test = test.parentElement;
             }
-            // console.log(test);
             test.children[1].classList.toggle('show');
 
-            // for(var i = 0; i < ShowAddForm.length; i++){
-            //     // ShowAddForm[i].addEventListener('click', function(){
-            //         ShowAddForm[i].classList.toggle('show');
-            //     // })
-            // }
 
         }
 
@@ -639,16 +801,9 @@
             for (let i = 0; i < ShowAddForm.length; i++)
                 ShowAddForm[i].classList.remove('show');
         }
-        // function hid
-        // function hideShowDatePick() {
-        //     for (let i = 0; i < calendarShow.length; i++)
-        //         calendarShow[i].classList.remove('show');
-        // }
         function autoHide() {
             hideUserMenu();
             hideShowAddForm();
-            // hideShowSearchForm();
-            // hideShowDatePick();
         }
     </script>
 
@@ -677,8 +832,9 @@
         })
     </script>
 
-
-    <script src="../script/cartSelect.js"></script>
+    <script src="../script/numbeWithComma.js" type="module"></script>
+    <script src="../script/cartHeader.js" type="module"></script>
+    <script src="../script/cartSelect.js" type="module"></script>
 
 
     <!-- Script calendar flatpickr -->
@@ -688,15 +844,10 @@
         flatpickr("#SelectDate", {
             minDate: "today",
             dateFormat: "d-m-Y",
-            "locale" : "vn"
+            "locale": "vn"
         });
 
-        // flatpickr("#SelectDateCheckout", {
-        //     minDate: "today",
-        //     dateFormat: "d-m-Y",
-        //     "locale" : "vn"
-            
-        // });
+
 
     </script>
 </body>

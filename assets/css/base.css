@@ -52,6 +52,9 @@ a:hover{
 /* i{
     padding: 12px;
 } */
+.show{
+    z-index: 3;
+}
 @keyframes dropDown {
     from{
         /* opacity: 0; */
@@ -145,4 +148,12 @@ button{
     background-color: rgb(226, 89, 139);    
     color: #f5fffe;
     opacity: 0.6;
+}
+
+
+.border-bar{
+    height: 55%;
+    width: 1.99px;
+    background-color: #ccc;
+    border-radius: 8px;
 }
