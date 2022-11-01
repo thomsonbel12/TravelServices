@@ -1,0 +1,10 @@
+.app__Checkout .app__body{
+    color: #5392fa;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 55px;
+}
+.app__body-header .body-header-bar li:first-child:after{
+    
+    background-color: #5392fa;
+}

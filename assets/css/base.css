@@ -95,6 +95,9 @@ button{
 .rgbRed-text{
     color: rgb(207, 32, 97);
 }
+.blue-text{
+    color: #5392fa
+}
 .rgbRed-background{
     background-color: rgb(207, 32, 97);
 }

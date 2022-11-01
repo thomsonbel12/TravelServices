@@ -18,19 +18,18 @@
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/calendar.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
-    <link rel="stylesheet" href="../assets/css/CartDetail.css">
-    <link rel="stylesheet" href="../assets/css/myProfile.css">
-
-    <script src="../script/numbeWithComma.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/css/book.css">
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
 
-    <div id="app" class="app__myProfile">
+    <div id="app" class="app__Book">
         <div id="header" class="app__header">
             <!-- <div class=""> -->
             <div class="app__header-logo">
@@ -40,13 +39,12 @@
                 </a>
 
             </div>
-
             <div class="app__header-option">
                 <a class="rgbRed_OutlineButton button-padding_12">Đăng kí cho thuê nhà</a>
                 <span class="shopping_cart">
-                    <a class="rgbRed-text" href="./CartDetail.html">
+                    <a class="rgbRed-text" href="../HTML/CartDetail.html">
                         <i class="fa-solid fa-cart-shopping">
-                            <span class="cart-item-number total_cart_room"></span>
+                            <span class="cart-item-number total_cart_room total_cart_room"></span>
                         </i>
                     </a>
                     <div class="shopping_cart-items">
@@ -134,7 +132,6 @@
             </div>
 
 
-
             <div class="app__header-user">
                 <div class="app__header-user-display">
                     <!-- <div class="app__header-user-display" onclick="user_menu_click()"> -->
@@ -196,204 +193,88 @@
             </div>
 
         </div>
+        <div class="app__body">
+            <!-- <a href="./Checkout.html"></a> -->
+            <div class="app__body-header">
+                <ul class="body-header-bar">
+                    <li class="active">
+                        <span id="step-1" class="step">1</span>
+                        <span class="step-text">Thông tin khách hàng</span>
+                    </li>
 
-        <div id="body" class="app__body">
-            <div class="app__body-left-menu">
-                <ul class="left-menu-items">
-                    <li class="left-menu-item left-menu-cart-list">
-                        <a href="./CartDetail.html">
-                            <i class="fa-sharp fa-solid fa-clipboard"></i>
-                            Giỏ hàng của tôi
-                        </a>
-                    </li>
-                    <li class="left-menu-item left-menu-history-list">
-                        <a href="">
-                            <i class="fa-solid fa-clipboard-check"></i>
-                            Lịch sử du lịch
-                        </a>
-                    </li>
-                    <li class="left-menu-item">
-                        <a href="">
-                            <i class="fa-solid fa-star"></i>
-                            Danh sách yêu thích
-                        </a>
-                    </li>
-                    <li class="left-menu-item left-menu-profile">
-                        <a href="./myProfile.html">
-                            <i class="fa-solid fa-address-card"></i>
-                            Hồ sơ của tôi
-                        </a>
+                    <li>
+                        <span id="step-2" class="step">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="step-text">Xác nhận thanh toán</span>
                     </li>
                 </ul>
-
             </div>
-            <div class="app__body-right-content">
-                <div class="right-content-header">
-                    <div class="header-banner">
-                        <img src="https://cdn6.agoda.net/images/LOY-5878/default/vip-banner-agoji-non-vip.svg" alt="">
-                        <div class="header-banner-text">
-                            <span class="fontWeight-700">
-                                Bạn có muốn trở thành khách VIP không ?
-                            </span>
-                            <br>
-                            <br>
-                            <span style="font-size: 16px">
-                                Hãy hoàn tất việc đặt phòng và thanh toán đúng hạn để mở khóa các dịch vụ và giảm giá,
-                                và hưởng dịch vụ đặc biệt.
-                            </span>
+
+            <form style="width: 100%;" action="./Checkout.html">
+                <div class="app__body-content">
+                    <div class="body-left-content">
+                        <div class="body-left-item body-left-header">
+                            <i class="fa-regular fa-circle-user"></i>
+                            <span class="body-left-header-text">Xin Chào <span class="rgbRed-text">${user_name}</span> !</span>
                         </div>
-                        <img src="https://cdn6.agoda.net/images/LOY-5878/default/vip-banner-agoji-non-vip.svg" alt="">
+                        <div class="body-left-item user-info-check">
+                            <div class="user-info-header">
+                                <h4 style="color: #333;">Chi tiết liên lạc</h4>
+                                <h5>Vui lòng xác nhận các thông tin sau !!</h5>
+                            </div>
+    
+                            <div class="user-info">
+                                <div class="user-info-item user-info-name">
+                                    <div class="user-info-input">
+                                        <label for="user-name">Họ và Tên</label>
+                                        <input id="user-name" type="text" placeholder="Họ và Tên" value="${user_name}">
+                                    </div>
+                                </div>
+                                <div class="user-info-item user-info-email">
+                                    <div class="user-info-input">
+                                        <label for="user-email">Email</label>
+                                        <input id="user-email" type="email" placeholder="Email" value="${user_email}@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="user-info-item user-info-name">
+                                    <div class="user-info-input">
+                                        <label for="user-phone">Số điện thoại</label>
+                                        <input id="user-phone" type="text" placeholder="Số điện thoại" value="${user_phone}">
+                                    </div>
+                                </div>
+                                <div class="user-info-item user-info-name">
+                                    <div class="user-info-input">
+                                        <label>Quốc gia</label>
+                                        <input type="text" placeholder="Quốc Gia">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <!-- <img  src="../assets/img/banner_1.png" alt=""> -->
+                        <div class="body-left-item body-left-submit-btn">
+                            <div class="policy-text" style="font-size: 12px; width: 60%; color: #aaa;">Thực hiện bước tiếp theo đồng nghĩa với việc bạn chấp nhận
+                                tuân theo <a href="" class="blue-text">Điều khoản sử dụng</a> và <a href="" class="blue-text">Chính sách bảo mật</a>
+                                của <span class="rgbRed-text">LHT C.</span>
+                            </div>
 
+                            <div class="body-submit">
+                                <button class="padding-8 blue-button">Đặt phòng ngay</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header-option">
-
-                    </div>
+                    <div class="body-right-content">12487</div>
                 </div>
-
-                <div class="right-content-body">
-                    <div class="user-information">
-                        <h1>Thông tin người dùng</h1>
-
-                        <div class="user-content user-name-content">
-                            <div class="user_name_inf user_inf_item">
-                                <div class="user_inf_left user_name_inf_left">
-                                    <div class="img_user_inf">
-                                        <img class="img_inf"
-                                            src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
-                                            alt="" class="user-img">
-                                    </div>
-                                    <div class="display_name">
-                                        <span class="display_label name_label">Họ & Tên</span>
-                                        <span class="text_content_inf">Phan Công Tú</span>
-                                    </div>
-                                </div>
-                                <div class="edit_username_inf"><a class="rgbRed-text edit_btn">Chỉnh sửa</a></div>
-                            </div>
-                            <div class="edit_username edit_item">
-                                <div class="edit-content">
-                                    <label for="new_user_name">Nhập tên mới</label>
-                                    <input id="new_user_name" class="app__body-input-text" type="text">
-                                </div>
-
-                                <div class="btn_xacnhan_huy">
-                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="user-content user-email-content">
-                            <div class="user_email_inf user_inf_item">
-                                <div class="user_inf_left">
-                                    <span class="display_label">Email</span>
-                                    <span class="text_content_inf">phancongtu25032002@gmail.com</span>
-                                </div>
-                                <div class="edit_email_inf">
-                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
-                                </div>
-
-                            </div>
-
-                            <div class="edit_email edit_item">
-                                <div class="edit-content">
-                                    <label for="new_email">Nhập Email mới</label>
-                                    <input id="new_email" class="app__body-input-text" type="text">
-                                </div>
-
-                                <div class="btn_xacnhan_huy">
-                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="user-content user-phone-content">
-                            <div class="phone_number_inf user_inf_item">
-                                <div class="user_inf_left">
-                                    <span class="display_label">Số điện thoại</span>
-                                    <span class="text_content_inf">0123456789</span>
-                                </div>
-                                
-                                <div class="edit_phone_number_inf">
-                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
-                                </div>
-                            </div>
-                            <div class="edit_phone_number edit_item">
-                                <div class="edit-content">
-                                    <label for="new_phone_num">Nhập số điện thoại mới</label>
-                                    <input id="new_phone_num" class="app__body-input-text" type="text">
-                                </div>
-
-                                <div class="btn_xacnhan_huy">
-                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="user-content user-password-content">
-                            <div class="password_inf user_inf_item">
-                                <div class="user_inf_left">
-                                    <span class="display_label">Mật khẩu</span>
-                                    <span class="text_content_inf">*********</span>
-                                </div>
-                                
-                                <div class="edit_password_inf">
-                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
-                                </div>
-                            </div>
-                            <div class="edit_phone_number edit_item">
-                                <div class="edit-content">
-                                    <div class="pass_field old_pass_field">
-                                        <label for="old_pass">Nhập mật khẩu cũ</label>
-
-                                        <div class="pass_input">
-                                            <input type="password" id="old_pass" class="app__body-input-text" type="text">
-                                            <i class="show_pass_icon fa-solid fa-eye"></i>
-                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="pass_field new_pass_field">
-                                        <label for="new_pass">Nhập mật khẩu mới</label>
-
-                                        <div class="pass_input">
-                                            <input type="password" id="new_pass" class="app__body-input-text" type="text">
-                                            <i class="show_pass_icon fa-solid fa-eye"></i>
-                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="pass_field new_pass_repeat_field">
-                                        <label for="new_pass_repeat">Nhập lại mật khẩu mới</label>
-
-                                        <div class="pass_input">
-                                            <input type="password" id="new_pass_repeat" class="app__body-input-text" type="text">
-                                            <i class="show_pass_icon fa-solid fa-eye"></i>
-                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="btn_xacnhan_huy">
-                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
+
     </div>
 
-    <script src="../script/calendarScript.js"></script>
-    <script src="../script/myProfile.js"></script>
 
+
+    <!-- <script src="../script/selectCitiMain.js"></script> -->
+    <script src="../script/cartHeader.js" type="module"></script>
+    
     <!-- Mở menu user -->
     <script>
         const app = document.querySelector('.app__header-user-display');
@@ -414,8 +295,6 @@
         });
 
     </script>
-
-
     <script>
         document.onclick = function () {
             autoHide();
@@ -425,15 +304,18 @@
         function hideUserMenu() {
             menuClick.classList.remove('show');
         }
-        function hideShowAddForm() {
-            for (let i = 0; i < ShowAddForm.length; i++)
-                ShowAddForm[i].classList.remove('show');
-        }
-        // function hid
-        function hideShowDatePick() {
-            for (let i = 0; i < calendarShow.length; i++)
-                calendarShow[i].classList.remove('show');
-        }
+        // function hideShowAddForm() {
+        //     for (let i = 0; i < ShowAddForm.length; i++)
+        //         ShowAddForm[i].classList.remove('show');
+        // }
+        // function hideShowSearchForm() {
+        //     for (let i = 0; i < ShowSearchForm.length; i++)
+        //         ShowSearchForm[i].classList.remove('show');
+        // }
+        // function hideShowDatePick(){
+        //     for (let i = 0; i < calendarShow.length; i++)
+        //         calendarShow[i].classList.remove('show');
+        // }
         function autoHide() {
             hideUserMenu();
             // hideShowAddForm();
@@ -442,8 +324,6 @@
         }
     </script>
 
-    <script src="../script/numbeWithComma.js" type="module"></script>
-    <script src="../script/cartHeader.js" type="module"></script>
 </body>
 
 </html>

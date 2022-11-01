@@ -60,7 +60,7 @@
                 <span class="shopping_cart">
                     <a class="rgbRed-text" href="./CartDetail.html">
                         <i class="fa-solid fa-cart-shopping">
-                            <span class="cart-item-number">3</span>
+                            <span class="cart-item-number total_cart_room"></span>
                         </i>
                     </a>
                     <div class="shopping_cart-items">
@@ -139,7 +139,7 @@
                         </div>
 
                         <div class="cart-item cart-item-detail-link">
-                            <p>Có <span class="rgbRed-text fontWeight-700">3</span> phòng trong danh sách</p>
+                            <p>Có <span class="rgbRed-text fontWeight-700 total_cart_room"></span> phòng trong danh sách</p>
                             <a class="rgbRed_OutlineButton button-padding_12" href="./CartDetail.html">Chi tiết
                                 danh sách</a>
                         </div>
@@ -959,58 +959,6 @@
 
 
 
-    <script>
-        window.addEventListener('load', function () {
-            function hideBottomBorderCityList() {
-                document.getElementById("hcm").style.borderBottom = "1px solid #aaa";
-
-                document.getElementById("hn").style.borderBottom = "1px solid #aaa";
-                // document.getElementById("box-hn").style.display = "none";
-
-                document.getElementById('vt').style.borderBottom = "1px solid #aaa";
-                document.getElementById('dn').style.borderBottom = "1px solid #aaa";
-                document.getElementById('dl').style.borderBottom = "1px solid #aaa";
-
-
-
-                // document.getElementById("box-list").style.display = "none";
-            }
-
-            function showHCMHotelList() {
-                hideBottomBorderCityList();
-                document.getElementById("hcm").style.borderBottom = "2px solid #5392fa";
-                document.getElementById("box-list").style.display = "block";
-            }
-            document.getElementById("hcm").addEventListener('click', showHCMHotelList);
-
-            function showHNHotelList() {
-                hideBottomBorderCityList();
-                document.getElementById('hn').style.borderBottom = "2px solid #5392fa";
-            }
-            document.getElementById('hn').addEventListener('click', showHNHotelList);
-
-
-            function showVTHotelList() {
-                hideBottomBorderCityList();
-                document.getElementById('vt').style.borderBottom = "2px solid #5392fa";
-            }
-            document.getElementById('vt').addEventListener('click', showVTHotelList);
-
-
-            function showDNHotelList() {
-                hideBottomBorderCityList();
-                document.getElementById('dn').style.borderBottom = "2px solid #5392fa";
-            }
-            document.getElementById('dn').addEventListener('click', showDNHotelList);
-
-
-            function showDLHotelList() {
-                hideBottomBorderCityList();
-                document.getElementById('dl').style.borderBottom = "2px solid #5392fa";
-            }
-            document.getElementById('dl').addEventListener('click', showDLHotelList);
-        })
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
