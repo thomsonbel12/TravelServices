@@ -9,12 +9,18 @@ function edit_btn_click(e){
     let edit_click = e.target;
     let user_inf_item = edit_click;
 
+    for(let i = 0 ; i < edit_item.length ;i++){
+        edit_item[i].style.display = "none";
+        edit_btn[i].style.display = "block"
+    }
+
     while(!user_inf_item.classList.contains("use_inf_item")){
         user_inf_item = user_inf_item.parentElement;
     }
 
     let edit_show = user_inf_item.nextElementSibling;
 
+    
 
     edit_show.style.display = "block"
     edit_click.style.display = "none"
