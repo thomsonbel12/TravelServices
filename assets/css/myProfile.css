@@ -50,18 +50,19 @@
   margin: 10px;
   padding: 20px;
   border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .app__body .right-content-body .user-information .user_name_inf_left {
   display: flex;
+  flex-direction: row !important;
   align-items: center;
 }
 
-.app__body
-  .right-content-body
-  .user-information
-  .user_name_inf_left
-  .img_user_inf {
+.app__body .right-content-body .user-information .user_name_inf_left .img_user_inf {
   position: relative;
   height: 60px;
   width: 60px;
@@ -79,52 +80,106 @@
   object-fit: cover;
 }
 
-.app__body
-  .right-content-body
-  .user-information
-  .user_name_inf_left
-  .display_name {
-  padding-left: 20px;
+.display_label {
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.app__body
-  .right-content-body
-  .user-information
-  .user_name_inf
-  .edit_username_inf {
+.app__body .right-content-body .user-information .user_name_inf_left .display_name {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 55px;
+}
+
+.app__body .right-content-body .user-information .user_name_inf .edit_username_inf {
   display: block;
   float: right;
 }
-.app__body
-  .right-content-body
-  .user-information
-  .phone_number_inf
-  .edit_phone_number_inf {
+
+.app__body .right-content-body .user-information .phone_number_inf .edit_phone_number_inf {
   display: block;
   float: right;
 }
-.app__body
-  .right-content-body
-  .user-information
-  .password_inf
-  .edit_password_inf {
+
+.app__body .right-content-body .user-information .password_inf .edit_password_inf {
   display: block;
   float: right;
 }
-.app__body
-  .right-content-body
-  .user-information
-  .user_email_inf
-  .edit_email_inf {
+
+.app__body .right-content-body .user-information .user_email_inf .edit_email_inf {
   display: block;
   float: right;
 }
+
 .app__body .right-content-body .text_content_inf {
   color: rgb(91, 73, 73);
 }
+
 .app__body .right-content-body .edit_item {
-  padding: 40px 50px;
+  /* padding: 40px 50px; */
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 7px 0 8px #e9ebee;
+  background: linear-gradient(90deg, #b2ddfd, #fff);
+  border-radius: 8px;
 }
+
+.app__body .right-content-body .edit_item label {
+  /* margin-bottom: 12px; */
+  font-weight: 600;
+  /* color: #fff ; */
+}
+
+.app__body .right-content-body .edit_item .pass_input {
+  position: relative;
+  width: 50%;
+}
+
+.app__body .right-content-body .edit_item .pass_input i{
+  position: absolute;
+  /* left: 0; */
+  right: 20px;
+  top: 28px;
+  /* bottom: 0; */
+  margin: auto 0;
+  /* text-align: center; */
+  cursor: pointer;
+}
+
+.app__body .right-content-body .edit_item input {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  /* outline: #75a8f9; */
+  /* outline-color: #75a8f9; */
+  /* outline: 1px solid #5392fa; */
+  border: 1px solid #ccc;
+  background-color: #f8f7f9;
+  border-radius: 5px;
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+}
+
+.app__body .right-content-body .edit_item input:focus {
+  outline: 2px solid #5392fa;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 6px 2px;
+}
+
 .app__body .right-content-body .edit_item .btn_xacnhan_huy {
-  float: right;
+  /* float: right; */
+}
+
+.user-content {
+  /* background-color: #5392fa; */
+  height: auto;
+  margin: 24px 0;
+}
+
+.user_inf_left {
+  display: flex;
+  flex-direction: column;
+  height: 55px;
+  justify-content: space-around;
 }

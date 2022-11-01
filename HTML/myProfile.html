@@ -255,68 +255,128 @@
                 <div class="right-content-body">
                     <div class="user-information">
                         <h1>Thông tin người dùng</h1>
-                        <div class="user_name_inf use_inf_item">
-                            <div class="user_name_inf_left">
-                                <div class="img_user_inf">
-                                    <img class="img_inf"
-                                        src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
-                                        alt="" class="user-img">
-                                </div>
-                                <div class="display_name">
-                                    <h2 class="name_label">Họ & Tên</h2>
-                                    <span class="text_content_inf">Phan Công Tú</span>
-                                </div>
-                            </div>
-                            <div class="edit_username_inf"><a href="">Chỉnh sửa</a></div>
-                        </div>
-                        <div class="edit_username edit_item">
-                            <label for="">Nhập tên mới</label>
-                            <input class="app__body-input-text" type="text">
-                            <div class="btn_xacnhan_huy">
-                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
-                            </div>
-                        </div>
-                        <div class="user_email_inf use_inf_item">
-                            <h2>Email</h2>
-                            <span class="text_content_inf">phancongtu25032002@gmail.com</span>
-                            <div class="edit_email_inf"><a href="">Chỉnh sửa</a></div>
 
-                        </div>
-                        <div class="edit_email edit_item">
-                            <label for="">Nhập Email mới</label>
-                            <input class="app__body-input-text" type="text">
-                            <div class="btn_xacnhan_huy">
-                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                        <div class="user-content user-name-content">
+                            <div class="user_name_inf use_inf_item">
+                                <div class="user_inf_left user_name_inf_left">
+                                    <div class="img_user_inf">
+                                        <img class="img_inf"
+                                            src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
+                                            alt="" class="user-img">
+                                    </div>
+                                    <div class="display_name">
+                                        <span class="display_label name_label">Họ & Tên</span>
+                                        <span class="text_content_inf">Phan Công Tú</span>
+                                    </div>
+                                </div>
+                                <div class="edit_username_inf"><a class="rgbRed-text edit_btn">Chỉnh sửa</a></div>
+                            </div>
+                            <div class="edit_username edit_item">
+                                <label for="new_user_name">Nhập tên mới</label>
+                                <input id="new_user_name" class="app__body-input-text" type="text">
+
+                                <div class="btn_xacnhan_huy">
+                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="phone_number_inf use_inf_item">
-                            <h2>Số điện thoại</h2>
-                            <span class="text_content_inf">0123456789</span>
-                            <div class="edit_phone_number_inf"><a href="">Chỉnh sửa</a></div>
-                        </div>
-                        <div class="edit_phone_number edit_item">
-                            <label for="">Nhập số điện thoại mới</label>
-                            <input class="app__body-input-text" type="text">
-                            <div class="btn_xacnhan_huy">
-                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+
+                        <div class="user-content user-email-content">
+                            <div class="user_email_inf use_inf_item">
+                                <div class="user_inf_left">
+                                    <span class="display_label">Email</span>
+                                    <span class="text_content_inf">phancongtu25032002@gmail.com</span>
+                                </div>
+                                <div class="edit_email_inf">
+                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
+                                </div>
+
+                            </div>
+
+                            <div class="edit_email edit_item">
+                                <label for="new_email">Nhập Email mới</label>
+                                <input id="new_email" class="app__body-input-text" type="text">
+
+                                <div class="btn_xacnhan_huy">
+                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="password_inf use_inf_item">
-                            <h2>Mật khẩu</h2>
-                            <span class="text_content_inf">*********</span>
-                            <div class="edit_password_inf"><a href="">Chỉnh sửa</a></div>
+
+                        <div class="user-content user-phone-content">
+                            <div class="phone_number_inf use_inf_item">
+                                <div class="user_inf_left">
+                                    <span class="display_label">Số điện thoại</span>
+                                    <span class="text_content_inf">0123456789</span>
+                                </div>
+                                
+                                <div class="edit_phone_number_inf">
+                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
+                                </div>
+                            </div>
+                            <div class="edit_phone_number edit_item">
+                                <div class="edit-content">
+                                    <label for="new_phone_num">Nhập số điện thoại mới</label>
+                                    <input id="new_phone_num" class="app__body-input-text" type="text">
+                                </div>
+
+                                <div class="btn_xacnhan_huy">
+                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="edit_phone_number edit_item">
-                            <label for="">Nhập mật khẩu mới</label>
-                            <input class="app__body-input-text" type="text">
-                            <label for="">Nhập lại mật khẩu</label>
-                            <input class="app__body-input-text" type="text">
-                            <div class="btn_xacnhan_huy">
-                                <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
-                                <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+
+                        <div class="user-content user-password-content">
+                            <div class="password_inf use_inf_item">
+                                <div class="user_inf_left">
+                                    <span class="display_label">Mật khẩu</span>
+                                    <span class="text_content_inf">*********</span>
+                                </div>
+                                
+                                <div class="edit_password_inf">
+                                    <a class="rgbRed-text edit_btn">Chỉnh sửa</a>
+                                </div>
+                            </div>
+                            <div class="edit_phone_number edit_item">
+                                <div class="edit-content">
+                                    <div class="pass_field old_pass_field">
+                                        <label for="old_pass">Nhập mật khẩu cũ</label>
+
+                                        <div class="pass_input">
+                                            <input type="password" id="old_pass" class="app__body-input-text" type="text">
+                                            <i class="show_pass_icon fa-solid fa-eye"></i>
+                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="pass_field new_pass_field">
+                                        <label for="new_pass">Nhập mật khẩu mới</label>
+
+                                        <div class="pass_input">
+                                            <input type="password" id="new_pass" class="app__body-input-text" type="text">
+                                            <i class="show_pass_icon fa-solid fa-eye"></i>
+                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="pass_field new_pass_repeat_field">
+                                        <label for="new_pass_repeat">Nhập lại mật khẩu mới</label>
+
+                                        <div class="pass_input">
+                                            <input type="password" id="new_pass_repeat" class="app__body-input-text" type="text">
+                                            <i class="show_pass_icon fa-solid fa-eye"></i>
+                                            <i style="display: none;" class="hide_pass_icon fa-solid fa-eye-slash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn_xacnhan_huy">
+                                    <button class="btn_huy rgbRed_OutlineButton button-padding_12 ">Hủy</button>
+                                    <button class="btn_xacnhan blue-button button-padding_12 ">Xác nhận</button>
+                                </div>
                             </div>
                         </div>
 
@@ -327,6 +387,8 @@
     </div>
 
     <script src="../script/calendarScript.js"></script>
+    <script src="../script/myProfile.js"></script>
+
     <!-- Mở menu user -->
     <script>
         const app = document.querySelector('.app__header-user-display');
