@@ -8,6 +8,7 @@ const checkAll_box1 = document.getElementById('checkbox-selectAll1');
 const checkbox = document.getElementsByClassName('checkbox-select');
 const money = document.getElementsByClassName('cart-room-money-text');
 const MoneyShow = document.getElementById('footer-all-money-text');
+
 let checkNum = 0;
 let MoneyNum = parseInt(MoneyShow.innerText);
 
