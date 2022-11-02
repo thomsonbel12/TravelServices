@@ -12,6 +12,7 @@ const MoneyShow = document.getElementById('footer-all-money-text');
 let checkNum = 0;
 let MoneyNum = parseInt(MoneyShow.innerText);
 
+
 const right_content_footer = document.getElementById("right-content-footer");
 const no_cart_list = document.getElementById("no-cart-list")
 
@@ -35,7 +36,6 @@ if(checkbox.length > 0){
 submit_cart_checkout.setAttribute("disabled", 'disabled')
 submit_cart_checkout.style.opacity = "0.5"
 
-cart_selected_num.innerHTML = checkNum
 
 
 
@@ -157,3 +157,15 @@ for(let i = 0 ; i < checkbox.length; i++){
     checkbox[i].addEventListener('click', checkbox_click);
 
 }
+
+window.addEventListener('load', function(){
+    checkAll_box.checked = false
+    checkAll_box1.checked = false
+    checkNum = 0;
+    MoneyNum = 0;
+    for(let i = 0 ;i < checkbox.length ;i++){
+        checkbox[i].checked = false
+    }
+})
+
+cart_selected_num.innerHTML = checkNum
