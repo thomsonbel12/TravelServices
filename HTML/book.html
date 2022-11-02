@@ -123,7 +123,8 @@
                         </div>
 
                         <div class="cart-item cart-item-detail-link">
-                            <p>Có <span class="rgbRed-text fontWeight-700 total_cart_room"></span> phòng trong danh sách</p>
+                            <p>Có <span class="rgbRed-text fontWeight-700 total_cart_room"></span> phòng trong danh sách
+                            </p>
                             <a class="rgbRed_OutlineButton button-padding_12" href="./CartDetail.html">Chi tiết
                                 danh sách</a>
                         </div>
@@ -216,14 +217,15 @@
                     <div class="body-left-content">
                         <div class="body-left-item body-left-header">
                             <i class="fa-regular fa-circle-user"></i>
-                            <span class="body-left-header-text">Xin Chào <span class="rgbRed-text">${user_name}</span> !</span>
+                            <span class="body-left-header-text">Xin Chào <span class="rgbRed-text">${user_name}</span>
+                                !</span>
                         </div>
                         <div class="body-left-item user-info-check">
                             <div class="user-info-header">
                                 <h4 style="color: #333;">Chi tiết liên lạc</h4>
                                 <h5>Vui lòng xác nhận các thông tin sau !!</h5>
                             </div>
-    
+
                             <div class="user-info">
                                 <div class="user-info-item user-info-name">
                                     <div class="user-info-input">
@@ -234,28 +236,38 @@
                                 <div class="user-info-item user-info-email">
                                     <div class="user-info-input">
                                         <label for="user-email">Email</label>
-                                        <input id="user-email" type="email" placeholder="Email" value="${user_email}@gmail.com">
+                                        <input id="user-email" type="email" placeholder="Email"
+                                            value="${user_email}@gmail.com">
                                     </div>
                                 </div>
                                 <div class="user-info-item user-info-name">
                                     <div class="user-info-input">
                                         <label for="user-phone">Số điện thoại</label>
-                                        <input id="user-phone" type="text" placeholder="Số điện thoại" value="${user_phone}">
+                                        <input id="user-phone" type="text" placeholder="Số điện thoại"
+                                            value="${user_phone}">
                                     </div>
                                 </div>
                                 <div class="user-info-item user-info-name">
                                     <div class="user-info-input">
                                         <label>Quốc gia</label>
-                                        <input type="text" placeholder="Quốc Gia">
+                                        <!-- <input type="text" placeholder="Quốc Gia"> -->
+                                        <select name="country" id="country">
+
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="body-left-item body-left-submit-btn">
-                            <div class="policy-text" style="font-size: 12px; width: 60%; color: #aaa;">Thực hiện bước tiếp theo đồng nghĩa với việc bạn chấp nhận
-                                tuân theo <a href="" class="blue-text">Điều khoản sử dụng</a> và <a href="" class="blue-text">Chính sách bảo mật</a>
-                                của <span class="rgbRed-text">LHT C.</span>
+                            <div class="policy-text" style="font-size: 12px; width: 60%; color: #aaa;">Thực hiện bước
+                                tiếp theo đồng nghĩa với việc bạn chấp nhận
+                                tuân theo
+                                <a href="" class="blue-text">Điều khoản sử dụng</a>
+                                và
+                                <a href="" class="blue-text">Chính sách bảo mật</a>
+                                của
+                                <span class="rgbRed-text">LHT C.</span>
                             </div>
 
                             <div class="body-submit">
@@ -263,18 +275,141 @@
                             </div>
                         </div>
                     </div>
-                    <div class="body-right-content">12487</div>
+                    <div class="body-right-content">
+                        <div class="body-right-item right-room-summary">
+                            <div class="right-room-header fontWeight-600" style="color: #555">TÓM TẮT DANH SÁCH PHÒNG
+                            </div>
+                            <div class="right-room-list">
+
+                                <div class="room-content">
+                                    <div class="room-content-header">
+                                        <div class="room-tag">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            <span class="room-tag-item room-tag-name fontWeight-600 black-text">KHÁCH
+                                                SẠN</span>
+                                            <span class="room-tag-item room-tag-city semiBlack-text">(HỒ CHÍ
+                                                MINH)</span>
+                                        </div>
+
+                                        <div class="room-content-body">
+                                            <div class="room-body-item room-img-name">
+                                                <div class="room-img">
+                                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="room-name semiBlack-text fontWeight-600">LuxHomes SaiGon -
+                                                    VinHome Central Park(Căn hộ LuxHomes SaiGon)</div>
+                                            </div>
+                                            <div class="room-body-item room-book-detail">
+
+                                            </div>
+                                            <div class="room-body-item">
+                                                <div class="room-date semiBlack-text">
+                                                    <i class="fa-solid fa-calendar blue-text"></i>
+                                                    <span> Từ &nbsp;</span>
+                                                    <span id="checkin-date"
+                                                        class="checkin_date rgbRed-text fontWeight-600">24-12-2022</span>
+
+                                                    <span>&nbsp; đến &nbsp;</span>
+                                                    <span id="checkout-date"
+                                                        class="checkout_date rgbRed-text fontWeight-600">26-11-2022</span>
+                                                    <!-- <span class="border-bar"></span> -->
+
+                                                    <span>&nbsp;Tổng số ngày : &nbsp;</span>
+                                                    <span class="total_days rgbRed-text fontWeight-600"></span>
+                                                    <span>&nbsp; Ngày</span>
+                                                </div>
+
+                                                <div class="room-people semiBlack-text">
+                                                    <i class="fa-solid fa-users blue-text"></i>
+                                                    <span class="room_num rgbRed-text fontWeight-600">1</span>
+                                                    <span>&nbsp; Phòng, &nbsp;</span>
+
+                                                    <span class="adult_num rgbRed-text fontWeight-600">3</span>
+                                                    <span>&nbsp; Người lớn, &nbsp;</span>
+
+                                                    <span class="adult_num rgbRed-text fontWeight-600">1</span>
+                                                    <span>&nbsp; Trẻ em. &nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="room-content">
+                                    <div class="room-content-header">
+                                        <div class="room-tag">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            <span class="room-tag-item room-tag-name fontWeight-600 black-text">KHÁCH
+                                                SẠN</span>
+                                            <span class="room-tag-item room-tag-city semiBlack-text">(HỒ CHÍ
+                                                MINH)</span>
+                                        </div>
+
+                                        <div class="room-content-body">
+                                            <div class="room-body-item room-img-name">
+                                                <div class="room-img">
+                                                    <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="room-name semiBlack-text fontWeight-600">LuxHomes SaiGon -
+                                                    VinHome Central Park(Căn hộ LuxHomes SaiGon)</div>
+                                            </div>
+                                            <div class="room-body-item room-book-detail">
+
+                                            </div>
+                                            <div class="room-body-item">
+                                                <div class="room-date semiBlack-text">
+                                                    <i class="fa-solid fa-calendar blue-text"></i>
+                                                    <span> Từ &nbsp;</span>
+                                                    <span id="checkin-date"
+                                                        class="checkin_date rgbRed-text fontWeight-600">29-12-2023</span>
+
+                                                    <span>&nbsp; đến &nbsp;</span>
+                                                    <span id="checkout-date"
+                                                        class="checkout_date rgbRed-text fontWeight-600">26-11-2022</span>
+                                                    <!-- <span class="border-bar"></span> -->
+
+                                                    <span>&nbsp;Tổng số ngày : &nbsp;</span>
+                                                    <span class="total_days rgbRed-text fontWeight-600"></span>
+                                                    <span>&nbsp; Ngày</span>
+                                                </div>
+
+                                                <div class="room-people semiBlack-text">
+                                                    <i class="fa-solid fa-users blue-text"></i>
+                                                    <span class="room_num rgbRed-text fontWeight-600">1</span>
+                                                    <span>&nbsp; Phòng, &nbsp;</span>
+
+                                                    <span class="adult_num rgbRed-text fontWeight-600">3</span>
+                                                    <span>&nbsp; Người lớn, &nbsp;</span>
+
+                                                    <span class="adult_num rgbRed-text fontWeight-600">1</span>
+                                                    <span>&nbsp; Trẻ em. &nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="body-right-item"></div>
+                        <div class="body-right-item"></div>
+                    </div>
                 </div>
             </form>
         </div>
 
     </div>
 
-
-
+    <script src="../script/countDays.js" type="module"></script>
+    <script src="../script/book.js" type="module"></script>
+    <script src="../script/loadCountry.js"></script>
     <!-- <script src="../script/selectCitiMain.js"></script> -->
     <script src="../script/cartHeader.js" type="module"></script>
-    
+
     <!-- Mở menu user -->
     <script>
         const app = document.querySelector('.app__header-user-display');
