@@ -14,9 +14,9 @@
 .app__forgetpassMail .app__body-login-btn{
     width: 100%;
 }
-.app__forgetpassMail .app__body-input-login-btn{
-    /* background-color: transparent; */
-}
+/* .app__forgetpassMail .app__body-input-login-btn{
+    background-color: transparent;
+} */
 .app__forgetpassMail .app__body-input-bottom{
 
     height: auto !important;
