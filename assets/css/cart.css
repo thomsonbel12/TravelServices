@@ -6,10 +6,10 @@
 .app__header .app__header-logo{
     flex: 1;
 }
-.app__header .app__header-user{
+/* .app__header .app__header-user{ */
     /* display: flex; */
     /* flex: 2; */
-}
+/* } */
 
 .app__header .app__header-option{
     /* flex: 0; */
@@ -108,8 +108,8 @@
     border-bottom: 1px solid #ddd;
     font-weight: 700;
 }
-.app__header-option .shopping_cart .shopping_cart-items .cart-text{
-}
+/* .app__header-option .shopping_cart .shopping_cart-items .cart-text{
+} */
 .app__header-option .shopping_cart .shopping_cart-items .cart-item{
     display: flex;
     width: 100%;

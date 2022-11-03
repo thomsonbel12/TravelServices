@@ -102,7 +102,7 @@
     width: 100%;
 }
 
-.right-content-header .header-option .header-option-item {}
+/* .right-content-header .header-option .header-option-item {} */
 
 .right-content-header .header-option .header-option-left {
     border-bottom: 3px solid #5392fa;
@@ -339,6 +339,6 @@
     justify-content: space-evenly;
     height: 100%;
 }
-.right-content-footer .footer-content-right .Money-Wrapper .Money-Tag{
+/* .right-content-footer .footer-content-right .Money-Wrapper .Money-Tag{
 
-}
+} */
