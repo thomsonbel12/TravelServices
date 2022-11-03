@@ -118,8 +118,9 @@
     background-color: transparent;
     width: 30px;
     height: 20px;
-    left: -29px;
+    left: -30%;
     top: -2px;
+    cursor: pointer;
 }
 
 .right-content-header .header-option .header-option-right {
@@ -244,10 +245,11 @@
     /* border-top: 2px solid #ccc; */
     width: 100%;
     padding: 8px;
-
     display: flex;
     flex-direction: column;
+    height: 100%;
     align-items: center;
+    justify-content: space-around;
 }
 .cart-room-money > div:last-child{
     border-bottom: none !important;
