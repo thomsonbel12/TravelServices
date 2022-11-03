@@ -30,7 +30,7 @@
     width: 100%;
     top: 16px;
     z-index: -1;
-    right: -190px;
+    right: -50%;
     height: 3px;
     background-color: #ccc;
 }
@@ -119,6 +119,10 @@
     padding: 8px;
     margin-top: 4px;
 }
+.user-info-check .user-info .user-info-item .user-info-input select:hover,
+.user-info-check .user-info .user-info-item .user-info-input input:hover{
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 6px 2px;
+}
 
 .user-info-check .user-info .user-info-item .user-info-input select:focus,
 .user-info-item .user-info-input input:focus{
@@ -140,11 +144,22 @@
 }
 .right-room-summary .right-room-header{
     height: 60px;
-    line-height: 60px;
+    /* line-height: 60px; */
     padding-left: 12px;
     border-bottom: 1px solid #cccccc;
     background-color: #f5fffe;
     font-size: 14px;
+    margin-bottom: 24px;
+
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.right-room-summary .right-room-header .right-room-header-num-room{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
 }
 .right-room-summary .right-room-list{
     /* border: 1px solid #ccc; */
@@ -156,8 +171,10 @@
 }
 .right-room-summary .right-room-list .room-content{
     border-bottom: 2px solid rgb(158, 158, 158);
-    padding: 14px;
-    margin: 24px 0;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+
+    padding: 21px 14px;
+    margin: 12px 0;
 }
 .room-content .room-content-header .room-tag-item{
     /* color: rgb(178, 178, 178); */
@@ -197,33 +214,65 @@
 
     /* outline: 1px solid #ccc; */
 }
-.room-content-body .room-img-name .room-name{
+.room-content-body .room-img-name .room-name-money{
     font-size: 15px;
     width: 80%;
     max-height: 98.5px;
     word-break: break-all;
     overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.room-img-name .room-name-money .room-name{
+    max-height: 50%;
+    overflow: hidden;
+
+}
+
 .room-content-body .room-date i,
-.room-content-body .room-people i{
+.room-content-body .room-people i,
+.room-name-money .room-money i,
+.room-total-money i{
     /* display: block; */
-    width: 20px;
-    margin-right: 12px;
+    width: 24px;
+    /* margin-right: 12px; */
 }
 .room-content-body .room-date,
-.room-content-body .room-people{
-    display: flex;
+.room-content-body .room-people,
+.room-total-money{
     /* letter-spacing: 0.5px; */
     /* justify-content: space-between; */
+    display: flex;
     align-items: center;
     font-size: 13px;
-    margin: 12px 0;
+    margin: 8px 0;
+}
+.room-date input{
+    width: 75px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
 }
 .room-content-body .room-people{
     display: unset;
 }
-/* .border{
-    height: 100%;
-    background-color: #5392fa;
-    width: 20px;
-} */
+
+.room-content-body .room-book-detail{
+    display: flex;
+    flex-direction: column;
+
+    /* padding: 12px 0 0 0 ; */
+    margin: unset;
+    border-top: 2px solid #ccc;
+}
+
+.room-total-money{
+    /* width: 100%; */
+    /* min-width: 40%; */
+    /* text-align: right; */
+    /* display: flex; */
+    align-self: flex-end;
+    font-size: 15px;
+}

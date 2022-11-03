@@ -6,6 +6,13 @@ const input_text = document.getElementsByClassName("app__body-input-text")
 for(const item of edit_item){
     item.style.display = "none"
 }
+
+function deleteText(){
+    for(let i = 0 ;i < btn_huy.length; i++){
+        input_text[i].value = "";
+    }
+}
+
 function edit_btn_click(e){
     let edit_click = e.target;
     let user_inf_item = edit_click;
@@ -22,17 +29,21 @@ function edit_btn_click(e){
     let edit_show = user_inf_item.nextElementSibling;
 
     
+    deleteText();
 
     edit_show.style.display = "block"
     edit_click.style.display = "none"
     // console.log(edit_click)
 }
 
+
 function btn_huy_click(e){
     let btn_huy = e.target;
     let user_info_item = btn_huy;
     let edit_click
     let edit_item
+
+    deleteText();
 
     while(!user_info_item.classList.contains("edit_item")){
         user_info_item = user_info_item.parentElement;
@@ -43,10 +54,10 @@ function btn_huy_click(e){
     edit_click = user_info_item.children[1].children[0]
     edit_click.style.display = "block";
     edit_item.style.display = "none"
-    console.log(edit_item)
-
-
+    // console.log(edit_item)
 }
+
+
 for(let i = 0; i < edit_btn.length ;i++){
     edit_btn[i].addEventListener('click', edit_btn_click)
 }
@@ -54,6 +65,7 @@ for(let i = 0; i < edit_btn.length ;i++){
 for(let i = 0 ;i < btn_huy.length;i++){
     btn_huy[i].addEventListener('click', btn_huy_click)
 }
+
 
 
 

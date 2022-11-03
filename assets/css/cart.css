@@ -80,6 +80,11 @@
     opacity: 0;
 
 }
+.app__header-option .shopping_cart .shopping_cart-items .cart-list{
+    overflow-y: auto;
+    max-height: 267px;
+
+}
 .app__header-option .shopping_cart .shopping_cart-items::before{
     content: "";
     position: absolute;

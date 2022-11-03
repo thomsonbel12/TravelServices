@@ -10,11 +10,13 @@ function dateFormat(inputDate) {
 function countDays(checkin_date, checkout_date){
     let checkin = new Date(dateFormat(checkin_date));
     let checkout = new Date(dateFormat(checkout_date));
-    console.log(checkin)
-    console.log(checkout)
+    // console.log(checkin)
+    // console.log(checkout)
     let days = checkout.getTime() - checkin.getTime();
 
-    return (Math.ceil(days / (1000 * 3600 * 24)));
+    return (Math.ceil(days / (1000 * 3600 * 24))) + 1;
+
+
 }
 
 export {dateFormat, countDays}

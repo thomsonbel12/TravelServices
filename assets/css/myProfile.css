@@ -196,3 +196,9 @@
   height: 55px;
   justify-content: space-around;
 }
+
+.user_inf_left input{
+  border: none;
+  outline: none;
+  background: transparent;
+}

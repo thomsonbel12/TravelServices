@@ -229,16 +229,33 @@
 
 }
 .right-content-body .cart-list .cart-room .cart-room-money{
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
     margin:0 8px;
-    padding: 8px;
     border: 1px solid #5392fa;
     border-radius: 8px;
+    font-size: 12px;
+}
+.right-content-body .cart-list .cart-room .cart-room-money > div{
+    border-bottom: 2px solid #ccc;
+    /* border-top: 2px solid #ccc; */
+    width: 100%;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-room-money > div:last-child{
+    border-bottom: none !important;
 }
 .right-content-body .cart-list .cart-room .cart-room-money .cart-room-money-price{
-    margin-top: 55px;
+    /* margin-top: 55px; */
     display: flex;
-    height: 35%;
+    /* height: 35%; */
     align-items: center;
 }
 .right-content-body .cart-list .cart-room .cart-room-money .cart-room-money-tag{
