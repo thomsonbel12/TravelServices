@@ -153,6 +153,9 @@ for (let i = 0; i < checkbox.length; i++) {
 
             MoneyNum = MoneyNum + (parseInt(removeCommas(moneys_1_day[i].innerHTML)) * parseInt(total_days[i].innerHTML));
             MoneyShow.innerHTML = numberWithCommas(MoneyNum);
+
+            submit_cart_checkout.removeAttribute("disabled");
+            submit_cart_checkout.style.opacity = "1";
         } else {
             checkNum = checkNum - 1;
 
