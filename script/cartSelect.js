@@ -44,6 +44,19 @@ function getDays() {
 }
 getDays();
 
+const cart_room_wrap = document.getElementsByClassName("cart-room-wrap")
+for(let i = 0 ;i < cart_room_wrap.length; i++){
+    if(total_days[i].innerHTML === "0"){
+        cart_room_wrap[i].style.outline = "4px solid rgb(207, 32, 97)"
+        cart_room_wrap[i].style.border = "unset"
+    }
+}
+function changeCart_wrap(i){
+    if(total_days[i].innerHTML != "0"){
+        cart_room_wrap[i].style.outline = "unset"
+        cart_room_wrap[i].style.border = "2px solid #5392fa"
+    }
+}
 
 submit_cart_checkout.setAttribute("disabled", 'disabled');
 submit_cart_checkout.style.opacity = "0.5";
@@ -202,10 +215,12 @@ function final_Func() {
 for (let i = 0; i < checkin_date.length; i++) {
     checkin_date[i].addEventListener('change', function (e) {
         final_Func();
+        changeCart_wrap(i)
     });
 
     checkout_date[i].addEventListener('change', function (e) {
         final_Func();
+        changeCart_wrap(i)
     });
 }
 

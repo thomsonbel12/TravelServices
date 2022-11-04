@@ -177,6 +177,10 @@
     margin: 12px 0;
 
 }
+.right-content-body .cart-list .cart-room-wrap:hover{
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    outline: 1px solid #5392fa;
+}
 
 .right-content-body .cart-list .cart-room {
     width: 100%;
