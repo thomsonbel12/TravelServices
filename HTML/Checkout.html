@@ -264,13 +264,327 @@
                 </ul>
             </div>
 
-            <div class="app__body-content">
-                
-            </div>
+            <form style="width: 100%;" action="">
+                <div class="app__body-content">
+                    <div class="body-left-content">
+                        <div class="body-left-item body-left-header">
+                            <i class="fa-regular fa-circle-user"></i>
+                            <span class="body-left-header-text">Xin Chào <span class="rgbRed-text">${user_name}</span>
+                                !</span>
+                        </div>
+                        <div class="body-left-item user-info-check">
+                            <div class="user-info-header">
+                                <h4 style="color: #333;">Phương thức thanh toán</h4>
+                                <h5>Vui lòng chọn 1 trong các phương thức thanh toán sau !!</h5>
+                            </div>
+                            
+                            <div class="pay_method">
+                                <!-- <div class="payment_wrap"> -->
+                                    <input id="direct_payment" type="radio">
+                                    <label for="direct_payment">Thanh Toán Khi Nhận Phòng</label>
+                                    
+                                    <input id="momo_payment" type="radio">
+                                    <label for="momo_payment">Thanh Toán Bằng MoMo</label>
+                                <!-- </div> -->
+
+                                <!-- <div class="momo_payment_wrap">
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="body-left-item body-left-submit-btn">
+                            <div class="policy-text" style="font-size: 12px; width: 60%; color: #aaa;">Thực hiện bước
+                                tiếp theo đồng nghĩa với việc bạn chấp nhận
+                                tuân theo
+                                <a href="" class="blue-text">Điều khoản sử dụng</a>
+                                và
+                                <a href="" class="blue-text">Chính sách bảo mật</a>
+                                của
+                                <span class="rgbRed-text">LHT C.</span>
+                            </div>
+
+                            <div class="body-submit">
+                                <button  class="padding-8 blue-button">Thanh toán</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-right-content">
+                        <div class="body-right-item right-room-summary">
+                            <div class="right-room-header fontWeight-600 semiBlack-text">
+                                <!-- <div> -->
+                                    TÓM TẮT DANH SÁCH PHÒNG
+                                <!-- </div> -->
+                                <div class="right-room-header-num-room fontWeight-500">
+                                    <div>
+                                        (
+                                        <span id="total_rooms" class="fontWeight-600 rgbRed-text total_room"></span>
+                                        &nbsp;Phòng
+                                        )
+                                    </div>
+                                    
+                                    <div> 
+                                        Tổng : &nbsp;&nbsp;&nbsp;
+                                        <span id="total_money" class=" rgbRed-text fontWeight-600"></span>
+                                        &nbsp;VNĐ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-room-list">
+
+                                <div class="room-content">
+                                    <div class="room-content-header">
+                                        <div class="room-tag">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            <span class="room-tag-item room-tag-name fontWeight-600 black-text">KHÁCH
+                                                SẠN</span>
+                                            <span class="room-tag-item room-tag-city semiBlack-text">(HỒ CHÍ
+                                                MINH)</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="room-content-body">
+                                        <div class="room-body-item room-img-name">
+                                            <div class="room-img">
+                                                <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="room-name-money semiBlack-text fontWeight-600">
+                                                <div class="room-name">
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+
+                                                </div>
+                                                <div class="room-money">
+                                                    <i class="fa-regular fa-money-bill-1 rgbRed-text"></i>
+                                                    <span class="money-1-day rgbRed-text">590000</span>
+                                                    <span class="money-currency">VNĐ</span>
+                                                    (
+                                                    <span class="rgbRed-text fontWeight-600">1</span>
+                                                    Ngày
+                                                    )
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="room-body-item room-book-detail">
+                                            <div class="room-date semiBlack-text">
+                                                <i class="fa-solid fa-calendar blue-text"></i>
+                                                <span> Từ &nbsp;</span>
+                                                <input id="checkin-date"
+                                                    class="checkin_date rgbRed-text fontWeight-600" disabled value="24-12-2022">
+
+                                                <span>&nbsp; đến &nbsp;</span>
+                                                <input id="checkout-date"
+                                                    class="checkout_date rgbRed-text fontWeight-600" disabled value="26-12-2022">
+                                                <!-- <span class="border-bar"></span> -->
+
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;Tổng số ngày : &nbsp;</span>
+                                                <span class="total_days rgbRed-text fontWeight-600"></span>
+                                                <span>&nbsp; Ngày</span>
+                                            </div>
+
+                                            <div class="room-people semiBlack-text">
+                                                <i class="fa-solid fa-users blue-text"></i>
+                                                <span class="room_num rgbRed-text fontWeight-600">1</span>
+                                                <span> Phòng, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">3</span>
+                                                <span>Người lớn, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">1</span>
+                                                <span>Trẻ em.</span>
+                                            </div>
+
+                                            <div class="room-total-money">
+                                                <i class="fa-solid fa-money-check-dollar"></i>
+                                                <span class="semiBlack-text fontWeight-600">Tổng số tiền : &nbsp;</span>
+                                                <span class="room-total-money-text rgbRed-text fontWeight-600"></span>
+                                                <span class="money-currency semiBlack-text">&nbsp;VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="room-content">
+                                    <div class="room-content-header">
+                                        <div class="room-tag">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            <span class="room-tag-item room-tag-name fontWeight-600 black-text">KHÁCH
+                                                SẠN</span>
+                                            <span class="room-tag-item room-tag-city semiBlack-text">(HỒ CHÍ
+                                                MINH)</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="room-content-body">
+                                        <div class="room-body-item room-img-name">
+                                            <div class="room-img">
+                                                <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="room-name-money semiBlack-text fontWeight-600">
+                                                <div class="room-name">
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+
+                                                </div>
+                                                <div class="room-money">
+                                                    <i class="fa-regular fa-money-bill-1 rgbRed-text"></i>
+                                                    <span class="money-1-day rgbRed-text">590000</span>
+                                                    <span class="money-currency">VNĐ</span>
+                                                    (
+                                                    <span class="rgbRed-text fontWeight-600">1</span>
+                                                    Ngày
+                                                    )
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="room-body-item room-book-detail">
+                                            <div class="room-date semiBlack-text">
+                                                <i class="fa-solid fa-calendar blue-text"></i>
+                                                <span> Từ &nbsp;</span>
+                                                <input id="checkin-date"
+                                                    class="checkin_date rgbRed-text fontWeight-600" disabled value="24-12-2022">
+
+                                                <span>&nbsp; đến &nbsp;</span>
+                                                <input id="checkout-date"
+                                                    class="checkout_date rgbRed-text fontWeight-600" disabled value="26-12-2022">
+                                                <!-- <span class="border-bar"></span> -->
+
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;Tổng số ngày : &nbsp;</span>
+                                                <span class="total_days rgbRed-text fontWeight-600"></span>
+                                                <span>&nbsp; Ngày</span>
+                                            </div>
+
+                                            <div class="room-people semiBlack-text">
+                                                <i class="fa-solid fa-users blue-text"></i>
+                                                <span class="room_num rgbRed-text fontWeight-600">1</span>
+                                                <span> Phòng, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">3</span>
+                                                <span>Người lớn, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">1</span>
+                                                <span>Trẻ em.</span>
+                                            </div>
+
+                                            <div class="room-total-money">
+                                                <i class="fa-solid fa-money-check-dollar"></i>
+                                                <span class="semiBlack-text fontWeight-600">Tổng số tiền : &nbsp;</span>
+                                                <span class="room-total-money-text rgbRed-text fontWeight-600"></span>
+                                                <span class="money-currency semiBlack-text">&nbsp;VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="room-content">
+                                    <div class="room-content-header">
+                                        <div class="room-tag">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            <span class="room-tag-item room-tag-name fontWeight-600 black-text">KHÁCH
+                                                SẠN</span>
+                                            <span class="room-tag-item room-tag-city semiBlack-text">(HỒ CHÍ
+                                                MINH)</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="room-content-body">
+                                        <div class="room-body-item room-img-name">
+                                            <div class="room-img">
+                                                <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="room-name-money semiBlack-text fontWeight-600">
+                                                <div class="room-name">
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+                                                    LuxHomes SaiGon - VinHome Central Park(Căn hộ LuxHomes SaiGon)
+
+                                                </div>
+                                                <div class="room-money">
+                                                    <i class="fa-regular fa-money-bill-1 rgbRed-text"></i>
+                                                    <span class="money-1-day rgbRed-text">479000</span>
+                                                    <span class="money-currency">VNĐ</span>
+                                                    (
+                                                    <span class="rgbRed-text fontWeight-600">1</span>
+                                                    Ngày
+                                                    )
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="room-body-item room-book-detail">
+                                            <div class="room-date semiBlack-text">
+                                                <i class="fa-solid fa-calendar blue-text"></i>
+                                                <span> Từ &nbsp;</span>
+                                                <input id="checkin-date"
+                                                    class="checkin_date rgbRed-text fontWeight-600" disabled value="13-12-2022">
+
+                                                <span>&nbsp; đến &nbsp;</span>
+                                                <input id="checkout-date"
+                                                    class="checkout_date rgbRed-text fontWeight-600" disabled value="12-11-2022">
+                                                <!-- <span class="border-bar"></span> -->
+
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;Tổng số ngày : &nbsp;</span>
+                                                <span class="total_days rgbRed-text fontWeight-600"></span>
+                                                <span>&nbsp; Ngày</span>
+                                            </div>
+
+                                            <div class="room-people semiBlack-text">
+                                                <i class="fa-solid fa-users blue-text"></i>
+                                                <span class="room_num rgbRed-text fontWeight-600">1</span>
+                                                <span> Phòng, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">3</span>
+                                                <span>Người lớn, </span>
+
+                                                <span class="adult_num rgbRed-text fontWeight-600">1</span>
+                                                <span>Trẻ em.</span>
+                                            </div>
+
+                                            <div class="room-total-money">
+                                                <i class="fa-solid fa-money-check-dollar"></i>
+                                                <span class="semiBlack-text fontWeight-600">Tổng số tiền : &nbsp;</span>
+                                                <span class="room-total-money-text rgbRed-text fontWeight-600"></span>
+                                                <span class="money-currency semiBlack-text">&nbsp;VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="body-right-item"></div>
+                        <div class="body-right-item"></div>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
 
+    <!-- <script src="../script/selectCitiMain.js"></script> -->
+    <script src="../script/numbeWithComma.js" type="module"></script>
+    <script src="../script/countDays.js" type="module"></script>
+    <script src="../script/book.js" type="module"></script>
+    <script src="../script/loadCountry.js"></script>
     <!-- <script src="../script/selectCitiMain.js"></script> -->
     <script src="../script/cartHeader.js" type="module"></script>
     
