@@ -178,7 +178,7 @@
 
 }
 .right-content-body .cart-list .cart-room-wrap:hover{
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 9px 25px rgba(0, 0, 0, 0.2);
     outline: 1px solid #5392fa;
 }
 
@@ -342,6 +342,37 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+}
+.right-content-footer .footer-content-right .footer-btn{
+    position: relative;
+    height: 100%;
+    /* vertical-align: middle; */
+    display: flex;
+    padding: 22px 26px;
+    font-size: 14px;
+}
+.right-content-footer .footer-content-right .footer-btn .footer-btn-error{
+    position: absolute;
+    background-color: rgba(251, 115, 115);
+    top: -55%;
+    right: 0;
+    display: none;
+    color: #e9ebee;
+    width: 300px;
+    font-size: 14px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
+    /* min-height: 30px; */
+}
+.right-content-footer .footer-content-right .footer-btn .footer-btn-error::before{
+    content: "";
+    position: absolute;
+    top: 83%;
+    right: 22%;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    background-color: rgba(251, 115, 115);
 }
 /* .right-content-footer .footer-content-right .Money-Wrapper .Money-Tag{
 

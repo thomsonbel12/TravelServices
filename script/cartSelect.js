@@ -32,6 +32,7 @@ const checkin_date = document.getElementsByClassName("checkin_date");
 const checkout_date = document.getElementsByClassName("checkout_date");
 const total_days = document.getElementsByClassName("total_days");
 
+let validDate = 0;
 
 dateSwap();
 
@@ -44,17 +45,28 @@ function getDays() {
 }
 getDays();
 
-const cart_room_wrap = document.getElementsByClassName("cart-room-wrap")
-for(let i = 0 ;i < cart_room_wrap.length; i++){
-    if(total_days[i].innerHTML === "0"){
-        cart_room_wrap[i].style.outline = "4px solid rgb(207, 32, 97)"
-        cart_room_wrap[i].style.border = "unset"
+
+function calcValidDate() {
+    validDate = 0;
+    for (let i = 0; i < total_days.length; i++) {
+        if (total_days[i].innerHTML !== "0") {
+            validDate = validDate + 1;
+        }
     }
 }
-function changeCart_wrap(i){
-    if(total_days[i].innerHTML != "0"){
-        cart_room_wrap[i].style.outline = "unset"
-        cart_room_wrap[i].style.border = "2px solid #5392fa"
+calcValidDate();
+
+const cart_room_wrap = document.getElementsByClassName("cart-room-wrap");
+for (let i = 0; i < cart_room_wrap.length; i++) {
+    if (total_days[i].innerHTML === "0") {
+        cart_room_wrap[i].style.outline = "4px solid rgb(207, 32, 97)";
+        cart_room_wrap[i].style.border = "unset";
+    }
+}
+function changeCart_wrap(i) {
+    if (total_days[i].innerHTML !== "0") {
+        cart_room_wrap[i].style.outline = "unset";
+        cart_room_wrap[i].style.border = "2px solid #5392fa";
     }
 }
 
@@ -99,8 +111,15 @@ function checkAll() {
             }
         }
         MoneyNum = selectAll_totalMoney();
-        submit_cart_checkout.removeAttribute("disabled");
-        submit_cart_checkout.style.opacity = "1";
+        calcValidDate();
+        if (validDate === checkNum) {
+            submit_cart_checkout.removeAttribute("disabled");
+            submit_cart_checkout.style.opacity = "1";
+        }
+        else {
+            submit_cart_checkout.setAttribute("disabled", "disabled");
+            submit_cart_checkout.style.opacity = "0.5";
+        }
         checkAll_box1.checked = true;
 
     }
@@ -115,6 +134,7 @@ function checkAll() {
         submit_cart_checkout.style.opacity = "0.5";
         checkAll_box1.checked = false;
     }
+
     MoneyShow.innerHTML = numberWithCommas(MoneyNum);
 
     cart_selected_num.innerHTML = checkNum;
@@ -129,8 +149,15 @@ function checkAll1() {
             }
         }
         MoneyNum = selectAll_totalMoney();
-        submit_cart_checkout.removeAttribute("disabled");
-        submit_cart_checkout.style.opacity = "1";
+        calcValidDate();
+        if (validDate === checkNum) {
+            submit_cart_checkout.removeAttribute("disabled");
+            submit_cart_checkout.style.opacity = "1";
+        }
+        else {
+            submit_cart_checkout.setAttribute("disabled", "disabled");
+            submit_cart_checkout.style.opacity = "0.5";
+        }
         checkAll_box.checked = true;
 
     }
@@ -157,6 +184,23 @@ checkAll_box1.addEventListener('click', checkAll1);
 
 cart_selected_num.innerHTML = checkNum;
 
+function test() {
+    let z = 0;
+    for (let i = 0; i < total_days.length; i++) {
+        if (total_days[i].innerHTML === "0" && checkbox[i].checked === true) {
+            submit_cart_checkout.style.opacity = "0.5";
+            submit_cart_checkout.setAttribute("disabled", "disabled");
+        } else {
+            z++;
+        }
+    }
+    console.log(validDate + " " + z);
+    if (z === total_days.length) {
+        submit_cart_checkout.style.opacity = "1";
+        submit_cart_checkout.removeAttribute("disabled");
+    }
+}
+
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener('click', function (e) {
         if (checkbox[i].checked === true) {
@@ -167,8 +211,16 @@ for (let i = 0; i < checkbox.length; i++) {
             MoneyNum = MoneyNum + (parseInt(removeCommas(moneys_1_day[i].innerHTML)) * parseInt(total_days[i].innerHTML));
             MoneyShow.innerHTML = numberWithCommas(MoneyNum);
 
-            submit_cart_checkout.removeAttribute("disabled");
-            submit_cart_checkout.style.opacity = "1";
+
+            if (total_days[i].innerHTML !== "0") {
+                submit_cart_checkout.removeAttribute("disabled");
+                submit_cart_checkout.style.opacity = "1";
+            } else {
+                submit_cart_checkout.style.opacity = "0.5";
+                submit_cart_checkout.setAttribute("disabled", "disabled");
+            }
+            test();
+
         } else {
             checkNum = checkNum - 1;
 
@@ -178,10 +230,19 @@ for (let i = 0; i < checkbox.length; i++) {
             MoneyShow.innerHTML = numberWithCommas(MoneyNum);
 
 
+            if (total_days[i].innerHTML !== "0") {
+                submit_cart_checkout.removeAttribute("disabled");
+                submit_cart_checkout.style.opacity = "1";
+            } else {
+                submit_cart_checkout.style.opacity = "0.5";
+                submit_cart_checkout.setAttribute("disabled", "disabled");
+            }
+            test();
             if (checkNum === 0) {
                 submit_cart_checkout.style.opacity = "0.5";
                 submit_cart_checkout.setAttribute("disabled", "disabled");
             }
+
         }
         if (checkNum === checkbox.length) {
             checkAll_box.checked = true;
@@ -189,14 +250,14 @@ for (let i = 0; i < checkbox.length; i++) {
 
             MoneyNum = selectAll_totalMoney();
 
-            submit_cart_checkout.style.opacity = "1";
-            submit_cart_checkout.removeAttribute("disabled");
+            checkAll();
         } else {
             checkAll_box.checked = false;
             checkAll_box1.checked = false;
         }
     });
 }
+
 function final_Func() {
     getDays();
     room_total_moneyCal();
@@ -215,64 +276,43 @@ function final_Func() {
 for (let i = 0; i < checkin_date.length; i++) {
     checkin_date[i].addEventListener('change', function (e) {
         final_Func();
-        changeCart_wrap(i)
+        calcValidDate();
+
+        if (checkbox[i].checked === true) {
+            test();
+        }
+        changeCart_wrap(i);
     });
 
     checkout_date[i].addEventListener('change', function (e) {
         final_Func();
-        changeCart_wrap(i)
+        calcValidDate();
+
+        if (checkbox[i].checked === true) {
+            test();
+        }
+
+        changeCart_wrap(i);
     });
 }
 
+const error_message = document.getElementById('footer-btn-error');
+const btn_wrap = document.getElementsByClassName("footer-btn");
+btn_wrap[0].addEventListener('mouseenter', function () {
+    let noRoomText = "Vui lòng chọn ít nhất 1 phòng để tiếp tục thanh toán";
+    let invalidDateText = "Vui lòng chọn Ngày nhận phòng và trả phòng để tiếp tục thanh toán";
+    if (checkNum === 0) {
+        error_message.style.display = "block";
+        error_message.innerHTML = noRoomText;
+    } else if (checkNum !== 0 && submit_cart_checkout.disabled) {
+        error_message.style.display = "block";
+        error_message.innerHTML = invalidDateText;
+    }
+});
+btn_wrap[0].addEventListener('mouseleave', function () {
+    error_message.style.display = "none";
+});
 
-
-
-// function checkbox_click(event) {
-//     let test = event.target.parentElement.children[0];
-//     let moneyWrap = event.target.parentElement.nextElementSibling.children[0];
-//     while (!moneyWrap.classList.contains("cart-room-money")) {
-//         moneyWrap = moneyWrap.nextElementSibling;
-//     }
-//     moneyWrap = moneyWrap.children[1].children[0].innerHTML;
-
-//     if (test.checked == true) {
-//         checkNum = checkNum + 1;
-//         MoneyNum = MoneyNum + parseInt(removeCommas(moneyWrap));
-
-//         cart_selected_num.innerHTML = checkNum;
-//         submit_cart_checkout.style.opacity = "1";
-//         submit_cart_checkout.removeAttribute("disabled");
-//         // submit_cart_checkout.setAttribute("disabled", 'disabled')
-
-//     } else {
-//         checkNum = checkNum - 1;
-
-//         MoneyNum = MoneyNum - parseInt(removeCommas(moneyWrap));
-
-//         cart_selected_num.innerHTML = checkNum;
-
-//         if (checkNum === 0) {
-//             submit_cart_checkout.style.opacity = "0.5";
-//             submit_cart_checkout.setAttribute("disabled", "disabled");
-//         }
-//     }
-//     if (checkNum === checkbox.length) {
-//         checkAll_box.checked = true;
-//         checkAll_box1.checked = true;
-//         submit_cart_checkout.style.opacity = "1";
-//         submit_cart_checkout.removeAttribute("disabled");
-//         // submit_cart_checkout.setAttribute("disabled", 'disabled')
-//     } else {
-//         checkAll_box.checked = false;
-//         checkAll_box1.checked = false;
-//         // submit_cart_checkout.style.opacity = "0.5"
-//     }
-//     MoneyShow.innerHTML = MoneyNum;
-
-//     MoneyShow.innerHTML = numberWithCommas(MoneyNum);
-
-
-// }
 
 
 
@@ -281,6 +321,7 @@ window.addEventListener('load', function () {
     checkAll_box1.checked = false;
     checkNum = 0;
     MoneyNum = 0;
+
     for (let i = 0; i < checkbox.length; i++) {
         checkbox[i].checked = false;
     }
