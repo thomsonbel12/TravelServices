@@ -299,8 +299,11 @@ for (let i = 0; i < checkin_date.length; i++) {
 const error_message = document.getElementById('footer-btn-error');
 const btn_wrap = document.getElementsByClassName("footer-btn");
 btn_wrap[0].addEventListener('mouseenter', function () {
-    let noRoomText = "Vui lòng chọn ít nhất 1 phòng để tiếp tục thanh toán";
-    let invalidDateText = "Vui lòng chọn Ngày nhận phòng và trả phòng để tiếp tục thanh toán";
+    let noRoomText = `Vui lòng chọn ít nhất <span  style="text-decoration: underline;" class="fontWeight-700">1 phòng </span> để tiếp tục thanh toán`;
+    let invalidDateText = `Vui lòng chọn 
+                            <span style="text-decoration: underline;" class="fontWeight-700">Ngày Nhận Phòng </span> 
+                            và <span style="text-decoration: underline;" class="fontWeight-700">Ngày Trả Phòng</span>  
+                            để tiếp tục thanh toán`
     if (checkNum === 0) {
         error_message.style.display = "block";
         error_message.innerHTML = noRoomText;
