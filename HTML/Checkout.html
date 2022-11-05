@@ -278,17 +278,40 @@
                                 <h5>Vui lòng chọn 1 trong các phương thức thanh toán sau !!</h5>
                             </div>
                             
-                            <div class="pay_method">
-                                <!-- <div class="payment_wrap"> -->
-                                    <input id="direct_payment" type="radio" checked>
-                                    <label for="direct_payment">Thanh Toán Khi Nhận Phòng</label>
+                        </div>
+                        <div class="body-left-item pay_method">
+                            <div class="direct_payment_wrap">
+                                <div class="payment_header">
+                                    <input id="direct_payment_check_btn" type="checkbox" class="custom_button">
+                                    <label id="direct_payment_check" for="direct_payment_check_btn" class="direct_payment_check">Thanh Toán Khi Nhận Phòng</label>
+                                </div>
+                                
+                                <div style="display: none;" id="direct_payment_detail" class="payment_detail direct_detail">
+                                    <h5 class="fontWeight-600 semiBlack-text">Thanh Toán khi nhận phòng : </h5>
+                                    <ul style="list-style: disc; padding: 0 45px; font-size: 14px;">
+                                        <li>Tổng số lượng phòng : <span class="rooms_total_show fontWeight-600 rgbRed-text">3</span></li>
+                                        <li>Tổng số tiền bạn phải trả : <span class="total_rooms_money fontWeight-600 rgbRed-text"></span> VNĐ</li>
+                                    </ul>
+                                    <span style="font-size: 13px; margin-top: 16px;" class="fontWeight-600 rgbRed-text">Khi nhận phòng vui lòng xuất trình các thông tin cần thiết như
+                                        <span style="text-decoration: underline;" class="semiBlack-text">Hóa đơn </span>  <span class="semiRgbRed-text">(sẽ cấp cho bạn khi hoàn thành quá trình xác nhận)</span> và  <span style="text-decoration: underline;" class="semiBlack-text">Số điện thoại đã đăng kí của bạn !</span>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="momo_payment_wrap">
+                                <div class="payment_header">
+                                    <input id="momo_payment_check_btn" type="checkbox" class="custom_button">
+                                    <label  id ="momo_payment_check" for="momo_payment_check_btn" class="momo_payment_check">Thanh Toán Bằng MoMo</label>
+                                </div>
+                                <div style="display: none;"  id="momo_payment_detail" class="payment_detail">
+                                    <h5 class="fontWeight-600 semiBlack-text">Thanh Toán Bằng MOMO :</h5>
+                                    <ul style="list-style: disc; padding: 0 45px; font-size: 14px;">
+                                        <li>Số điện thoại liên kết với momo của bn là : </li>
+                                        <li>Tổng số lượng phòng : <span class="rooms_total_show fontWeight-600 rgbRed-text">3</span></li>
+                                        <li>Tổng số tiền bạn phải trả : <span class="total_rooms_money fontWeight-600 rgbRed-text"></span> VNĐ</li>
+                                    </ul>
                                     
-                                    <input id="momo_payment" type="radio" disabled>
-                                    <label for="momo_payment">Thanh Toán Bằng MoMo</label>
-                                <!-- </div> -->
-
-                                <!-- <div class="momo_payment_wrap">
-                                </div> -->
+                                </div>
                             </div>
                         </div>
 
@@ -304,7 +327,7 @@
                             </div>
 
                             <div class="body-submit">
-                                <button  class="padding-8 blue-button">Thanh toán</button>
+                                <button id="submit_checkout" class="submit_checkout padding-8 blue-button">Thanh toán</button>
                             </div>
                         </div>
                     </div>
@@ -584,9 +607,11 @@
     <script src="../script/numbeWithComma.js" type="module"></script>
     <script src="../script/countDays.js" type="module"></script>
     <script src="../script/book.js" type="module"></script>
-    <script src="../script/loadCountry.js"></script>
+    <!-- <script src="../script/loadCountry.js"></script> -->
     <!-- <script src="../script/selectCitiMain.js"></script> -->
     <script src="../script/cartHeader.js" type="module"></script>
+    
+    <script src="../script/checkout.js" type="module"></script>
     
     <!-- Mở menu user -->
     <script>

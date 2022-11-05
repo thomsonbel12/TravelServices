@@ -4,7 +4,7 @@ const cart_item_money = document.getElementsByClassName("cart-item-money");
 const total_cart_room = document.getElementsByClassName("total_cart_room");
 
 const day = document.getElementsByClassName("cart-day")
-        console.log(day[0])
+        // console.log(day[0])
         for (let i = 0; i < day.length; i++) {
             day[i].innerHTML = dateFormat(day[i].innerHTML)
         }
