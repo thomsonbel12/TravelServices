@@ -34,6 +34,11 @@ const total_days = document.getElementsByClassName("total_days");
 
 let validDate = 0;
 
+// for(let i = 0 ;i < total_days.length ;i++){
+//     checkin_date[i].value = dateFormat(checkin_date[i].value)
+//     checkout_date[i].value = dateFormat(checkout_date[i].value)
+// }
+
 dateSwap();
 
 function getDays() {

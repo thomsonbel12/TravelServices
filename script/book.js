@@ -36,14 +36,23 @@ if (room_contents.length === 0) {
 
 const total_money_text = document.getElementById("total_money");
 let total_money = 0;
-for (let i = 0; i < room_total_money.length; i++) {
-    room_total_money[i].innerHTML = parseInt(moneys_1_day[i].innerHTML) * parseInt(total_days[i].innerHTML);
-    total_money += parseInt(room_total_money[i].innerHTML);
+function total_moneyCal(){
+    for (let i = 0; i < room_total_money.length; i++) {
+        room_total_money[i].innerHTML = parseInt(moneys_1_day[i].innerHTML) * parseInt(total_days[i].innerHTML);
+        total_money += parseInt(room_total_money[i].innerHTML);
+    }
+    return total_money;
 }
+total_moneyCal();
 total_money_text.innerHTML = numberWithCommas(total_money);
 
-for (let i = 0; i < moneys_1_day.length; i++) {
-    room_total_money[i].innerHTML = numberWithCommas(room_total_money[i].innerHTML);
-    moneys_1_day[i].innerHTML = numberWithCommas(moneys_1_day[i].innerHTML);
+function room_total_moneyCal(){
+    for (let i = 0; i < moneys_1_day.length; i++) {
+        room_total_money[i].innerHTML = numberWithCommas(room_total_money[i].innerHTML);
+        moneys_1_day[i].innerHTML = numberWithCommas(moneys_1_day[i].innerHTML);
+    }
 }
+room_total_moneyCal()
+
+export {total_moneyCal}
 

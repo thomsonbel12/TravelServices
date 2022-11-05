@@ -95,6 +95,9 @@ button{
 .rgbRed-text{
     color: rgb(207, 32, 97);
 }
+.semiRgbRed-text{
+    color: rgb(236, 139, 175);
+}
 .blue-text{
     color: #5392fa
 }
@@ -168,4 +171,38 @@ button{
     width: 1.99px;
     background-color: #ccc;
     border-radius: 8px;
+}
+
+.custom_button{
+    appearance: none;
+    margin-right: 1.2rem;
+    background-color: #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom_button::after{
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #f5fffe;
+
+    display: none;
+}
+.custom_button:hover{
+    background-color: rgb(131, 131, 131);
+    
+}
+.custom_button:checked{
+    background-color: #5392fa;
+}
+.custom_button:checked::after{
+    display: block;
 }
