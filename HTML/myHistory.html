@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../assets/css/calendar.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
     <link rel="stylesheet" href="../assets/css/CartDetail.css">
-
+    <link rel="stylesheet" href="../assets/css/myHistory.css">
     <!-- <script src="../script/numbeWithComma.js" type="module"></script> -->
     <style>
         input {
@@ -41,7 +41,7 @@
 
 <body>
 
-    <div id="app" class="app__CartDetail">
+    <div id="app" class="app__myHistory">
         <div id="header" class="app__header">
             <!-- <div class=""> -->
             <div class="app__header-logo">
@@ -263,13 +263,13 @@
             <div class="app__body-left-menu">
                 <ul class="left-menu-items">
                     <li class="left-menu-item left-menu-cart-list">
-                        <a href="">
+                        <a href="./CartDetail.html">
                             <i class="fa-sharp fa-solid fa-clipboard"></i>
                             Giỏ hàng của tôi
                         </a>
                     </li>
                     <li class="left-menu-item left-menu-history-list">
-                        <a href="./myHistory.html">
+                        <a href="">
                             <i class="fa-solid fa-clipboard-check"></i>
                             Lịch sử du lịch
                         </a>
@@ -310,17 +310,17 @@
 
                     </div>
                     <div class="header-option">
-                        <div class="header-option-item header-option-left">
+                        <!-- <div class="header-option-item header-option-left"> -->
                             <!-- <div>Phòng</div> -->
-                            <div
+                            <!-- <div
                                 style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
                                 <input style="margin-right: 0;" type="checkbox" id="checkbox-selectAll"
                                     class="app__body-input-remember-checkbox checkbox-selectAll">
                                 <label style="position: relative;" class="checkbox-all-text rgbRed-text"
                                     for="checkbox-selectAll">Chọn tất cả</label>
-                            </div>
+                            </div> -->
 
-                        </div>
+                        <!-- </div> -->
                         <div class="header-option-item header-option-right">
                             <div class="option-right-text rgbRed-text">Sắp xếp theo</div>
                             <div class="option-right-btn option-right-checkin">Ngày Nhận phòng</div>
@@ -330,7 +330,7 @@
                 </div>
 
                 <div class="right-content-body">
-                    <form action="./book.html">
+                    
                         <div style="width: 100%;" class="cart-list padding-8">
 
                             <div class="cart-room-wrap">
@@ -798,7 +798,9 @@
 
                         </div>
 
-                        <div id="right-content-footer" class="right-content-footer">
+                        
+
+                        <!-- <div id="right-content-footer" class="right-content-footer">
                             <div class="footer-content-item footer-content-left">
                                 <div class="footer-content-left-option">
                                     <div style="display: flex; align-items: center; width: 100%; justify-content: space-around;">
@@ -841,8 +843,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </div> -->
+                    
                     <div id="no-cart-list" class="no-cart-list">
                         <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
                         <div class="no-cart-text">
@@ -963,7 +965,7 @@
     <script src="../script/countDays.js" type="module"></script>
     <script src="../script/dateHandle.js" type="module"></script>
     <script src="../script/cartHeader.js" type="module"></script>
-    <script src="../script/cartSelect.js" type="module"></script>
+    <!-- <script src="../script/cartSelect.js" type="module"></script> -->
 
 
     <!-- Script calendar flatpickr -->
