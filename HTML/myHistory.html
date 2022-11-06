@@ -27,15 +27,14 @@
     <!-- <script src="../script/numbeWithComma.js" type="module"></script> -->
     <style>
         input {
-            /* width: 100%; */
             height: 100%;
             border: none;
             outline: none;
         }
 
-        input:hover {
+        /* input:hover {
             background-color: rgb(236, 236, 236);
-        }
+        } */
     </style>
 </head>
 
@@ -323,6 +322,7 @@
                         <!-- </div> -->
                         <div class="header-option-item header-option-right">
                             <div class="option-right-text rgbRed-text">Sắp xếp theo</div>
+                            <div class="option-right-btn option-right-orderDate">Ngày Đặt phòng</div>
                             <div class="option-right-btn option-right-checkin">Ngày Nhận phòng</div>
                             <div class="option-right-btn option-right-checkout">Ngày Trả phòng</div>
                         </div>
@@ -330,14 +330,32 @@
                 </div>
 
                 <div class="right-content-body">
-                    
-                        <div style="width: 100%;" class="cart-list padding-8">
 
-                            <div class="cart-room-wrap">
-                                <div style="padding-left: 12px;" class="cart-room-check">
-                                    <input style="margin: unset;" type="checkbox" id="checkbox-select"
-                                        class="checkbox-select app__body-input-remember-checkbox">
+                    <div style="width: 100%;" class="bill-list cart-list padding-8">
+
+                        <div class="bill-info padding-12">
+                            <div class="bill-info_orderDate padding-12">
+                                <div class="semiBlack-text fontWeight-600">
+                                    <span>Ngày đặt đơn : </span>
+                                    <input type="text" class="date order_date rgbRed-text fontWeight-600" value="12-12-2022">
                                 </div>
+                                <!-- <i class="fa-solid fa-chevron-up point-up"></i> -->
+                            </div>
+                            
+                            <div class="bill-info_detail">
+                                <ul>
+                                    <li>Tổng số Tiền : <span class="rgbRed-text fontWeight-600 bill_info_total_money">120000</span> VNĐ</li>
+                                    <li>Tổng số Phòng : <span class="rgbRed-text fontWeight-600 bill_info_total_rooms">3</span> phòng</li>
+                                    <li>Phương thức thanh toán : <span class="rgbRed-text fontWeight-600">Thanh toán khi nhận phòng</span></li>
+                                </ul>
+                            </div>
+                            <i class="fa-solid fa-chevron-down point-btn"></i>
+                        </div>
+
+                        <div style="display: none;" class="bill-rooms">
+                            
+                            <div class="bill_room cart-room-wrap">
+                                
                                 <div class="cart-room padding-8">
                                     <div class="cart-room-img">
                                         <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
@@ -354,16 +372,14 @@
                                                 <div style="width: 100%;" class="content-input-date-select">
                                                     <div class="input-date-wrap input-date-checkin flatpickr">
                                                         <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkin_date"
-                                                            placeholder="Ngày Nhận phòng" value="">
-
+                                                        <input disabled id="SelectDate" class="date checkin_date"
+                                                            placeholder="Ngày Nhận phòng" value="22-10-2023">
                                                     </div>
                                                     <div class="input-date-wrap input-date-checkout flatpickr">
                                                         <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkout_date"
-                                                            placeholder="Ngày Trả phòng" value="">
+                                                        <input disabled id="SelectDate" class="date checkout_date"
+                                                            placeholder="Ngày Trả phòng" value="22-10-2023">
                                                     </div>
-
                                                 </div>
                                             </div>
 
@@ -381,68 +397,7 @@
                                                                 1 phòng
                                                             </div>
                                                         </div>
-
-                                                        <i class="fa-solid fa-chevron-down point-down"></i>
                                                     </div>
-
-                                                    <div class="input-add-room-people">
-                                                        <div class="input-add add-room">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Phòng
-                                                                </div>
-                                                                <div class="add-text-desc">
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-regular fa-square-minus"></i>
-                                                                <span class="input-add-number rooms">1</span>
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-solid fa-square-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-adult">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Người lớn
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    18 tuổi trở lên
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn input-add-btn-adult">
-                                                                <i id="minusAdult"
-                                                                    class="fa-solid fa-square-minus minusAdult"></i>
-                                                                <span id="adults"
-                                                                    class="input-add-number adults">3</span>
-                                                                <i id="addAdult"
-                                                                    class="fa-regular fa-square-plus addAdult"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-child">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Trẻ em
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    0-12 tuổi
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i id="minusChild"
-                                                                    class="fa-regular fa-square-minus minusChild"></i>
-                                                                <span class="input-add-number children">4</span>
-                                                                <i id="addChild"
-                                                                    class="fa-solid fa-square-plus addChild"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -475,23 +430,12 @@
                                                 <span class="semiBlack-text fontWeight-600">VND</span>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="cart-room-btn padding-8">
-                                        <a href="" class="rgbRed_OutlineButton padding-8">
-                                            <i class="fa-solid fa-trash"></i>
-                                            Xóa phòng này
-                                        </a>
-                                    </div>
-
                                 </div>
                             </div>
-
-                            <div class="cart-room-wrap">
-                                <div style="padding-left: 12px;" class="cart-room-check">
-                                    <input style="margin: unset;" type="checkbox" id="checkbox-select"
-                                        class="checkbox-select app__body-input-remember-checkbox">
-                                </div>
+                            
+                            <div class="bill_room cart-room-wrap">
+                                
                                 <div class="cart-room padding-8">
                                     <div class="cart-room-img">
                                         <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
@@ -508,16 +452,14 @@
                                                 <div style="width: 100%;" class="content-input-date-select">
                                                     <div class="input-date-wrap input-date-checkin flatpickr">
                                                         <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkin_date"
-                                                            placeholder="Ngày Nhận phòng" value="22-5-2023">
-
+                                                        <input disabled id="SelectDate" class="date checkin_date"
+                                                            placeholder="Ngày Nhận phòng" value="22-10-2023">
                                                     </div>
                                                     <div class="input-date-wrap input-date-checkout flatpickr">
                                                         <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkout_date"
-                                                            placeholder="Ngày Trả phòng" value="">
+                                                        <input disabled id="SelectDate" class="date checkout_date"
+                                                            placeholder="Ngày Trả phòng" value="22-9-2023">
                                                     </div>
-
                                                 </div>
                                             </div>
 
@@ -535,68 +477,7 @@
                                                                 1 phòng
                                                             </div>
                                                         </div>
-
-                                                        <i class="fa-solid fa-chevron-down point-down"></i>
                                                     </div>
-
-                                                    <div class="input-add-room-people">
-                                                        <div class="input-add add-room">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Phòng
-                                                                </div>
-                                                                <div class="add-text-desc">
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-regular fa-square-minus"></i>
-                                                                <span class="input-add-number rooms">1</span>
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-solid fa-square-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-adult">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Người lớn
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    18 tuổi trở lên
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn input-add-btn-adult">
-                                                                <i id="minusAdult"
-                                                                    class="fa-solid fa-square-minus minusAdult"></i>
-                                                                <span id="adults"
-                                                                    class="input-add-number adults">3</span>
-                                                                <i id="addAdult"
-                                                                    class="fa-regular fa-square-plus addAdult"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-child">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Trẻ em
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    0-12 tuổi
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i id="minusChild"
-                                                                    class="fa-regular fa-square-minus minusChild"></i>
-                                                                <span class="input-add-number children">4</span>
-                                                                <i id="addChild"
-                                                                    class="fa-solid fa-square-plus addChild"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -608,7 +489,7 @@
                                             </div>
                                             <div class="cart-room-money-price fontWeight-700 rgbRed-text">
                                                 <div class="cart-room-money-text padding-8">
-                                                    <span class="money-1-day">329000</span>
+                                                    <span class="money-1-day">429000</span>
                                                     <span class="semiBlack-text">&nbsp;VNĐ</span>
                                                 </div>
                                             </div>
@@ -629,174 +510,202 @@
                                                 <span class="semiBlack-text fontWeight-600">VND</span>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="cart-room-btn padding-8">
-                                        <a href="" class="rgbRed_OutlineButton padding-8">
-                                            <i class="fa-solid fa-trash"></i>
-                                            Xóa phòng này
-                                        </a>
-                                    </div>
-
                                 </div>
                             </div>
-
-                            <div class="cart-room-wrap">
-                                <div style="padding-left: 12px;" class="cart-room-check">
-                                    <input style="margin: unset;" type="checkbox" id="checkbox-select"
-                                        class="checkbox-select app__body-input-remember-checkbox">
-                                </div>
-                                <div class="cart-room padding-8">
-                                    <div class="cart-room-img">
-                                        <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="cart-room-content">
-                                        <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
-                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien
-                                            Centre)asdasdsad
-                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
-                                        </div>
-                                        <div class="cart-room-decs">
-                                            <div class="cart-room-date">
-                                                <div style="width: 100%;" class="content-input-date-select">
-                                                    <div class="input-date-wrap input-date-checkin flatpickr">
-                                                        <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkin_date"
-                                                            placeholder="Ngày Nhận phòng" value="28-1-2022">
-
-                                                    </div>
-                                                    <div class="input-date-wrap input-date-checkout flatpickr">
-                                                        <i class="far fa-calendar-alt"></i>
-                                                        <input id="SelectDate" class="checkout_date"
-                                                            placeholder="Ngày Trả phòng" value="27-3-2022">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="cart-room-people">
-                                                <div style="width: 100%;" class="content-input-people-room">
-                                                    <div class="input-people-room-text">
-                                                        <i class="fa-solid fa-users"></i>
-                                                        <div class="input-people-text">
-                                                            <div class="input-people">
-                                                                <span class="adultNum">3</span> người lớn, <span
-                                                                    class="childNum">4</span> trẻ em
-                                                            </div>
-
-                                                            <div class="input-room">
-                                                                1 phòng
-                                                            </div>
-                                                        </div>
-
-                                                        <i class="fa-solid fa-chevron-down point-down"></i>
-                                                    </div>
-
-                                                    <div class="input-add-room-people">
-                                                        <div class="input-add add-room">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Phòng
-                                                                </div>
-                                                                <div class="add-text-desc">
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-regular fa-square-minus"></i>
-                                                                <span class="input-add-number rooms">1</span>
-                                                                <i style="visibility: hidden;"
-                                                                    class="fa-solid fa-square-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-adult">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Người lớn
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    18 tuổi trở lên
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn input-add-btn-adult">
-                                                                <i id="minusAdult"
-                                                                    class="fa-solid fa-square-minus minusAdult"></i>
-                                                                <span id="adults"
-                                                                    class="input-add-number adults">3</span>
-                                                                <i id="addAdult"
-                                                                    class="fa-regular fa-square-plus addAdult"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="input-add add-child">
-                                                            <div class="input-add-text">
-                                                                <div class="add-text-title">
-                                                                    Trẻ em
-                                                                </div>
-                                                                <div class="add-text-desc">
-                                                                    0-12 tuổi
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="input-add-btn">
-                                                                <i id="minusChild"
-                                                                    class="fa-regular fa-square-minus minusChild"></i>
-                                                                <span class="input-add-number children">4</span>
-                                                                <i id="addChild"
-                                                                    class="fa-solid fa-square-plus addChild"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart-room-money">
-                                        <div class="money-1day-wrap">
-                                            <div class="cart-room-money-tag fontWeight-700 rgbRed-text">
-                                                Giá Tiền ( <span class="rgbRed-text"> 1 </span> Ngày )
-                                            </div>
-                                            <div class="cart-room-money-price fontWeight-700 rgbRed-text">
-                                                <div class="cart-room-money-text padding-8">
-                                                    <span class="money-1-day">583000</span>
-                                                    <span class="semiBlack-text">&nbsp;VNĐ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="total-days-wrap">
-                                            <div class="fontWeight-700 rgbRed-text">Tổng số ngày</div>
-                                            <div class="fontWeight-700 rgbRed-text">
-                                                <span class="total_days"></span>
-                                                <span class="semiBlack-text fontWeight-600">Ngày</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="total-room-money">
-                                            <div class="fontWeight-700 rgbRed-text">Tổng số Tiền</div>
-                                            <div class="fontWeight-700 rgbRed-text">
-                                                <span class="room-total-money-text"></span>
-                                                <span class="semiBlack-text fontWeight-600">VND</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="cart-room-btn padding-8">
-                                        <a href="" class="rgbRed_OutlineButton padding-8">
-                                            <i class="fa-solid fa-trash"></i>
-                                            Xóa phòng này
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
+                            
                         </div>
+
+
+                    </div>
+
+                    <div style="width: 100%;" class="bill-list cart-list padding-8">
+
+                        <div class="bill-info padding-12">
+                            <div class="bill-info_orderDate padding-12">
+                                <div class="semiBlack-text fontWeight-600">
+                                    <span>Ngày đặt đơn : </span>
+                                    <input type="text" class="date order_date rgbRed-text fontWeight-600" value="12-12-2022">
+                                </div>
+                                <!-- <i class="fa-solid fa-chevron-up point-up"></i> -->
+                            </div>
+                            
+                            <div class="bill-info_detail">
+                                <ul>
+                                    <li>Tổng số Tiền : <span class="rgbRed-text fontWeight-600 bill_info_total_money">120000</span> VNĐ</li>
+                                    <li>Tổng số Phòng : <span class="rgbRed-text fontWeight-600 bill_info_total_rooms">3</span> phòng</li>
+                                    <li>Phương thức thanh toán : <span class="rgbRed-text fontWeight-600">Thanh toán khi nhận phòng</span></li>
+                                </ul>
+                            </div>
+                            <i class="fa-solid fa-chevron-down point-btn"></i>
+                        </div>
+
+                        <div style="display: none;" class="bill-rooms">
+                            
+                            <div class="bill_room cart-room-wrap">
+                                
+                                <div class="cart-room padding-8">
+                                    <div class="cart-room-img">
+                                        <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="cart-room-content">
+                                        <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien
+                                            Centre)asdasdsad
+                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                        </div>
+                                        <div class="cart-room-decs">
+                                            <div class="cart-room-date">
+                                                <div style="width: 100%;" class="content-input-date-select">
+                                                    <div class="input-date-wrap input-date-checkin flatpickr">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                        <input disabled id="SelectDate" class="date checkin_date"
+                                                            placeholder="Ngày Nhận phòng" value="22-10-2023">
+                                                    </div>
+                                                    <div class="input-date-wrap input-date-checkout flatpickr">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                        <input disabled id="SelectDate" class="date checkout_date"
+                                                            placeholder="Ngày Trả phòng" value="22-10-2023">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-room-people">
+                                                <div style="width: 100%;" class="content-input-people-room">
+                                                    <div class="input-people-room-text">
+                                                        <i class="fa-solid fa-users"></i>
+                                                        <div class="input-people-text">
+                                                            <div class="input-people">
+                                                                <span class="adultNum">3</span> người lớn, <span
+                                                                    class="childNum">4</span> trẻ em
+                                                            </div>
+
+                                                            <div class="input-room">
+                                                                1 phòng
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-room-money">
+                                        <div class="money-1day-wrap">
+                                            <div class="cart-room-money-tag fontWeight-700 rgbRed-text">
+                                                Giá Tiền ( <span class="rgbRed-text"> 1 </span> Ngày )
+                                            </div>
+                                            <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                                <div class="cart-room-money-text padding-8">
+                                                    <span class="money-1-day">429000</span>
+                                                    <span class="semiBlack-text">&nbsp;VNĐ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="total-days-wrap">
+                                            <div class="fontWeight-700 rgbRed-text">Tổng số ngày</div>
+                                            <div class="fontWeight-700 rgbRed-text">
+                                                <span class="total_days"></span>
+                                                <span class="semiBlack-text fontWeight-600">Ngày</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="total-room-money">
+                                            <div class="fontWeight-700 rgbRed-text">Tổng số Tiền</div>
+                                            <div class="fontWeight-700 rgbRed-text">
+                                                <span class="room-total-money-text"></span>
+                                                <span class="semiBlack-text fontWeight-600">VND</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bill_room cart-room-wrap">
+                                
+                                <div class="cart-room padding-8">
+                                    <div class="cart-room-img">
+                                        <img src="https://limody.vn/wp-content/uploads/2021/09/villa-la-gi-4.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="cart-room-content">
+                                        <div style="max-height: 43%;" class="cart-room-name rgbRed-text fontWeight-700">
+                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien
+                                            Centre)asdasdsad
+                                            Căn hộ Cherry - Trung tâm Thảo Điền (Cherry apartment - Thao Dien Centre)
+                                        </div>
+                                        <div class="cart-room-decs">
+                                            <div class="cart-room-date">
+                                                <div style="width: 100%;" class="content-input-date-select">
+                                                    <div class="input-date-wrap input-date-checkin flatpickr">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                        <input disabled id="SelectDate" class="date checkin_date"
+                                                            placeholder="Ngày Nhận phòng" value="22-10-2023">
+                                                    </div>
+                                                    <div class="input-date-wrap input-date-checkout flatpickr">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                        <input disabled id="SelectDate" class="date checkout_date"
+                                                            placeholder="Ngày Trả phòng" value="22-9-2023">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-room-people">
+                                                <div style="width: 100%;" class="content-input-people-room">
+                                                    <div class="input-people-room-text">
+                                                        <i class="fa-solid fa-users"></i>
+                                                        <div class="input-people-text">
+                                                            <div class="input-people">
+                                                                <span class="adultNum">3</span> người lớn, <span
+                                                                    class="childNum">4</span> trẻ em
+                                                            </div>
+
+                                                            <div class="input-room">
+                                                                1 phòng
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-room-money">
+                                        <div class="money-1day-wrap">
+                                            <div class="cart-room-money-tag fontWeight-700 rgbRed-text">
+                                                Giá Tiền ( <span class="rgbRed-text"> 1 </span> Ngày )
+                                            </div>
+                                            <div class="cart-room-money-price fontWeight-700 rgbRed-text">
+                                                <div class="cart-room-money-text padding-8">
+                                                    <span class="money-1-day">429000</span>
+                                                    <span class="semiBlack-text">&nbsp;VNĐ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="total-days-wrap">
+                                            <div class="fontWeight-700 rgbRed-text">Tổng số ngày</div>
+                                            <div class="fontWeight-700 rgbRed-text">
+                                                <span class="total_days"></span>
+                                                <span class="semiBlack-text fontWeight-600">Ngày</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="total-room-money">
+                                            <div class="fontWeight-700 rgbRed-text">Tổng số Tiền</div>
+                                            <div class="fontWeight-700 rgbRed-text">
+                                                <span class="room-total-money-text"></span>
+                                                <span class="semiBlack-text fontWeight-600">VND</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
 
                         
 
@@ -849,9 +758,9 @@
                         <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
                         <div class="no-cart-text">
                             <p class="fontWeight-700">
-                                Quý khách không có phòng nào trong danh sách chờ.</p>
+                                Quý khách không có phòng nào trong danh sách.</p>
                             <p style="font-size: 14px">
-                                Hãy thêm phòng vào giỏ hàng nếu quý khách có ý định xem xét đặt nhiều phòng!
+                                Hãy đặt phòng hoặc thêm phòng vào giỏ hàng nếu quý khách có ý định xem xét đặt nhiều phòng!
                             </p>
                             <a href="../index.html">
                                 Quay trở về trang chủ
@@ -872,7 +781,7 @@
         const app = document.querySelector('.app__header-user-display');
         const menuClick = document.querySelector('.app__header-user-menu');
         function user_menu_click() {
-            hideShowAddForm();
+            // hideShowAddForm();
             menuClick.classList.toggle("show");
         }
 
@@ -890,7 +799,7 @@
     
 
     <!-- Mở form thêm phòng, người -->
-    <script>
+    <!-- <script>
         const AddFormClick = document.getElementsByClassName('input-people-room-text');
         const ShowAddForm = document.getElementsByClassName('input-add-room-people');
         function ShowAddRoomPeopleForm(e) {
@@ -915,7 +824,7 @@
             });
         }
 
-    </script>
+    </script> -->
 
     <script>
         document.onclick = function () {
@@ -926,28 +835,37 @@
         function hideUserMenu() {
             menuClick.classList.remove('show');
         }
-        function hideShowAddForm() {
-            for (let i = 0; i < ShowAddForm.length; i++)
-                ShowAddForm[i].classList.remove('show');
-        }
+        // function hideShowAddForm() {
+        //     for (let i = 0; i < ShowAddForm.length; i++)
+        //         ShowAddForm[i].classList.remove('show');
+        // }
         function autoHide() {
             hideUserMenu();
-            hideShowAddForm();
+            // hideShowAddForm();
         }
     </script>
 
     <script>
+        const dayOrderDatSort = document.querySelector('.option-right-orderDate');
         const dayCheckinSort = document.querySelector('.option-right-checkin');
         const dayCheckoutSort = document.querySelector('.option-right-checkout');
 
         function disableBtn() {
+            dayOrderDatSort.style.backgroundColor = "transparent";
             dayCheckinSort.style.backgroundColor = "transparent";
             dayCheckoutSort.style.backgroundColor = "transparent";
 
+            dayOrderDatSort.style.fontWeight = "unset";
             dayCheckinSort.style.fontWeight = "unset";
             dayCheckoutSort.style.fontWeight = "unset";
         }
-
+        disableBtn()
+        dayOrderDatSort.addEventListener('click', function () {
+            disableBtn();
+            dayOrderDatSort.style.backgroundColor = "#ddd";
+            dayOrderDatSort.style.fontWeight = "600";
+        });
+        dayOrderDatSort.click()
         dayCheckinSort.addEventListener('click', function () {
             disableBtn();
             dayCheckinSort.style.backgroundColor = "#ddd";
@@ -966,17 +884,17 @@
     <script src="../script/dateHandle.js" type="module"></script>
     <script src="../script/cartHeader.js" type="module"></script>
     <!-- <script src="../script/cartSelect.js" type="module"></script> -->
-
+    <script src="../script/myHistory.js" type="module"></script>
 
     <!-- Script calendar flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
     <script>
-        flatpickr("#SelectDate", {
-            minDate: "today",
-            dateFormat: "d-m-Y",
-            "locale": "vn"
-        });
+        // flatpickr("#SelectDate", {
+        //     minDate: "today",
+        //     dateFormat: "d-m-Y",
+        //     "locale": "vn"
+        // });
 
 
 

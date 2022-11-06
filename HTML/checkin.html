@@ -308,14 +308,18 @@
                     </div>
                 </div>
                 <div id="rooms_infomation">
+                    
+
                     <div class="room">
                         <img class="room-img"
                             src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10032247-0fb541c614f47aebf6f0e7992bd4370b.jpeg?_src=imagekit&tr=h-176,q-40,w-300"
                             alt="">
                         <div class="room-inf">
                             <h2>Loại phòng: Phòng đơn</h2>
-                            <h2>Số khách: 2 khách</h2>
+                            <h2>Số khách: <span class="max_adult_num">3</span> người lớn, <span class="max_child_num">4</span> trẻ em</h2>
                             <h2>Giá: 288.150 VND</h2>
+                            <h2>Số phòng còn trống : 
+                            <span class="max_available_num">6</span></h2>
                             <div style="width: 100%;" class="content-input-date-select">
                                 <div class="input-date-wrap input-date-checkin flatpickr">
                                     <i class="far fa-calendar-alt"></i>
@@ -339,7 +343,7 @@
                                         </div>
 
                                         <div class="input-room">
-                                            1 phòng
+                                            <span class="roomNum">1</span> phòng
                                         </div>
                                     </div>
 
@@ -358,11 +362,11 @@
                                         </div>
 
                                         <div class="input-add-btn">
-                                            <i style="visibility: hidden;"
-                                                class="fa-regular fa-square-minus"></i>
+                                            <i 
+                                                class="fa-regular fa-square-minus minusRoom"></i>
                                             <span class="input-add-number rooms">1</span>
-                                            <i style="visibility: hidden;"
-                                                class="fa-solid fa-square-plus"></i>
+                                            <i 
+                                                class="fa-solid fa-square-plus addRoom"></i>
                                         </div>
                                     </div>
                                     <div class="input-add add-adult">
@@ -435,30 +439,33 @@
         });
 
     </script>
-    <script>
-        const AddFormClick = document.querySelectorAll('.input-people-room-text');
-        const ShowAddForm = document.querySelectorAll('.input-add-room-people');
-        function ShowAddRoomPeopleForm() {
-            hideUserMenu();
-            // hideShowAddForm();
-            // hideShowSearchForm();
-            // hideShowDatePick();
+ <!-- Mở form thêm phòng, người -->
+ <script>
+    const AddFormClick = document.getElementsByClassName('input-people-room-text');
+    const ShowAddForm = document.getElementsByClassName('input-add-room-people');
+    function ShowAddRoomPeopleForm(e) {
+        hideUserMenu();
 
-            for (let i = 0; i < ShowAddForm.length; i++)
-                ShowAddForm[i].classList.toggle('show');
+        let test = e.target;
+        while (!test.classList.contains('content-input-people-room')) {
+            test = test.parentElement;
         }
+        test.children[1].classList.toggle('show');
 
-        for (let i = 0; i < ShowAddForm.length; i++) {
-            AddFormClick[i].addEventListener('click', ShowAddRoomPeopleForm);
-            ShowAddForm[i].addEventListener('click', function () {
-                event.stopPropagation();
-            });
-            AddFormClick[i].addEventListener('click', function () {
-                event.stopPropagation();
-            });
-        }
 
-    </script>
+    }
+
+    for (let i = 0; i < ShowAddForm.length; i++) {
+        AddFormClick[i].addEventListener('click', ShowAddRoomPeopleForm);
+        ShowAddForm[i].addEventListener('click', function () {
+            event.stopPropagation();
+        });
+        AddFormClick[i].addEventListener('click', function () {
+            event.stopPropagation();
+        });
+    }
+
+</script>
     <script>
         document.onclick = function () {
             autoHide();
@@ -503,7 +510,7 @@
     <script src="../script/addRoomPeople.js"></script>
     <script src="../script/numbeWithComma.js" type="module"></script>
     <script src="../script/cartHeader.js" type="module"></script>
-
+    <script src="../script/room.js"></script>
 
 
 
