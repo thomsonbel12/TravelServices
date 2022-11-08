@@ -98,5 +98,5 @@ const total_rooms_money = document.getElementsByClassName("total_rooms_money")
 for(let i = 0 ;i < rooms_total_show.length ;i++){
     rooms_total_show[i].innerHTML = total_rooms.length
     total_rooms_money[i].innerHTML = total_money.innerHTML
-    // console.log("dmm")
+    // console.log(total_money.innerHTML )
 }

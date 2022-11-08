@@ -55,6 +55,14 @@ a:hover{
 .show{
     z-index: 3;
 }
+@keyframes cartGrowth {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
 @keyframes dropDown {
     from{
         /* opacity: 0; */
@@ -206,3 +214,38 @@ button{
 .custom_button:checked::after{
     display: block;
 }
+
+.modal{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+
+    display: none;
+
+}
+.modal-overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    
+}
+.modal-body{
+    z-index: 100;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-inner{
+    /* margin: auto; */
+    /* height: 100px; */
+    /* width: 100px; */
+    background-color: #f5fffe;
+    padding: 12px;
+}
+
