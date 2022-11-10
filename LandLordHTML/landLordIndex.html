@@ -61,7 +61,7 @@
                                 Hồ sơ của tôi
                             </li>
 
-                            <span>
+                            <span class="data-number">
                                 Đặc biệt
                             </span>
 
@@ -87,8 +87,8 @@
                             <img src="../assets/img/landlordLogo.png" alt="">
                         </a>
                     </li>
-                    <li class="sidebar_item sidebar_item-home">
-                        <a href="#">
+                    <li class="sidebar_item active sidebar_item-home">
+                        <a href="#home">
                             <span class="sidebar_item-icon">
                                 <i class="fa-solid fa-house"></i>
                             </span>
@@ -132,22 +132,121 @@
             </div>
         </div>
         <div class="app_body">
-            <div class="app_body-content">
-                <div class="overall_content">
-                    <div class="overall_content-item">
-                        asdasd
-                    </div>
-                    <div class="overall_content-item">
-                        asd
-                    </div>
-                    <div class="overall_content-item">
+            <div class="app_body-content app_body-content-home">
+                <div class="app_body-content-item app_body-content-header semiBlack-text fontWeight-600">
+                    <h3>TRANG CHỦ</h3>
+                </div>
+                <div class="app_body-content-item overall_content">
+                    <div style="background-color: #fec106;" class="overall_content-item">
                         
+                        <div class="overall_content-item-body">
+                            <div class="overall_content-data">
+                                <div class="overall_content-data-name">Tài sản của Tôi</div>
+                                <div class="overall_content-data-number">
+                                    <span class="data-number">
+                                        80
+                                    </span>
+                                    <span class="data-number-extension">Khách sạn, căn hộ</span>
+                                </div>
+                            </div>
+                            
+                            <i class="fa-solid fa-building-user"></i>
+                        </div>
+                        <div style="background-color: #d2a725;" class="overall_content-item-info">
+                            <a href="#">
+                                Chi tiết
+                                <i class="fa-solid fa-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="background-color: #16a1b9;" class="overall_content-item">
+                        <div class="overall_content-item-body">
+                            <div class="overall_content-data">
+                                <div class="overall_content-data-name">Tổng số lượng khách</div>
+                                <div class="overall_content-data-number">
+                                    <span class="data-number">
+                                        80,000
+                                    </span>
+                                    <span class="data-number-extension">Khách hàng</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div style="background-color: #1892a6;" class="overall_content-item-info">
+                            <a href="#">
+                                Chi tiết
+                                <i class="fa-solid fa-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="background-color: #29a643;" class="overall_content-item">
+                        <div class="overall_content-item-body">
+                            <div class="overall_content-data">
+                                <div class="overall_content-data-name">Doanh Thu (VNĐ)</div>
+                                <div class="overall_content-data-number">
+                                    <span class="data-number">
+                                        1,802,000,000
+                                    </span>
+                                    <span class="data-number-extension">VNĐ</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div style="background-color: #16842c;" class="overall_content-item-info">
+                            <a href="#">
+                                Chi tiết
+                                <i class="fa-solid fa-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="background-color: #dc3547;" class="overall_content-item">
+                        
+                        <div class="overall_content-item-body">
+                            <div class="overall_content-data">
+                                <div class="overall_content-data-name">Đơn đặt</div>
+                                <div class="overall_content-data-number">
+                                    <span class="data-number">
+                                        80
+                                    </span>
+                                    <span class="data-number-extension">Đơn đặt phòng</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <div style="background-color: #c02635;" class="overall_content-item-info">
+                            <a href="#">
+                                Chi tiết
+                                <i class="fa-solid fa-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app_body-content-item content-home-detail" style="margin-top: 48px;">
+                    <div class="content-home-detail-item content-home-recentOrder">
+                        <div class="content-detail-header">
+                            <h4 class="semiBlack-text">Đơn hàng gần đây</h4>
+                            <a href="#" class="padding-8 blue-button">Xem tất cả</a>
+                        </div>
+                        <div class="content-detail-body">
+
+                        </div>
+                    </div>
+                    <div class="content-home-detail-item content-home-recentCustomer">
+                        <div class="content-detail-header">
+                            <h4 class="semiBlack-text">Khách hàng gần đây</h4>
+                            <a href="#" class="padding-8 blue-outline-button">Xem tất cả</a>
+                        </div>
+                        <div class="content-detail-body">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="../scriptLanlord/landlordSidebar.js"></script>
     <!-- Mở menu user -->
     <script>
         const app = document.querySelector('.app__header-user-display');
@@ -167,17 +266,25 @@
 
     </script>
 
+    <!-- Mở sidebar -->
     <script>
         const app_header = document.querySelector('.app_header');
         const app_body = document.querySelector('.app_body');
         const sidebar_list = document.querySelector(".sidebar_list");
         const sidebar_bottom_btn = document.querySelector(".sidebar_bottom-btn");
 
+        const content_home_recentOrder = document.querySelector('.content-home-recentOrder');
+        const content_home_recentCustomer = document.querySelector('.content-home-recentCustomer');
+
         function checkSidebar() {
             if (sidebar_list.classList.contains('active')) {
                 app_body.style.marginLeft = "240px";
+                content_home_recentOrder.style.width = "100%"
+                content_home_recentCustomer.style.width = "100%"
             } else {
-                app_body.style.marginLeft = "80px";
+                app_body.style.marginLeft = "100px";
+                content_home_recentOrder.style.width = "780px"
+                content_home_recentCustomer.style.width = "550px"
             }
         }
         function sidebar_listToggle() {
@@ -203,7 +310,7 @@
     <script>
         function hide() {
             menuClick.classList.remove("show");
-            sidebar_list.classList.remove('active');
+            // sidebar_list.classList.remove('active');
             checkSidebar()
         }
         document.addEventListener('click', function () {
