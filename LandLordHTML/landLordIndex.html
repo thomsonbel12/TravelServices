@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/landlordCSS/landLordIndex.css">
     <link rel="stylesheet" href="../assets/landlordCSS/landlordSidebar.css">
+    <link rel="stylesheet" href="../assets/landlordCSS/ResponsiveLanlord.css">
     <title>Chủ Nhà Nè</title>
 </head>
 
@@ -83,7 +84,7 @@
             <div class="sidebar_list">
                 <ul class="sidebar_list-content">
                     <li class="sidebar_item logo_img">
-                        <a href="#">
+                        <a href="./landLordIndex.html">
                             <img src="../assets/img/landlordLogo.png" alt="">
                         </a>
                     </li>
@@ -96,7 +97,7 @@
                         </a>
                     </li>
                     <li class="sidebar_item sidebar_item-own">
-                        <a href="#">
+                        <a href="./landlordProperty.html">
                             <span class="sidebar_item-icon">
                                 <i class="fa-solid fa-building-user"></i>
                             </span>
@@ -132,7 +133,7 @@
             </div>
         </div>
         <div class="app_body">
-            <div class="app_body-content app_body-content-home">
+            <div id="app_body-content-home" class="app_body-content app_body-content-home">
                 <div class="app_body-content-item app_body-content-header semiBlack-text fontWeight-600">
                     <h3>TRANG CHỦ</h3>
                 </div>
@@ -223,26 +224,141 @@
                 </div>
 
                 <div class="app_body-content-item content-home-detail" style="margin-top: 48px;">
-                    <div class="content-home-detail-item content-home-recentOrder">
+                    <div class="recent-list recentOrder">
                         <div class="content-detail-header">
-                            <h4 class="semiBlack-text">Đơn hàng gần đây</h4>
+                            <h2 class="semiBlack-text">Đơn hàng gần đây</h2>
                             <a href="#" class="padding-8 blue-button">Xem tất cả</a>
                         </div>
-                        <div class="content-detail-body">
-
-                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Tên khách sạn</td>
+                                    <td>Giá tiền</td>
+                                    <td>Phương thức thanh toán</td>
+                                    <td>Tình trạng</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 1</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 1</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 1</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 1</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 1Khách sạn tềnh iu 1Khách sạn tềnh iu 1Khách sạn tềnh iu 1Khách sạn tềnh iu 1Khách sạn tềnh iu 1s</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 2</td>
+                                    <td>2,200,000</td>
+                                    <td class="fontWeight-600">Khi nhận phòng</td>
+                                    <td><span class="status notcheckedin">Chờ nhận phòng</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách sạn tềnh iu 3</td>
+                                    <td>1,200,000</td>
+                                    <td class="fontWeight-600">MOMO</td>
+                                    <td><span class="status checkedin">Đã nhận phòng</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="content-home-detail-item content-home-recentCustomer">
+                    <div class="recent-list recentCustomer">
                         <div class="content-detail-header">
-                            <h4 class="semiBlack-text">Khách hàng gần đây</h4>
+                            <h2 class="semiBlack-text">Khách hàng gần đây</h2>
                             <a href="#" class="padding-8 blue-outline-button">Xem tất cả</a>
                         </div>
-                        <div class="content-detail-body">
-
-                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        Avatar
+                                    </td>
+                                    <td>
+                                        Tên Khách hàng
+                                    </td>
+                                    <td>
+                                        Số lượng đơn
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="recent-customer-avatar">
+                                            <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F" alt="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        doraemin
+                                    </td>
+                                    <td>
+                                        80
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="recent-customer-avatar">
+                                            <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F" alt="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        doraemin
+                                    </td>
+                                    <td>
+                                        80
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="recent-customer-avatar">
+                                            <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F" alt="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        doraemin
+                                    </td>
+                                    <td>
+                                        80
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+
+            <!-- <div id="app_body-content-property" class="app_body-content app_body-content-property">
+                <div class="app_body-content-item app_body-content-header semiBlack-text fontWeight-600">
+                    <h3>TÀI SẢN CỦA TÔI</h3>
+                </div>
+                <div class="app_body-content-item">
+                    
+                </div>
+
+                
+            </div> -->
         </div>
     </div>
 
@@ -273,18 +389,22 @@
         const sidebar_list = document.querySelector(".sidebar_list");
         const sidebar_bottom_btn = document.querySelector(".sidebar_bottom-btn");
 
-        const content_home_recentOrder = document.querySelector('.content-home-recentOrder');
-        const content_home_recentCustomer = document.querySelector('.content-home-recentCustomer');
+        
+        const recentOrder =document.querySelector('.recentOrder')
+        const recentCustomer =document.querySelector('.recentCustomer')
 
         function checkSidebar() {
             if (sidebar_list.classList.contains('active')) {
                 app_body.style.marginLeft = "240px";
-                content_home_recentOrder.style.width = "100%"
-                content_home_recentCustomer.style.width = "100%"
+
+                recentOrder.style.width = "100%";
+                recentCustomer.style.width = "100%";
+
             } else {
                 app_body.style.marginLeft = "100px";
-                content_home_recentOrder.style.width = "780px"
-                content_home_recentCustomer.style.width = "550px"
+
+                recentOrder.style.width = "800px";
+                recentCustomer.style.width = "550px";
             }
         }
         function sidebar_listToggle() {

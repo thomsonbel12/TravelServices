@@ -106,6 +106,9 @@ button{
 .semiRgbRed-text{
     color: rgb(236, 139, 175);
 }
+.white-text{
+    color: #fff;
+}
 .blue-text{
     color: #5392fa
 }
@@ -120,6 +123,9 @@ button{
 }
 .rgbRed-background{
     background-color: rgb(207, 32, 97);
+}
+.green-background{
+    background-color: rgb(124, 207, 0);
 }
 .button-padding_12{
     padding: 12px;
@@ -249,3 +255,16 @@ button{
     padding: 12px;
 }
 
+
+
+.status {
+    padding: 3px 4px;
+    color: #fff;
+    border-radius: 5px;
+}
+.status.checkedin{
+    background-color: #8de02c;
+}
+.status.notcheckedin{
+    background-color: rgb(207, 32, 97);
+}

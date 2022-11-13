@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../assets/img/landlordLogo.png">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/landlordCSS/landLordIndex.css">
+    <link rel="stylesheet" href="../assets/landlordCSS/landlordSidebar.css">
+    <link rel="stylesheet" href="../assets/landlordCSS/ResponsiveLanlord.css">
+    <title>Chủ Nhà Nè</title>
+</head>
+
+<body>
+    <div id="body" class="app__landLord app__landLord-home">
+        <div class="app_header">
+            <div class="app__header-user">
+                <div class="app__header-user-display">
+                    <!-- <div class="app__header-user-display" onclick="user_menu_click()"> -->
+                    <div class="app__header-user-btn">
+                        <img src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t1.6435-9/194999223_1518253615178240_2253477086821177088_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=EePu4IfgFrYAX-8ie5N&_nc_ht=scontent.fsgn5-11.fna&oh=00_AT_ZdYrHyhjWhrC5CwWzDPqljc_4LFOuZHg0xCa2yWZr_g&oe=6369FF6F"
+                            alt="" class="user-img">
+                    </div>
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+
+                </div>
+
+                <div class="app__header-user-menu">
+                    <div class="user-menu-text">
+                        TÀI KHOẢN CỦA TÔI
+                    </div>
+                    <div class="user-menu-option">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-list"></i>
+                                <!-- <a href="">Đơn đặt chỗ của tôi</a> -->
+                                Khách Sạn của Tôi
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <!-- <a href="">Hộp thư</a> -->
+                                Hộp thư
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-heart"></i>
+                                <!-- <a href="">Hồ sơ của tôi</a> -->
+                                Thống kê
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-address-card"></i>
+                                <!-- <a href="">Hồ sơ của tôi</a> -->
+                                Hồ sơ của tôi
+                            </li>
+
+                            <span class="data-number">
+                                Đặc biệt
+                            </span>
+
+                            <li class="landlord-register" onclick="location.href='../index.html'">
+                                <i class="fa-solid fa-house-flag"></i>
+                                Làm người đi thuê 
+                            </li>
+
+                            <button class="user-menu-option-logout">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Đăng xuất
+                            </button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app_sidebar">
+            <div class="sidebar_list">
+                <ul class="sidebar_list-content">
+                    <li class="sidebar_item logo_img">
+                        <a href="./landLordIndex.html">
+                            <img src="../assets/img/landlordLogo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="sidebar_item sidebar_item-home">
+                        <a href="./landLordIndex.html">
+                            <span class="sidebar_item-icon">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="sidebar_item-name">Trang Chủ</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_item active sidebar_item-own">
+                        <a href="#myProperty">
+                            <span class="sidebar_item-icon">
+                                <i class="fa-solid fa-building-user"></i>
+                            </span>
+                            <span class="sidebar_item-name">Sở Hữu</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_item sidebar_item-customer">
+                        <a href="#">
+                            <span class="sidebar_item-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            <span class="sidebar_item-name">Khách Hàng</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_item sidebar_item-statis">
+                        <a href="#">
+                            <span class="sidebar_item-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                            <span class="sidebar_item-name">Số Liệu</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_item sidebar_item-profile">
+                        <a href="#">
+                            <span class="sidebar_item-icon">
+                                <i class="fa-solid fa-id-card-clip"></i>
+                            </span>
+                            <span class="sidebar_item-name">Tài Khoản</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sidebar_bottom-btn"></div>
+            </div>
+        </div>
+        <div class="app_body">
+
+            <div id="app_body-content-property" class="app_body-content app_body-content-property">
+                <div class="app_body-content-item app_body-content-header semiBlack-text fontWeight-600">
+                    <h3>TÀI SẢN CỦA TÔI</h3>
+                </div>
+                <div class="app_body-content-item">
+                    
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="../scriptLanlord/landlordSidebar.js"></script>
+    <!-- Mở menu user -->
+    <script>
+        const app = document.querySelector('.app__header-user-display');
+        const menuClick = document.querySelector('.app__header-user-menu');
+        function user_menu_click() {
+            // hide()
+            menuClick.classList.toggle("show");
+        }
+
+        app.addEventListener('click', user_menu_click);
+        menuClick.addEventListener('click', function () {
+            event.stopPropagation();
+        });
+        app.addEventListener('click', function () {
+            event.stopPropagation();
+        });
+
+    </script>
+
+    <!-- Mở sidebar -->
+    <script>
+        const app_header = document.querySelector('.app_header');
+        const app_body = document.querySelector('.app_body');
+        const sidebar_list = document.querySelector(".sidebar_list");
+        const sidebar_bottom_btn = document.querySelector(".sidebar_bottom-btn");
+
+        
+        const recentOrder =document.querySelector('.recentOrder')
+        const recentCustomer =document.querySelector('.recentCustomer')
+
+        function checkSidebar() {
+            if (sidebar_list.classList.contains('active')) {
+                app_body.style.marginLeft = "240px";
+
+                recentOrder.style.width = "100%";
+                recentCustomer.style.width = "100%";
+
+            } else {
+                app_body.style.marginLeft = "100px";
+
+                recentOrder.style.width = "800px";
+                recentCustomer.style.width = "550px";
+            }
+        }
+        function sidebar_listToggle() {
+            // hide()
+            menuClick.classList.remove("show");
+            sidebar_list.classList.toggle('active');
+            checkSidebar()  
+        }
+        sidebar_bottom_btn.addEventListener('click', sidebar_listToggle);
+
+
+        sidebar_list.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+        sidebar_bottom_btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+
+
+    </script>
+
+    <script>
+        function hide() {
+            menuClick.classList.remove("show");
+            // sidebar_list.classList.remove('active');
+            checkSidebar()
+        }
+        document.addEventListener('click', function () {
+            hide();
+        })
+
+    </script>
+</body>
+
+</html>
