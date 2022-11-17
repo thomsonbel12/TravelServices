@@ -330,16 +330,17 @@
                                                 placeholder="Nhập địa điểm du lịch hoặc tên khách sạn">
                                         </div>
 
-                                        <div class="search-input search-city">
+                                        <!-- <div class="search-input search-city">
                                             <input id="search-input" type="text" placeholder="Nhập địa điểm du lịch">
                                         </div>
 
                                         <div class="search-input search-hotel">
                                             <input id="search-input" type="text" placeholder="Nhập tên khách sạn">
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="search-item search-right-content">
                                         <div class="search-type-display">
+                                            <input class="search-input-type-num" style="display: none;" type="number" value="0">
                                             <span class="search-input-type">Tìm Tất Cả</span>
                                             <i class="fa-solid fa-chevron-down point-down"></i>
                                         </div>
@@ -930,21 +931,19 @@
         }
 
         const select_type = document.querySelectorAll('.search-type-select li');
-        const search_input = document.getElementsByClassName('search-input');
         const search_input_input = document.querySelectorAll('.search-input input');
         const search_input_type = document.querySelector('.search-input-type');
-        function hideInput() {
-            for (let i = 0; i < search_input.length; i++) {
-                search_input[i].classList.remove('show');
-            }
-        }
-        search_input[0].classList.add('show');
-        for (let i = 0; i < search_input.length; i++) {
+        const search_input_type_num = document.querySelector('.search-input-type-num')
+
+        for (let i = 0; i < select_type.length; i++) {
             select_type[i].addEventListener('click', function () {
-                hideInput();
-                search_input[i].classList.add('show');
-                search_input_input[i].focus()
+
+                search_input_input[0].focus()
+                search_input_type_num.value = i
                 search_input_type.innerHTML = select_type[i].innerHTML;
+
+                search_input_input[0].placeholder = select_type[i].innerHTML.trim() 
+                console.log(search_input_type_num.value)
                 hideSearchType();
             });
         }

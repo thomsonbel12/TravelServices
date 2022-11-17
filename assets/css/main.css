@@ -1596,12 +1596,12 @@ ul {
 	color: #fff;
 	background-color: #92baf9;
 }
-.content-item-input-text .search-input{
+/* .content-item-input-text .search-input{
 	display: none;
 }
 .content-item-input-text .search-input.show{
 	display: block;
-}
+} */
 .content-item-input-text .search-input,
 .content-item-input-text input{
 	height: 100%;
@@ -1622,7 +1622,7 @@ ul {
 	box-shadow: rgb(0 0 0 / 20%) 0px 1px 6px 2px;
 	background-color: #fff;
 	/* height: 100px; */
-	width: 270px;
+	width: 370px;
 	/* padding:12px; */
 	border-radius: 5px;
 	z-index: 1;
