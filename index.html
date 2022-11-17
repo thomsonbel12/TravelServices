@@ -55,7 +55,8 @@
             </div> -->
 
             <div class="app__header-option">
-                <a href="./LandLordHTML/landLordIndex.html" class="rgbRed_OutlineButton button-padding_12">Đăng kí cho thuê nhà</a>
+                <a href="./LandLordHTML/landLordIndex.html" class="rgbRed_OutlineButton button-padding_12">Đăng kí cho
+                    thuê nhà</a>
                 <span class="shopping_cart">
                     <a class="rgbRed-text" href="./HTML/CartDetail.html">
                         <i class="fa-solid fa-cart-shopping">
@@ -89,7 +90,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="cart-item">
                                 <div class="cart-item-img">
                                     <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
@@ -113,7 +114,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="cart-item">
                                 <div class="cart-item-img">
                                     <img src="https://ggstorage.oxii.vn/images/oxii-2019-2-27/728/ezps5xw.jpg" alt="">
@@ -267,13 +268,15 @@
                     </h2>
                     <p>
                         Rộng rãi hơn, chân thực hơn, nhiều lý do để đi du lịch hơn.
-                        <div style="display: none;">
-                            <h2>Số khách: <span class="max_adult_num">100</span> người lớn, <span class="max_child_num">100</span> trẻ em</h2>
-                                <h2>Giá: 288.150 VND</h2>
-                                <h2>Số phòng còn trống : 
-                                <span class="max_available_num">100</span></h2>
+                    <div style="display: none;">
+                        <h2>Số khách: <span class="max_adult_num">100</span> người lớn, <span
+                                class="max_child_num">100</span> trẻ em</h2>
+                        <h2>Giá: 288.150 VND</h2>
+                        <h2>Số phòng còn trống :
+                            <span class="max_available_num">100</span>
+                        </h2>
 
-                        </div>
+                    </div>
                     </p>
                 </div>
 
@@ -318,42 +321,39 @@
                                 </button>
 
                                 <div class="content-item-input-text">
-                                    <!-- <i class="fa-light fa-magnifying-glass"></i> -->
-                                    <label for="place-input">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </label>
-                                    <input id="place-input" type="text"
-                                        placeholder="Nhập địa điểm du lịch hoặc tên Khách sạn">
-                                    <div class="item-input-search-wrap">
-                                        <div class="item-input-search-list">
-                                            <ul>
-                                                <li class="search-list-item">
+                                    <div class="search-item search-left-content">
+                                        <label for="search-input">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </label>
+                                        <div class="search-input search-all">
+                                            <input id="search-input" type="text"
+                                                placeholder="Nhập địa điểm du lịch hoặc tên khách sạn">
+                                        </div>
 
-                                                    <div>
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                    </div>
-                                                    <div class="search-list-item-text">
-                                                        <p class="search-item-place">Hồ Chí Minh</p>
-                                                        <p class="search-item-desc">Thành Phố</p>
-                                                    </div>
+                                        <div class="search-input search-city">
+                                            <input id="search-input" type="text" placeholder="Nhập địa điểm du lịch">
+                                        </div>
+
+                                        <div class="search-input search-hotel">
+                                            <input id="search-input" type="text" placeholder="Nhập tên khách sạn">
+                                        </div>
+                                    </div>
+                                    <div class="search-item search-right-content">
+                                        <div class="search-type-display">
+                                            <span class="search-input-type">Tìm Tất Cả</span>
+                                            <i class="fa-solid fa-chevron-down point-down"></i>
+                                        </div>
+
+                                        <div class="search-type-select">
+                                            <ul>
+                                                <li>
+                                                    Tìm Tất Cả
                                                 </li>
-                                                <li class="search-list-item">
-                                                    <div>
-                                                        <i class="fa-sharp fa-solid fa-bed"></i>
-                                                    </div>
-                                                    <div class="search-list-item-text">
-                                                        <p class="search-item-place">Hotel Plaza 5 sao</p>
-                                                        <p class="search-item-desc">Khách Sạn</p>
-                                                    </div>
+                                                <li>
+                                                    Tìm theo địa điểm du lịch
                                                 </li>
-                                                <li class="search-list-item">
-                                                    <div>
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                    </div>
-                                                    <div class="search-list-item-text">
-                                                        <p class="search-item-place">Hồ Chí Minh</p>
-                                                        <p class="search-item-desc">Thành Phố</p>
-                                                    </div>
+                                                <li>
+                                                    Tìm theo tên khách sạn
                                                 </li>
                                             </ul>
                                         </div>
@@ -373,7 +373,7 @@
                                         </div>
 
                                     </div>
-                                    <div  class="content-input-people-room">
+                                    <div class="content-input-people-room">
                                         <div class="input-people-room-text">
                                             <i class="fa-solid fa-users"></i>
                                             <div class="input-people-text">
@@ -381,15 +381,15 @@
                                                     <span class="adultNum">1</span> người lớn, <span
                                                         class="childNum">0</span> trẻ em
                                                 </div>
-        
+
                                                 <div class="input-room">
                                                     <span class="roomNum">1</span> phòng
                                                 </div>
                                             </div>
-        
+
                                             <i class="fa-solid fa-chevron-down point-down"></i>
                                         </div>
-        
+
                                         <div class="input-add-room-people">
                                             <div class="input-add add-room">
                                                 <div class="input-add-text">
@@ -397,16 +397,14 @@
                                                         Phòng
                                                     </div>
                                                     <div class="add-text-desc">
-        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn">
-                                                    <i 
-                                                        class="fa-regular fa-square-minus minusRoom"></i>
+                                                    <i class="fa-regular fa-square-minus minusRoom"></i>
                                                     <span class="input-add-number rooms">1</span>
-                                                    <i 
-                                                        class="fa-solid fa-square-plus addRoom"></i>
+                                                    <i class="fa-solid fa-square-plus addRoom"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-adult">
@@ -418,13 +416,11 @@
                                                         18 tuổi trở lên
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn input-add-btn-adult">
-                                                    <i id="minusAdult"
-                                                        class="fa-solid fa-square-minus minusAdult"></i>
+                                                    <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
                                                     <span id="adults" class="input-add-number adults">1</span>
-                                                    <i id="addAdult"
-                                                        class="fa-regular fa-square-plus addAdult"></i>
+                                                    <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-child">
@@ -436,13 +432,12 @@
                                                         0-12 tuổi
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn">
                                                     <i id="minusChild"
                                                         class="fa-regular fa-square-minus minusChild"></i>
                                                     <span class="input-add-number children">0</span>
-                                                    <i id="addChild"
-                                                        class="fa-solid fa-square-plus addChild"></i>
+                                                    <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,7 +542,7 @@
                                         </div>
 
                                     </div>
-                                    <div  class="content-input-people-room">
+                                    <div class="content-input-people-room">
                                         <div class="input-people-room-text">
                                             <i class="fa-solid fa-users"></i>
                                             <div class="input-people-text">
@@ -555,15 +550,15 @@
                                                     <span class="adultNum">1</span> người lớn, <span
                                                         class="childNum">0</span> trẻ em
                                                 </div>
-        
+
                                                 <div class="input-room">
                                                     <span class="roomNum">1</span> phòng
                                                 </div>
                                             </div>
-        
+
                                             <i class="fa-solid fa-chevron-down point-down"></i>
                                         </div>
-        
+
                                         <div class="input-add-room-people">
                                             <div class="input-add add-room">
                                                 <div class="input-add-text">
@@ -571,16 +566,14 @@
                                                         Phòng
                                                     </div>
                                                     <div class="add-text-desc">
-        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn">
-                                                    <i 
-                                                        class="fa-regular fa-square-minus minusRoom"></i>
+                                                    <i class="fa-regular fa-square-minus minusRoom"></i>
                                                     <span class="input-add-number rooms">1</span>
-                                                    <i 
-                                                        class="fa-solid fa-square-plus addRoom"></i>
+                                                    <i class="fa-solid fa-square-plus addRoom"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-adult">
@@ -592,13 +585,11 @@
                                                         18 tuổi trở lên
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn input-add-btn-adult">
-                                                    <i id="minusAdult"
-                                                        class="fa-solid fa-square-minus minusAdult"></i>
+                                                    <i id="minusAdult" class="fa-solid fa-square-minus minusAdult"></i>
                                                     <span id="adults" class="input-add-number adults">1</span>
-                                                    <i id="addAdult"
-                                                        class="fa-regular fa-square-plus addAdult"></i>
+                                                    <i id="addAdult" class="fa-regular fa-square-plus addAdult"></i>
                                                 </div>
                                             </div>
                                             <div class="input-add add-child">
@@ -610,13 +601,12 @@
                                                         0-12 tuổi
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="input-add-btn">
                                                     <i id="minusChild"
                                                         class="fa-regular fa-square-minus minusChild"></i>
                                                     <span class="input-add-number children">0</span>
-                                                    <i id="addChild"
-                                                        class="fa-solid fa-square-plus addChild"></i>
+                                                    <i id="addChild" class="fa-solid fa-square-plus addChild"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -662,8 +652,8 @@
                 </div>
                 <div class="selectedCity">
                     <ul class="ListCity">
-                        <li class="city_select" id="hcm" >TP. Hồ Chí Minh</li>
-                        <li class="city_select" id="hn" >Hà Nội</li>
+                        <li class="city_select" id="hcm">TP. Hồ Chí Minh</li>
+                        <li class="city_select" id="hn">Hà Nội</li>
                         <li class="city_select" id="vt">Vũng Tàu</li>
                         <li class="city_select" id="dn">Đà Nẵng</li>
                         <li class="city_select" id="dl">Đà Lạt</li>
@@ -700,6 +690,8 @@
             // hideUserMenu();
             hideShowAddForm();
             hideShowSearchForm();
+            hideSearchType();
+
             menuClick.classList.toggle("show");
         }
 
@@ -808,12 +800,13 @@
             hideUserMenu();
             hideShowAddForm();
             // hideShowDatePick();
+            hideSearchType();
 
             for (let i = 0; i < ShowSearchForm.length; i++)
                 ShowSearchForm[i].classList.toggle('show');
         }
         for (let i = 0; i < ShowSearchForm.length; i++) {
-            searchFormClick[i].addEventListener('click', ShowSearchList);
+            // searchFormClick[i].addEventListener('click', ShowSearchList);
             ShowSearchForm[i].addEventListener('click', function () {
                 event.stopPropagation();
             });
@@ -829,10 +822,12 @@
         const ShowAddForm = document.querySelectorAll('.input-add-room-people');
         function ShowAddRoomPeopleForm() {
             hideUserMenu();
+
             // hideShowAddForm();
             hideShowSearchForm();
             // hideShowDatePick();
 
+            hideSearchType();
             for (let i = 0; i < ShowAddForm.length; i++)
                 ShowAddForm[i].classList.toggle('show');
         }
@@ -901,6 +896,11 @@
             for (let i = 0; i < ShowSearchForm.length; i++)
                 ShowSearchForm[i].classList.remove('show');
         }
+        function hideSearchType() {
+            for (let index = 0; index < search_type_display.length; index++) {
+                search_type_select[index].classList.remove('show');
+            }
+        }
         // function hideShowDatePick(){
         //     for (let i = 0; i < calendarShow.length; i++)
         //         calendarShow[i].classList.remove('show');
@@ -909,13 +909,46 @@
             hideUserMenu();
             hideShowAddForm();
             hideShowSearchForm();
+            hideSearchType();
             // hideShowDatePick();
         }
     </script>
 
 
 
+    <script>
+        const search_type_display = document.getElementsByClassName('search-type-display');
+        const search_type_select = document.getElementsByClassName('search-type-select');
+        for (let index = 0; index < search_type_display.length; index++) {
+            search_type_display[index].addEventListener('click', function () {
+                hideUserMenu();
+                hideShowAddForm();
+                hideShowSearchForm();
+                // hideSearchType();
+                search_type_select[index].classList.toggle('show');
+            });
+        }
 
+        const select_type = document.querySelectorAll('.search-type-select li');
+        const search_input = document.getElementsByClassName('search-input');
+        const search_input_input = document.querySelectorAll('.search-input input');
+        const search_input_type = document.querySelector('.search-input-type');
+        function hideInput() {
+            for (let i = 0; i < search_input.length; i++) {
+                search_input[i].classList.remove('show');
+            }
+        }
+        search_input[0].classList.add('show');
+        for (let i = 0; i < search_input.length; i++) {
+            select_type[i].addEventListener('click', function () {
+                hideInput();
+                search_input[i].classList.add('show');
+                search_input_input[i].focus()
+                search_input_type.innerHTML = select_type[i].innerHTML;
+                hideSearchType();
+            });
+        }
+    </script>
 
 
     <!-- 

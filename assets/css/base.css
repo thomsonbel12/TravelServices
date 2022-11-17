@@ -201,6 +201,10 @@ button{
     align-items: center;
     justify-content: center;
 }
+.rounded_button{
+    border-radius: 50%;
+    text-align: center;
+}
 .custom_button::after{
     content: "\f00c";
     font-family: "Font Awesome 6 Free";
@@ -227,10 +231,13 @@ button{
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
 
     display: none;
 
+}
+.modal.show{
+    display: block;
 }
 .modal-overlay{
     position: absolute;
@@ -249,8 +256,8 @@ button{
 }
 .modal-inner{
     /* margin: auto; */
-    /* height: 100px; */
-    /* width: 100px; */
+    height: 90%;
+    width: 98%;
     background-color: #f5fffe;
     padding: 12px;
 }

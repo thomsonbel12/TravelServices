@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/landlordCSS/landLordIndex.css">
     <link rel="stylesheet" href="../assets/landlordCSS/landlordSidebar.css">
-    <link rel="stylesheet" href="../assets/landlordCSS/ResponsiveLanlord.css">
+    <link rel="stylesheet" href="../assets/landlordCSS/landlordProperty.css">
     <title>Chủ Nhà Nè</title>
 </head>
 
@@ -68,7 +68,7 @@
 
                             <li class="landlord-register" onclick="location.href='../index.html'">
                                 <i class="fa-solid fa-house-flag"></i>
-                                Làm người đi thuê 
+                                Làm người đi thuê
                             </li>
 
                             <button class="user-menu-option-logout">
@@ -138,11 +138,145 @@
                 <div class="app_body-content-item app_body-content-header semiBlack-text fontWeight-600">
                     <h3>TÀI SẢN CỦA TÔI</h3>
                 </div>
-                <div class="app_body-content-item">
-                    
+                <div class="app_body-content-item ">
+                    <div class="myProperty-content-header">
+                        <ul>
+                            <li>
+                                Khách sạn
+                            </li>
+
+                            <li>
+                                Chỗ ở riêng
+                            </li>
+                        </ul>
+
+                        <button id="addProp" class="addProp blue-button padding-8">
+                            Thêm Chỗ Cho Thuê
+                        </button>
+                    </div>
+
+                    <div class="myProperty-content-body">
+                        <div class="myProperty-list myHotel-list">
+                            <div class="myProperty-list-item">
+                                <div class="myProp-info">
+                                    <div class="myProp-detail">
+                                        <div class="myProp_img">
+                                            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/1/13/photo-1-15788867113571927826762.jpg"
+                                                alt="">
+                                        </div>
+
+                                        <div class="myProp-detail-name">
+                                            <div class="name">Chỗ ở xịn xò 1</div>
+                                            <div class="desc">
+                                                <span class="status checkedin">Đang hoạt động</span>
+                                                <span class="address">Hồ Chí Mình, Bà Rịa</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="myProp-delete">
+                                        <a href="#" class="rgbRedButton padding-8" style="font-size: 13px;">Xóa Khách
+                                            Sạn này</a>
+                                    </div>
+                                </div>
+
+                                <div class="myProp-edit">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Thông tin chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Chi tiết Phòng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lịch đặt phòng</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#">Sửa chỗ ở</a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                            <div id="no-prop-list" class="no-prop-list">
+                                <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
+                                <div class="no-prop-text">
+                                    <p class="fontWeight-700">
+                                        Quý khách không có phòng nào trong danh sách.</p>
+                                    <p style="font-size: 14px">
+                                        Hãy thêm khách sạn, villa và phòng vào tài sản nếu quý khách có ý định cho thuê!
+                                    </p>
+                                    <!-- <a href="../index.html">
+                                        Quay trở về trang chủ
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="myProperty-list myVilla-list">
+
+                            villa
+
+                            <div id="no-prop-list" class="no-prop-list active">
+                                <img src="https://cdn6.agoda.net/images/MMB-3149/illustration-empty.png" alt="">
+                                <div class="no-prop-text">
+                                    <p class="fontWeight-700">
+                                        Quý khách không có phòng nào trong danh sách.</p>
+                                    <p style="font-size: 14px">
+                                        Hãy thêm khách sạn, villa và phòng vào tài sản nếu quý khách có ý định cho thuê!
+                                    </p>
+                                    <!-- <a href="../index.html">
+                                        Quay trở về trang chủ
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-addProp" class="modal show modal-addProp">
+        <div class="modal-overlay"></div>
+        <div class="modal-body">
+            <div class="modal-inner">
+                <div class="modal-inner-header">
+                    <h3 class="fontWeight-600">Thêm Chỗ Cho Thuê</h3>
+                    <div id="close-modal" class="rgbRed_OutlineButton rounded_button padding-8">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+
+                <div class="modal-inner-body">
+                    <div class="property-item property-type">
+                        <h2 class="section-name semiBlack-text">Cơ sở kinh doanh</h2>
+                        <div class="property-section">
+                            <h3>Loại hình</h3>
+                            <p>Chọn 1 loại hình cho thuê của bạn</p>
+                            <div class="property-type-list">
+                                <ul>
+                                    <li>
+                                        <button class="active property-type-btn">
+                                            <i class="fa-solid fa-hotel"></i>
+                                            Khách Sạn
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button disabled class="property-type-btn">
+                                            <i class="fa-solid fa-house"></i>
+                                            Villa
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -174,29 +308,29 @@
         const sidebar_list = document.querySelector(".sidebar_list");
         const sidebar_bottom_btn = document.querySelector(".sidebar_bottom-btn");
 
-        
-        const recentOrder =document.querySelector('.recentOrder')
-        const recentCustomer =document.querySelector('.recentCustomer')
+
+        const recentOrder = document.querySelector('.recentOrder');
+        const recentCustomer = document.querySelector('.recentCustomer');
 
         function checkSidebar() {
             if (sidebar_list.classList.contains('active')) {
                 app_body.style.marginLeft = "240px";
 
-                recentOrder.style.width = "100%";
-                recentCustomer.style.width = "100%";
+                // recentOrder.style.width = "100%";
+                // recentCustomer.style.width = "100%";
 
             } else {
                 app_body.style.marginLeft = "100px";
 
-                recentOrder.style.width = "800px";
-                recentCustomer.style.width = "550px";
+                // recentOrder.style.width = "800px";
+                // recentCustomer.style.width = "550px";
             }
         }
         function sidebar_listToggle() {
             // hide()
             menuClick.classList.remove("show");
             sidebar_list.classList.toggle('active');
-            checkSidebar()  
+            checkSidebar();
         }
         sidebar_bottom_btn.addEventListener('click', sidebar_listToggle);
 
@@ -216,12 +350,62 @@
         function hide() {
             menuClick.classList.remove("show");
             // sidebar_list.classList.remove('active');
-            checkSidebar()
+            checkSidebar();
         }
         document.addEventListener('click', function () {
             hide();
         })
 
+    </script>
+
+    <script>
+
+
+        const myProperty_content_header = document.querySelectorAll('.myProperty-content-header li');
+        const myProperty_list = document.getElementsByClassName("myProperty-list");
+
+        const no_prop_list = document.getElementsByClassName("no-prop-list");
+        const myProperty_list_item = document.getElementsByClassName('myProperty-list-item');
+
+        myProperty_content_header[0].classList.add('active');
+        myProperty_list[1].style.display = "none";
+
+        for (let i = 0; i < no_prop_list.length; i++) {
+            if (myProperty_list_item[i] === null) {
+                no_prop_list[i].classList.add('active');
+            }
+            console.log(myProperty_list_item[i]);
+        }
+
+        function hideProp() {
+            for (let i = 0; i < myProperty_content_header.length; i++) {
+                myProperty_content_header[i].classList.remove('active');
+
+                myProperty_list[i].style.display = "none";
+            }
+        }
+        function showMyPropList(i) {
+            hideProp();
+            myProperty_list[i].style.display = "block";
+        }
+        for (let i = 0; i < myProperty_content_header.length; i++) {
+            myProperty_content_header[i].addEventListener('click', function () {
+                showMyPropList(i);
+                myProperty_content_header[i].classList.add('active');
+            });
+        }
+    </script>
+
+    <script>
+        const addProp = document.getElementById('addProp');
+        const modal_addProp = document.getElementById('modal-addProp');
+        const close_modal = document.getElementById('close-modal');
+        addProp.addEventListener('click', function () {
+            modal_addProp.classList.add('show');
+        });
+        close_modal.addEventListener('click', function () {
+            modal_addProp.classList.remove('show');
+        })
     </script>
 </body>
 
